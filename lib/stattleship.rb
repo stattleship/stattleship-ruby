@@ -1,7 +1,4 @@
-require 'stattleship/ruby/version'
+require 'net/https'
 
-module Stattleship
-  module Ruby
-    # Your code goes here...
-  end
-end
+require 'stattleship/version'
+require 'stattleship/client'
