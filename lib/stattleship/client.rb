@@ -1,8 +1,7 @@
 module Stattleship
   class Client
-    BASE_API_URI = URI('https://stattleship.com').freeze
-
-    def initialize(path:, token:)
+    def initialize(path:, token: Stattleship.configuration.api_token)
+      @base_uri = Stattleship.configuration.base_uri.freeze
       @path = path
       @token = token
     end
@@ -28,10 +27,10 @@ module Stattleship
 
     private
 
-    attr_reader :path, :token
+    attr_reader :base_uri, :path, :token
 
     def http
-      @http ||= Net::HTTP.new(BASE_API_URI.host, BASE_API_URI.port)
+      @http ||= Net::HTTP.new(base_uri.host, base_uri.port)
     end
 
     def configure_http
@@ -40,7 +39,7 @@ module Stattleship
     end
 
     def endpoint
-      @endpoint ||= Net::HTTP::Get.new("#{BASE_API_URI}/#{path}", headers)
+      @endpoint ||= Net::HTTP::Get.new("#{base_uri}/#{path}", headers)
     end
   end
 end

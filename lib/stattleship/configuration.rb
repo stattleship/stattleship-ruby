@@ -16,6 +16,6 @@ module Stattleship
   end
 
   class Configuration
-    attr_accessor :api_token
+    attr_accessor :api_token, :base_uri
   end
 end

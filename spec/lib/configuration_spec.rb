@@ -10,10 +10,11 @@ module Stattleship
       end
     end
 
-    context 'pre-configured' do
+    context 'fully-configured' do
       before(:each) do
         Stattleship.configure do |config|
           config.api_token = 'abc123'
+          config.base_uri = URI('https://stattleship.com')
         end
       end
 
@@ -25,12 +26,11 @@ module Stattleship
         expect(configure).to be(configuration)
       end
 
-      describe 'api_token' do
-        it 'sets the api token' do
-          key = Stattleship.configuration.api_token
+      it 'sets the config values' do
+        config = Stattleship.configuration
 
-          expect(key).to eq('abc123')
-        end
+        expect(config.api_token).to eq('abc123')
+        expect(config.base_uri).to eq(URI('https://stattleship.com'))
       end
     end
   end
