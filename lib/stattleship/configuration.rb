@@ -16,6 +16,11 @@ module Stattleship
   end
 
   class Configuration
-    attr_accessor :api_token, :base_uri
+    attr_accessor :api_token
+    attr_writer :base_uri
+
+    def base_uri
+      @base_uri ||= URI('https://stattleship.com')
+    end
   end
 end

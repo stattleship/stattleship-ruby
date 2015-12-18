@@ -8,6 +8,14 @@ module Stattleship
 
         expect(configuration).to be_a(Configuration)
       end
+
+      describe '#base_uri' do
+        it 'defaults to a preset url if none is set' do
+          config = Stattleship.configuration
+
+          expect(config.base_uri).to eq(URI('https://stattleship.com'))
+        end
+      end
     end
 
     context 'fully-configured' do

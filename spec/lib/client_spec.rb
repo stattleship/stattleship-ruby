@@ -4,7 +4,6 @@ RSpec.describe Stattleship::Client do
   before(:each) do
     Stattleship.configure do |config|
       config.api_token = 'abc123'
-      config.base_uri = URI('https://stattleship.com')
     end
   end
 
