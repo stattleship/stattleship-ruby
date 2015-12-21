@@ -13,7 +13,7 @@ module Stattleship
         it 'defaults to a preset url if none is set' do
           config = Stattleship.configuration
 
-          expect(config.base_uri).to eq(URI('https://stattleship.com'))
+          expect(config.base_uri).to eq(URI(base_api_url))
         end
       end
     end
@@ -22,7 +22,7 @@ module Stattleship
       before(:each) do
         Stattleship.configure do |config|
           config.api_token = 'abc123'
-          config.base_uri = URI('https://stattleship.com')
+          config.base_uri = URI(base_api_url)
         end
       end
 
@@ -38,7 +38,7 @@ module Stattleship
         config = Stattleship.configuration
 
         expect(config.api_token).to eq('abc123')
-        expect(config.base_uri).to eq(URI('https://stattleship.com'))
+        expect(config.base_uri).to eq(URI(base_api_url))
       end
     end
   end

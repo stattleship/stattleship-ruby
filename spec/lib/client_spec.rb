@@ -19,12 +19,12 @@ module Stattleship
     describe '#fetch' do
       it 'makes a request to Stattleship with headers' do
         client = Client.new(path: 'hockey/nhl/game_logs')
-        stub_request(:get, /https:\/\/www.stattleship.com.*/)
+        stub_request(:get, /#{base_api_url}.*/)
 
         client.fetch
 
         expect(
-          a_request(:get, /https:\/\/www.stattleship.com.*/).
+          a_request(:get, /#{base_api_url}.*/).
           with(headers: headers)
         ).to have_been_made.once
       end
@@ -32,12 +32,12 @@ module Stattleship
       it 'makes a request to Stattleship at a specified url' do
         path = 'hockey/nhl/game_logs'
         client = Stattleship::Client.new(path: path)
-        stub_request(:get, /https:\/\/www.stattleship.com.*/)
+        stub_request(:get, /#{base_api_url}.*/)
 
         client.fetch
 
         expect(
-          a_request(:get, "https://www.stattleship.com/#{path}")
+          a_request(:get, "#{base_api_url}/#{path}")
         ).to have_been_made.once
       end
     end
