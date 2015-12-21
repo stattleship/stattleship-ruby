@@ -20,7 +20,7 @@ module Stattleship
     attr_writer :base_uri
 
     def base_uri
-      @base_uri ||= URI('https://stattleship.com')
+      @base_uri ||= URI('https://www.stattleship.com')
     end
   end
 end
