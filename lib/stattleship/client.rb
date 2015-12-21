@@ -16,27 +16,14 @@ module Stattleship
     end
 
     def fetch
-      configure_http
-
-      begin
-        http.request(endpoint)
+      Stattleship.configuration.http.request(endpoint)
       rescue StandardError => e
         puts "HTTP Request failed (#{e.message})"
-      end
     end
 
     private
 
     attr_reader :base_uri, :path, :token
-
-    def http
-      @http ||= Net::HTTP.new(base_uri.host, base_uri.port)
-    end
-
-    def configure_http
-      http.use_ssl = true
-      http.verify_mode = OpenSSL::SSL::VERIFY_PEER
-    end
 
     def endpoint
       @endpoint ||= Net::HTTP::Get.new("#{base_uri}/#{path}", headers)

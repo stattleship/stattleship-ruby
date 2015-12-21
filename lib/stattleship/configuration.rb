@@ -17,10 +17,18 @@ module Stattleship
 
   class Configuration
     attr_accessor :api_token
+    attr_reader :http
     attr_writer :base_uri
 
     def base_uri
       @base_uri ||= URI('https://www.stattleship.com')
+    end
+
+    def http
+      @http ||= Net::HTTP.new(base_uri.host, base_uri.port).tap do |http|
+        http.use_ssl = true
+        http.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      end
     end
   end
 end
