@@ -1,13 +1,17 @@
 module Stattleship
   class Team < OpenStruct
+    def full_name
+      "#{location} #{nickname}"
+    end
   end
 
   module TeamRepresenter
     include Roar::JSON
 
-    property :locations
+    property :id
+    property :location
     property :name
     property :nickname
-    property :id
+    property :slug
   end
 end
