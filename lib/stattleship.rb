@@ -1,5 +1,10 @@
 require 'net/https'
+require 'ostruct'
+require 'roar/json'
 
 require 'stattleship/version'
 require 'stattleship/configuration'
 require 'stattleship/client'
+require 'stattleship/player'
+require 'stattleship/team'
+require 'stattleship/stat_leaders'
