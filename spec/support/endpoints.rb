@@ -1,4 +1,16 @@
 module Endpoints
+  def nba_game_logs
+    nba_game_logs = Stattleship::BasketballGameLogs.new
+    nba_game_logs.extend(Stattleship::BasketballGameLogsRepresenter)
+
+    json = File.read('spec/fixtures/nba/game_log.json')
+
+    nba_game_logs.from_json(json)
+
+    puts nba_game_logs
+    nba_game_logs.stats
+  end
+
   def leaders
     stat_leaders = Stattleship::StatLeaders.new
     stat_leaders.extend(Stattleship::StatLeadersRepresenter)
