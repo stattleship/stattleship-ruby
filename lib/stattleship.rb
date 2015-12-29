@@ -1,3 +1,4 @@
+require 'dotenv'
 require 'net/https'
 require 'ordinalize'
 require 'ostruct'
@@ -18,3 +19,5 @@ require 'stattleship/game_logs'
 
 require 'stattleship/basketball_game_logs'
 require 'stattleship/stat_leaders'
+
+Dotenv.load

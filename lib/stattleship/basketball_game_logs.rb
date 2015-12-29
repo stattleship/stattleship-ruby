@@ -3,6 +3,17 @@ module Stattleship
   end
 
   class BasketballGameLogs < Stattleship::GameLogs
+    def self.fetch
+
+      client = Stattleship::Client.new(path: 'basketball/nba/game_logs')
+      json = client.fetch.body
+
+      nba_game_logs = Stattleship::BasketballGameLogs.new
+      nba_game_logs.extend(Stattleship::BasketballGameLogsRepresenter)
+      nba_game_logs.from_json(json)
+
+      nba_game_logs.stats
+    end
   end
 
   module BasketballGameLogsRepresenter
