@@ -7,7 +7,6 @@ module Endpoints
 
     nba_game_logs.from_json(json)
 
-    puts nba_game_logs
     nba_game_logs.stats
   end
 

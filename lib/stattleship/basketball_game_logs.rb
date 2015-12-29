@@ -1,30 +1,8 @@
 module Stattleship
-  class BasketballGameLog < OpenStruct
+  class BasketballGameLog < Stattleship::GameLog
   end
 
-  class BasketballGameLogs < OpenStruct
-    def stats
-      @game_logs ||= hydrate
-    end
-
-    def hydrate
-      game_logs.each do |game_log|
-        hydrate_players(game_log)
-        hydrate_teams(game_log)
-      end
-    end
-
-    def hydrate_players(model)
-      model.player = players.detect do |player|
-        player.id == model.player_id
-      end
-    end
-
-    def hydrate_teams(model)
-      model.team = teams.detect do |team|
-        team.id == model.player.team_id
-      end
-    end
+  class BasketballGameLogs < Stattleship::GameLogs
   end
 
   module BasketballGameLogsRepresenter
@@ -86,9 +64,17 @@ module Stattleship
         end
     end
 
+    collection :games, extend: Stattleship::GameRepresenter,
+                         class: Stattleship::Game
+    collection :leagues, extend: Stattleship::LeagueRepresenter,
+                         class: Stattleship::League
     collection :players, extend: Stattleship::PlayerRepresenter,
                          class: Stattleship::Player
+    collection :seasons, extend: Stattleship::SeasonRepresenter,
+                       class: Stattleship::Season
     collection :teams, extend: Stattleship::TeamRepresenter,
                        class: Stattleship::Team
+    collection :venues, extend: Stattleship::VenueRepresenter,
+                         class: Stattleship::Venue
   end
 end
