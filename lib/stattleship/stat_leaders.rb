@@ -7,14 +7,25 @@ module Stattleship
 
   class StatLeaders < OpenStruct
     def leaders
-      stat_leaders.each do |leader|
-        leader.player = players.detect do |player|
-          player.id == leader.player_id
-        end
+      @leaders ||= hydrate
+    end
 
-        leader.team = teams.detect do |team|
-          team.id == leader.player.team_id
-        end
+    def hydrate
+      stat_leaders.each do |leader|
+        hydrate_players(leader)
+        hydrate_teams(leader)
+      end
+    end
+
+    def hydrate_players(model)
+      model.player = players.detect do |player|
+        player.id == model.player_id
+      end
+    end
+
+    def hydrate_teams(model)
+      model.team = teams.detect do |team|
+        team.id == model.player.team_id
       end
     end
   end
