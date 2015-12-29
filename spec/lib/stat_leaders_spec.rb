@@ -2,7 +2,6 @@ require 'spec_helper'
 
 module Stattleship
   RSpec.describe StatLeaders do
-
     describe '#leaders' do
       it 'returns all the leaders' do
         expect(leaders.count).to eq 6
@@ -34,6 +33,14 @@ module Stattleship
       expect(leader.player.last_name).to eq('Kane')
     end
 
+    it 'knows about a player position' do
+      leader = leaders.first
+      player = leader.player
+
+      expect(player.position_abbreviation).to eq('RW')
+      expect(player.position_name).to eq('Right Wing')
+    end
+
     it 'knows about the player team' do
       leader = leaders[1]
       team = leader.team
@@ -48,7 +55,7 @@ module Stattleship
     it 'can format a readable sentence' do
       leader = leaders.first
 
-      expect(leader.to_sentence).to eq 'Blues Right Wing Vladimir Tarasenko is in first place with 26 goals'
+      expect(leader.to_sentence).to eq 'Vladimir Tarasenko is in first place with 26 goals'
     end
   end
 end

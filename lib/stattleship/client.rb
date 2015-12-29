@@ -17,8 +17,8 @@ module Stattleship
 
     def fetch
       Stattleship.configuration.http.request(endpoint)
-      rescue StandardError => e
-        puts "HTTP Request failed (#{e.message})"
+    rescue StandardError => e
+      puts "HTTP Request failed (#{e.message})"
     end
 
     private
