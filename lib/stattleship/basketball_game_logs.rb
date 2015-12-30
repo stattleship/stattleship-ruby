@@ -1,5 +1,19 @@
 module Stattleship
   class BasketballGameLog < Stattleship::GameLog
+    def stats
+      [
+        "#{field_goals_made.to_i} FGM",
+        "#{(field_goals_pct.to_f * 100).round(1)} FG%",
+        "#{points.to_i} PTS",
+        "#{rebounds_defensive.to_i} DRB",
+        "#{rebounds_offensive.to_i} ORB",
+        "#{rebounds_total} REB"
+      ]
+    end
+
+    def to_sentence
+      "#{player_name} #{stats.join(', ')} (#{game.name})"
+    end
   end
 
   class BasketballGameLogs < Stattleship::GameLogs
