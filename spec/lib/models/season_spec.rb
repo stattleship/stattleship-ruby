@@ -3,7 +3,7 @@ require 'spec_helper'
 module Stattleship
   module Models
     RSpec.describe Season do
-      it 'constructs a team from json' do
+      it 'constructs a season from json' do
         expect(season).to be_a Season
       end
 

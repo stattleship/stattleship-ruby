@@ -3,7 +3,7 @@ require 'spec_helper'
 module Stattleship
   module Models
     RSpec.describe Venue do
-      it 'constructs a team from json' do
+      it 'constructs a venue from json' do
         expect(venue).to be_a Venue
       end
 

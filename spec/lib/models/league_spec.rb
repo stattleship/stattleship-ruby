@@ -3,7 +3,7 @@ require 'spec_helper'
 module Stattleship
   module Models
     RSpec.describe League do
-      it 'constructs a team from json' do
+      it 'constructs a league from json' do
         expect(league).to be_a League
       end
 
