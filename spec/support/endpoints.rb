@@ -10,13 +10,23 @@ module Endpoints
   end
 
   def nfl_game_logs
-    nfl_game_logs = Stattleship::BasketballGameLogs.new
-    nfl_game_logs.extend(Stattleship::BasketballGameLogsRepresenter)
+    nfl_game_logs = Stattleship::FootballGameLogs.new
+    nfl_game_logs.extend(Stattleship::FootballGameLogsRepresenter)
 
     json = File.read('spec/fixtures/nfl/game_log.json')
 
     nfl_game_logs.from_json(json)
     nfl_game_logs.data
+  end
+
+  def nhl_game_logs
+    nhl_game_logs = Stattleship::HockeyGameLogs.new
+    nhl_game_logs.extend(Stattleship::HockeyGameLogsRepresenter)
+
+    json = File.read('spec/fixtures/nhl/game_log.json')
+
+    nhl_game_logs.from_json(json)
+    nhl_game_logs.data
   end
 
   def leaders
