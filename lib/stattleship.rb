@@ -26,4 +26,5 @@ require 'stattleship/stat_leaders'
 require 'stattleship/basketball_stat_leaders'
 require 'stattleship/football_stat_leaders'
 require 'stattleship/hockey_stat_leaders'
+
 Dotenv.load
