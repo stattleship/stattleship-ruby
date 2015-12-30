@@ -1,5 +1,14 @@
 module Stattleship
   class FootballGameLog < Stattleship::GameLog
+    def stats
+      [
+        "#{points.to_i} P",
+      ]
+    end
+
+    def to_sentence
+      "#{player_name} #{stats.join(', ')} (#{game.name})"
+    end
   end
 
   class FootballGameLogs < Stattleship::GameLogs
