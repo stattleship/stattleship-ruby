@@ -18,7 +18,7 @@ module Stattleship
     it 'knows about a player in first place' do
       leader = leaders.first
 
-      expect(leader.player).to be_a Stattleship::Player
+      expect(leader.player).to be_a Stattleship::Models::Player
       expect(leader.player.name).to eq('Vladimir Tarasenko')
       expect(leader.player.first_name).to eq('Vladimir')
       expect(leader.player.last_name).to eq('Tarasenko')
@@ -27,7 +27,7 @@ module Stattleship
     it 'knows about a player in second player in list' do
       leader = leaders[1]
 
-      expect(leader.player).to be_a Stattleship::Player
+      expect(leader.player).to be_a Stattleship::Models::Player
       expect(leader.player.name).to eq('Patrick Kane')
       expect(leader.player.first_name).to eq('Patrick')
       expect(leader.player.last_name).to eq('Kane')
@@ -45,7 +45,7 @@ module Stattleship
       leader = leaders[1]
       team = leader.team
 
-      expect(team).to be_a Stattleship::Team
+      expect(team).to be_a Stattleship::Models::Team
       expect(team.full_name).to eq('Chicago Blackhawks')
       expect(team.name).to eq('Chicago')
       expect(team.nickname).to eq('Blackhawks')
