@@ -3,15 +3,23 @@ module Stattleship
   end
 
   class BasketballGameLogs < Stattleship::GameLogs
-    def self.fetch
-      client = Stattleship::Client.new(path: 'basketball/nba/game_logs?team_id=nba-bos')
+    BASKETBALL_GAME_LOGS = 'basketball/nba/game_logs'.freeze
+
+    def self.fetch(team_id:)
+      query = { 'query' => {
+                  'team_id' => team_id,
+                }
+              }
+
+      client = Stattleship::Client.new(path: BASKETBALL_GAME_LOGS,
+                                       query: query)
       json = client.fetch.body
 
-      nba_game_logs = Stattleship::BasketballGameLogs.new
-      nba_game_logs.extend(Stattleship::BasketballGameLogsRepresenter)
-      nba_game_logs.from_json(json)
+      logs = Stattleship::BasketballGameLogs.new
+      logs.extend(Stattleship::BasketballGameLogsRepresenter)
+      logs.from_json(json)
 
-      nba_game_logs.data
+      logs.data
     end
   end
 
@@ -69,9 +77,9 @@ module Stattleship
           :player_id,
           :game_id,
           :team_id
-          ].each do |relationship|
+        ].each do |relationship|
           property relationship
-        end
+      end
     end
 
     collection :games, extend: Stattleship::GameRepresenter,
