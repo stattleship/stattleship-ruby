@@ -1,15 +1,15 @@
 module Stattleship
   class FootballStatLeaders < Stattleship::StatLeaders
-    def self.fetch
-      path = 'football/nfl/stat_leaders?stat=passes_touchdowns&type=football_passing_stat&place=4'
-      client = Stattleship::Client.new(path: path)
-      json = client.fetch.body
+    FOOTBALL_STAT_LEADERS = 'football/nfl/stat_leaders'.freeze
 
-      stat_leaders = Stattleship::StatLeaders.new
-      stat_leaders.extend(Stattleship::StatLeadersRepresenter)
-      stat_leaders.from_json(json)
+    def self.fetch(stat: 'passes_touchdowns',
+                   type: 'football_passing_stat',
+                   place: 3)
 
-      stat_leaders.data
+      super(path: FOOTBALL_STAT_LEADERS,
+            stat: stat,
+            type: type,
+            place: place)
     end
   end
 end

@@ -6,7 +6,7 @@ module Stattleship
   end
 
   class StatLeaders < OpenStruct
-    def self.fetch(stat:, type:, place: 3)
+    def self.fetch(path:, stat:, type:, place: 3)
       query = { 'query' => {
                   'stat' => stat,
                   'type' => type,
@@ -27,10 +27,6 @@ module Stattleship
 
     def data
       @data ||= populate
-    end
-
-    def path
-      raise 'StatLeader subclass must implement path'
     end
 
     private
