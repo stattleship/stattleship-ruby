@@ -1,0 +1,11 @@
+{
+  "id": "4d457218-ccdf-45cf-8f07-2d7ee7b5032c",
+  "created_at": "2015-11-28T22:33:56-05:00",
+  "updated_at": "2015-12-09T09:15:47-05:00",
+  "location": "Toronto",
+  "name": "Toronto",
+  "nickname": "Raptors",
+  "slug": "nba-tor",
+  "division_id": "8256a4da-413c-4f03-8438-56963be591c4",
+  "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+}
