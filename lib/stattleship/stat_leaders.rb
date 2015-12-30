@@ -6,8 +6,31 @@ module Stattleship
   end
 
   class StatLeaders < OpenStruct
+    def self.fetch(stat:, type:, place: 3)
+      query = { 'query' => {
+                  'stat' => stat,
+                  'type' => type,
+                  'place' => place,
+                }
+              }
+
+      client = Stattleship::Client.new(path: path,
+                                       query: query)
+      json = client.fetch.body
+
+      stat_leaders = Stattleship::StatLeaders.new
+      stat_leaders.extend(Stattleship::StatLeadersRepresenter)
+      stat_leaders.from_json(json)
+
+      stat_leaders.data
+    end
+
     def data
       @data ||= populate
+    end
+
+    def path
+      raise 'StatLeader subclass must implement path'
     end
 
     private
