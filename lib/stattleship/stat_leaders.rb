@@ -61,9 +61,9 @@ module Stattleship
       property :stat_name
     end
 
-    collection :players, extend: Stattleship::PlayerRepresenter,
-                         class: Stattleship::Player
-    collection :teams, extend: Stattleship::TeamRepresenter,
-                       class: Stattleship::Team
+    collection :players, extend: Stattleship::Models::PlayerRepresenter,
+                         class: Stattleship::Models::Player
+    collection :teams, extend: Stattleship::Models::TeamRepresenter,
+                       class: Stattleship::Models::Team
   end
 end

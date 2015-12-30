@@ -25,6 +25,7 @@ module Stattleship
 
   module BasketballGameLogsRepresenter
     include Roar::JSON
+    include Stattleship::Models
 
     collection :game_logs, class: Stattleship::BasketballGameLog do
       [
@@ -82,17 +83,17 @@ module Stattleship
       end
     end
 
-    collection :games, extend: Stattleship::GameRepresenter,
-                         class: Stattleship::Game
-    collection :leagues, extend: Stattleship::LeagueRepresenter,
-                         class: Stattleship::League
-    collection :players, extend: Stattleship::PlayerRepresenter,
-                         class: Stattleship::Player
-    collection :seasons, extend: Stattleship::SeasonRepresenter,
-                       class: Stattleship::Season
-    collection :teams, extend: Stattleship::TeamRepresenter,
-                       class: Stattleship::Team
-    collection :venues, extend: Stattleship::VenueRepresenter,
-                         class: Stattleship::Venue
+    collection :games, extend: GameRepresenter,
+                         class: Game
+    collection :leagues, extend: LeagueRepresenter,
+                         class: League
+    collection :players, extend: PlayerRepresenter,
+                         class: Player
+    collection :seasons, extend: SeasonRepresenter,
+                       class: Season
+    collection :teams, extend: TeamRepresenter,
+                       class: Team
+    collection :venues, extend: VenueRepresenter,
+                         class: Venue
   end
 end
