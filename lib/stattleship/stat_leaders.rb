@@ -6,24 +6,26 @@ module Stattleship
   end
 
   class StatLeaders < OpenStruct
-    def leaders
-      @leaders ||= hydrate
+    def data
+      @data ||= populate
     end
 
-    def hydrate
+    private
+
+    def populate
       stat_leaders.each do |leader|
-        hydrate_players(leader)
-        hydrate_teams(leader)
+        populate_players(leader)
+        populate_teams(leader)
       end
     end
 
-    def hydrate_players(model)
+    def populate_players(model)
       model.player = players.detect do |player|
         player.id == model.player_id
       end
     end
 
-    def hydrate_teams(model)
+    def populate_teams(model)
       model.team = teams.detect do |team|
         team.id == model.player.team_id
       end

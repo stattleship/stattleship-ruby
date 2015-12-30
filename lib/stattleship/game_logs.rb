@@ -22,56 +22,58 @@ module Stattleship
   end
 
   class GameLogs < OpenStruct
-    def stats
-      @game_logs ||= hydrate
+    def data
+      @data ||= populate
     end
 
-    def hydrate
+    private
+
+    def populate
       game_logs.each do |game_log|
-        hydrate_games(game_log)
-        hydrate_players(game_log)
-        hydrate_teams(game_log)
+        populate_games(game_log)
+        populate_players(game_log)
+        populate_teams(game_log)
       end
     end
 
-    def hydrate_games(model)
+    def populate_games(model)
       model.game = games.detect do |game|
         game.id == model.game_id
       end
 
-      hydrate_season(model.game)
-      hydrate_league(model.game.season)
-      hydrate_venue(model.game)
+      populate_season(model.game)
+      populate_league(model.game.season)
+      populate_venue(model.game)
 
       model.game.league = model.game.season.league
       model.league = model.game.league
     end
 
-    def hydrate_season(model)
+    def populate_season(model)
       model.season = seasons.detect do |season|
         season.id == model.season_id
       end
     end
 
-    def hydrate_league(model)
+    def populate_league(model)
       model.league = leagues.detect do |league|
         league.id == model.league_id
       end
     end
 
-    def hydrate_venue(model)
+    def populate_venue(model)
       model.venue = venues.detect do |venue|
         venue.id == model.venue_id
       end
     end
 
-    def hydrate_players(model)
+    def populate_players(model)
       model.player = players.detect do |player|
         player.id == model.player_id
       end
     end
 
-    def hydrate_teams(model)
+    def populate_teams(model)
       model.team = teams.detect do |team|
         team.id == model.player.team_id
       end

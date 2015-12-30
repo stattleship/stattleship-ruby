@@ -1,3 +1,5 @@
+require 'addressable/uri'
+require 'addressable/template'
 require 'dotenv'
 require 'net/https'
 require 'ordinalize'
@@ -19,5 +21,7 @@ require 'stattleship/game_logs'
 
 require 'stattleship/basketball_game_logs'
 require 'stattleship/stat_leaders'
-
+require 'stattleship/basketball_stat_leaders'
+require 'stattleship/football_stat_leaders'
+require 'stattleship/hockey_stat_leaders'
 Dotenv.load

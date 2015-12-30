@@ -20,10 +20,6 @@ module Stattleship
     attr_reader :http
     attr_writer :base_uri
 
-    def api_token
-      ENV['STATTLESHIP_ACCESS_TOKEN']
-    end
-
     def base_uri
       @base_uri ||= URI('https://www.stattleship.com')
     end

@@ -4,15 +4,14 @@ module Stattleship
 
   class BasketballGameLogs < Stattleship::GameLogs
     def self.fetch
-
-      client = Stattleship::Client.new(path: 'basketball/nba/game_logs')
+      client = Stattleship::Client.new(path: 'basketball/nba/game_logs?team_id=nba-bos')
       json = client.fetch.body
 
       nba_game_logs = Stattleship::BasketballGameLogs.new
       nba_game_logs.extend(Stattleship::BasketballGameLogsRepresenter)
       nba_game_logs.from_json(json)
 
-      nba_game_logs.stats
+      nba_game_logs.data
     end
   end
 

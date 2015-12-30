@@ -1,9 +1,10 @@
 module Stattleship
   class Client
-    def initialize(path:, token: Stattleship.configuration.api_token)
+    def initialize(path:, query: nil, token: Stattleship.configuration.api_token)
       @base_uri = Stattleship.configuration.base_uri.freeze
       @path = path
-      @token = token
+      @query = query
+      @token = token || ENV['STATTLESHIP_ACCESS_TOKEN']
     end
 
     def headers
@@ -23,10 +24,19 @@ module Stattleship
 
     private
 
-    attr_reader :base_uri, :path, :token
+    attr_reader :base_uri, :path, :query, :token
+
+    def url
+      if query
+        template = Addressable::Template.new("#{base_uri}/#{path}/{?query*}")
+        template.partial_expand(query).pattern
+      else
+        "#{base_uri}/#{path}"
+      end
+    end
 
     def endpoint
-      @endpoint ||= Net::HTTP::Get.new("#{base_uri}/#{path}", headers)
+      @endpoint ||= Net::HTTP::Get.new(url, headers)
     end
   end
 end

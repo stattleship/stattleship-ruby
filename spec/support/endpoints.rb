@@ -6,8 +6,7 @@ module Endpoints
     json = File.read('spec/fixtures/nba/game_log.json')
 
     nba_game_logs.from_json(json)
-
-    nba_game_logs.stats
+    nba_game_logs.data
   end
 
   def leaders
@@ -17,6 +16,6 @@ module Endpoints
     json = File.read('spec/fixtures/nhl/stat_leaders.json')
 
     stat_leaders.from_json(json)
-    stat_leaders.leaders
+    stat_leaders.data
   end
 end
