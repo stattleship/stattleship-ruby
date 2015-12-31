@@ -42,6 +42,39 @@ module Stattleship
       end
     end
 
+    describe '#paginate' do
+      it 'traverses the paginated response' do
+        path = 'basketball/nba/game_logs?team_id=nba-cle'
+        client = Stattleship::Client.new(path: path)
+        url = "#{base_api_url}/#{path}"
+        next_url = 'https://www.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=2&per_page=40'
+
+        response_headers = { 'Link' => '<https://www.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=1&per_page=40>; rel="first", <https://www.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=2&per_page=40>; rel="prev", <https://www.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=2&per_page=40>; rel="last", <https://www.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=2&per_page=40>; rel="next"' }
+
+        stub_request(:get, url).
+          to_return(body: File.read('spec/fixtures/nba/game_log.json'),
+                    headers: response_headers)
+
+        response_headers = { 'Link' => '<https://www.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=1&per_page=40>; rel="first", <https://www.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=1&per_page=40>; rel="prev", <https://www.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=2&per_page=40>; rel="last"' }
+
+        stub_request(:get, next_url).
+          to_return(body: File.read('spec/fixtures/nba/game_log_page_2.json'),
+                    headers: response_headers)
+
+        client.paginate(model: Stattleship::BasketballGameLogs)
+
+        expect(
+          a_request(:get,
+                    url)
+        ).to have_been_made.once
+
+        expect(
+          a_request(:get,
+                    next_url)
+        ).to have_been_made.once
+      end
+    end
+
     def headers
       version = Stattleship::Ruby::VERSION
       {

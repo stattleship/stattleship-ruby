@@ -12,4 +12,9 @@ module Stattleship
             place: place)
     end
   end
+
+  module FootballStatLeadersRepresenter
+    include Roar::JSON
+    include StatLeadersRepresenter
+  end
 end

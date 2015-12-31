@@ -7,6 +7,35 @@ module Stattleship
         expect(nhl_leaders.count).to eq 6
       end
     end
+
+    describe '.fetch' do
+      it 'makes a request to fetch hockey stat leaders' do
+        stub_request(:get, /#{base_api_url}.*/).
+          to_return(body: File.read('spec/fixtures/nhl/stat_leaders.json'))
+
+        HockeyStatLeaders.fetch(stat: 'goals',
+                                type: 'hockey_offensive_stat',
+                                place: 3)
+
+        expect(
+          a_request(:get,
+                    "#{base_api_url}/hockey/nhl/stat_leaders?place=3&stat=goals&type=hockey_offensive_stat")
+        ).to have_been_made.once
+      end
+
+      it 'parses and builds the hockey game logs' do
+        stub_request(:get, /#{base_api_url}.*/).
+          to_return(body: File.read('spec/fixtures/nhl/stat_leaders.json'))
+
+        stat_leaders = HockeyStatLeaders.fetch
+
+        expect(stat_leaders.count).to eq 6
+
+        stat_leaders.each do |stat_leader|
+          expect(stat_leader).to be_a Leader
+        end
+      end
+    end
   end
 
   RSpec.describe Leader do
@@ -55,7 +84,9 @@ module Stattleship
     it 'can format a readable sentence' do
       leader = nhl_leaders.first
 
-      expect(leader.to_sentence).to eq 'Vladimir Tarasenko is in first place with 26 goals'
+      expect(
+        leader.to_sentence
+      ).to eq 'Vladimir Tarasenko is in first place with 26 goals'
     end
   end
 end

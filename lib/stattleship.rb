@@ -1,14 +1,16 @@
 require 'addressable/uri'
 require 'addressable/template'
 require 'dotenv'
+require 'link_header'
 require 'net/https'
 require 'ordinalize'
 require 'ostruct'
 require 'roar/json'
 
 require 'stattleship/version'
-require 'stattleship/configuration'
-require 'stattleship/client'
+
+require 'stattleship/client/configuration'
+require 'stattleship/client/client'
 
 require 'stattleship/models/game'
 require 'stattleship/models/league'

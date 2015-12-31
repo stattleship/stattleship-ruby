@@ -55,7 +55,9 @@ module Stattleship
     it 'can format a readable sentence' do
       leader = leaders.first
 
-      expect(leader.to_sentence).to eq 'Vladimir Tarasenko is in first place with 26 goals'
+      expect(
+        leader.to_sentence
+      ).to eq 'Vladimir Tarasenko is in first place with 26 goals'
     end
   end
 end

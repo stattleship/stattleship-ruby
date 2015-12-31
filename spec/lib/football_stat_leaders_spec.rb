@@ -7,6 +7,35 @@ module Stattleship
         expect(nfl_leaders.count).to eq 4
       end
     end
+
+    describe '.fetch' do
+      it 'makes a request to fetch football stat leaders' do
+        stub_request(:get, /#{base_api_url}.*/).
+          to_return(body: File.read('spec/fixtures/nfl/stat_leaders.json'))
+
+        FootballStatLeaders.fetch(stat: 'rushes_yards',
+                                  type: 'football_rushing_stat',
+                                  place: 5)
+
+        expect(
+          a_request(:get,
+                    "#{base_api_url}/football/nfl/stat_leaders?place=5&stat=rushes_yards&type=football_rushing_stat")
+        ).to have_been_made.once
+      end
+
+      it 'parses and builds the football game logs' do
+        stub_request(:get, /#{base_api_url}.*/).
+          to_return(body: File.read('spec/fixtures/nfl/stat_leaders.json'))
+
+        stat_leaders = FootballStatLeaders.fetch
+
+        expect(stat_leaders.count).to eq 4
+
+        stat_leaders.each do |stat_leader|
+          expect(stat_leader).to be_a Leader
+        end
+      end
+    end
   end
 
   RSpec.describe Leader do
@@ -55,7 +84,9 @@ module Stattleship
     it 'can format a readable sentence' do
       leader = nfl_leaders.first
 
-      expect(leader.to_sentence).to eq 'Adrian Peterson is in first place with 1418 rushes_yards'
+      expect(
+        leader.to_sentence
+      ).to eq 'Adrian Peterson is in first place with 1418 rushes_yards'
     end
   end
 end

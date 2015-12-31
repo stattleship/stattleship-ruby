@@ -7,6 +7,33 @@ module Stattleship
         expect(nhl_game_logs.count).to eq 7
       end
     end
+
+    describe '.fetch' do
+      it 'makes a request to fetch hockey game logs' do
+        stub_request(:get, /#{base_api_url}.*/).
+          to_return(body: File.read('spec/fixtures/nhl/game_log.json'))
+
+        HockeyGameLogs.fetch(team_id: 'nhl-bos')
+
+        expect(
+          a_request(:get,
+                    "#{base_api_url}/hockey/nhl/game_logs?team_id=nhl-bos")
+        ).to have_been_made.once
+      end
+
+      it 'parses and builds the hockey game logs' do
+        stub_request(:get, /#{base_api_url}.*/).
+          to_return(body: File.read('spec/fixtures/nhl/game_log.json'))
+
+        game_logs = HockeyGameLogs.fetch(team_id: 'nhl-bos')
+
+        expect(game_logs.count).to eq 7
+
+        game_logs.each do |game_log|
+          expect(game_log).to be_a HockeyGameLog
+        end
+      end
+    end
   end
 
   module Models

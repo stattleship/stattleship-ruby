@@ -7,22 +7,14 @@ module Stattleship
 
   class StatLeaders < OpenStruct
     def self.fetch(path:, stat:, type:, place: 3)
-      query = { 'query' => {
-                  'stat' => stat,
-                  'type' => type,
-                  'place' => place,
-                }
-              }
+      query = { 'query' =>
+                  { 'stat' => stat,
+                    'type' => type,
+                    'place' => place } }
 
-      client = Stattleship::Client.new(path: path,
-                                       query: query)
-      json = client.fetch.body
-
-      stat_leaders = Stattleship::StatLeaders.new
-      stat_leaders.extend(Stattleship::StatLeadersRepresenter)
-      stat_leaders.from_json(json)
-
-      stat_leaders.data
+      Stattleship::Client.new(path: path,
+                              query: query).
+        paginate(model: self)
     end
 
     def data

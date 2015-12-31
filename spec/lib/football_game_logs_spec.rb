@@ -7,6 +7,33 @@ module Stattleship
         expect(nfl_game_logs.count).to eq 5
       end
     end
+
+    describe '.fetch' do
+      it 'makes a request to fetch football game logs' do
+        stub_request(:get, /#{base_api_url}.*/).
+          to_return(body: File.read('spec/fixtures/nfl/game_log.json'))
+
+        FootballGameLogs.fetch(team_id: 'nfl-ne')
+
+        expect(
+          a_request(:get,
+                    "#{base_api_url}/football/nfl/game_logs?team_id=nfl-ne")
+        ).to have_been_made.once
+      end
+
+      it 'parses and builds the football game logs' do
+        stub_request(:get, /#{base_api_url}.*/).
+          to_return(body: File.read('spec/fixtures/nfl/game_log.json'))
+
+        game_logs = FootballGameLogs.fetch(team_id: 'nfl-cle')
+
+        expect(game_logs.count).to eq 5
+
+        game_logs.each do |game_log|
+          expect(game_log).to be_a FootballGameLog
+        end
+      end
+    end
   end
 
   module Models
@@ -63,7 +90,9 @@ module Stattleship
         end
 
         it 'returns the league_name' do
-          expect(nfl_game_logs.first.league_name).to eq 'National Football League'
+          expect(
+            nfl_game_logs.first.league_name
+          ).to eq 'National Football League'
         end
       end
     end

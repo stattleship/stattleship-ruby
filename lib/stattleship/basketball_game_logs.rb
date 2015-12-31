@@ -20,26 +20,14 @@ module Stattleship
     BASKETBALL_GAME_LOGS = 'basketball/nba/game_logs'.freeze
 
     def self.fetch(team_id:)
-      query = { 'query' => {
-                  'team_id' => team_id,
-                }
-              }
-
-      client = Stattleship::Client.new(path: BASKETBALL_GAME_LOGS,
-                                       query: query)
-      json = client.fetch.body
-
-      logs = Stattleship::BasketballGameLogs.new
-      logs.extend(Stattleship::BasketballGameLogsRepresenter)
-      logs.from_json(json)
-
-      logs.data
+      super(path: BASKETBALL_GAME_LOGS,
+            team_id: team_id)
     end
   end
 
   module BasketballGameLogsRepresenter
     include Roar::JSON
-    include Stattleship::Models
+    include Stattleship::GameLogsRepresenter
 
     collection :game_logs, class: Stattleship::BasketballGameLog do
       [
@@ -84,30 +72,17 @@ module Stattleship
         :quintuple_double,
         :thirty_thirty,
         :triple_double,
-        ].each do |attribute|
-          property attribute
-        end
+      ].each do |attribute|
+        property attribute
+      end
 
-        [
-          :player_id,
-          :game_id,
-          :team_id
-        ].each do |relationship|
-          property relationship
+      [
+        :player_id,
+        :game_id,
+        :team_id
+      ].each do |relationship|
+        property relationship
       end
     end
-
-    collection :games, extend: GameRepresenter,
-                         class: Game
-    collection :leagues, extend: LeagueRepresenter,
-                         class: League
-    collection :players, extend: PlayerRepresenter,
-                         class: Player
-    collection :seasons, extend: SeasonRepresenter,
-                       class: Season
-    collection :teams, extend: TeamRepresenter,
-                       class: Team
-    collection :venues, extend: VenueRepresenter,
-                         class: Venue
   end
 end

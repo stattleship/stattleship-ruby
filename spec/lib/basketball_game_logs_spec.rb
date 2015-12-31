@@ -7,6 +7,33 @@ module Stattleship
         expect(nba_game_logs.count).to eq 3
       end
     end
+
+    describe '.fetch' do
+      it 'makes a request to fetch basketball game logs' do
+        stub_request(:get, /#{base_api_url}.*/).
+          to_return(body: File.read('spec/fixtures/nba/game_log.json'))
+
+        BasketballGameLogs.fetch(team_id: 'nba-cle')
+
+        expect(
+          a_request(:get,
+                    "#{base_api_url}/basketball/nba/game_logs?team_id=nba-cle")
+        ).to have_been_made.once
+      end
+
+      it 'parses and builds the basketball game logs' do
+        stub_request(:get, /#{base_api_url}.*/).
+          to_return(body: File.read('spec/fixtures/nba/game_log.json'))
+
+        game_logs = BasketballGameLogs.fetch(team_id: 'nba-cle')
+
+        expect(game_logs.count).to eq 3
+
+        game_logs.each do |game_log|
+          expect(game_log).to be_a BasketballGameLog
+        end
+      end
+    end
   end
 
   module Models
@@ -41,7 +68,9 @@ module Stattleship
         end
 
         it 'returns the league_name' do
-          expect(game.league_name).to eq 'National Basketball Association'
+          expect(
+            game.league_name
+          ).to eq 'National Basketball Association'
         end
 
         def game
@@ -63,7 +92,9 @@ module Stattleship
         end
 
         it 'returns the league_name' do
-          expect(nba_game_logs.first.league_name).to eq 'National Basketball Association'
+          expect(
+            nba_game_logs.first.league_name
+          ).to eq 'National Basketball Association'
         end
       end
     end

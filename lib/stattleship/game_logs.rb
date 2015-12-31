@@ -22,6 +22,15 @@ module Stattleship
   end
 
   class GameLogs < OpenStruct
+    def self.fetch(path:, team_id:)
+      query = { 'query' =>
+                { 'team_id' => team_id } }
+
+      Stattleship::Client.new(path: path,
+                              query: query).
+        paginate(model: self)
+    end
+
     def data
       @data ||= populate
     end
@@ -41,6 +50,10 @@ module Stattleship
         game.id == model.game_id
       end
 
+      populate_game(model)
+    end
+
+    def populate_game(model)
       populate_season(model.game)
       populate_league(model.game.season)
       populate_venue(model.game)
@@ -78,5 +91,23 @@ module Stattleship
         team.id == model.player.team_id
       end
     end
+  end
+
+  module GameLogsRepresenter
+    include Roar::JSON
+    include Stattleship::Models
+
+    collection :games, extend: GameRepresenter,
+                       class: Game
+    collection :leagues, extend: LeagueRepresenter,
+                         class: League
+    collection :players, extend: PlayerRepresenter,
+                         class: Player
+    collection :seasons, extend: SeasonRepresenter,
+                         class: Season
+    collection :teams, extend: TeamRepresenter,
+                       class: Team
+    collection :venues, extend: VenueRepresenter,
+                        class: Venue
   end
 end

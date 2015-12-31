@@ -7,6 +7,35 @@ module Stattleship
         expect(nba_leaders.count).to eq 5
       end
     end
+
+    describe '.fetch' do
+      it 'makes a request to fetch basketball stat leaders' do
+        stub_request(:get, /#{base_api_url}.*/).
+          to_return(body: File.read('spec/fixtures/nba/stat_leaders.json'))
+
+        BasketballStatLeaders.fetch(stat: 'three_pointers_made',
+                                    type: 'basketball_offensive_stat',
+                                    place: 5)
+
+        expect(
+          a_request(:get,
+                    "#{base_api_url}/basketball/nba/stat_leaders?place=5&stat=three_pointers_made&type=basketball_offensive_stat")
+        ).to have_been_made.once
+      end
+
+      it 'parses and builds the basketball game logs' do
+        stub_request(:get, /#{base_api_url}.*/).
+          to_return(body: File.read('spec/fixtures/nba/stat_leaders.json'))
+
+        stat_leaders = BasketballStatLeaders.fetch
+
+        expect(stat_leaders.count).to eq 5
+
+        stat_leaders.each do |stat_leader|
+          expect(stat_leader).to be_a Leader
+        end
+      end
+    end
   end
 
   RSpec.describe Leader do
@@ -55,7 +84,9 @@ module Stattleship
     it 'can format a readable sentence' do
       leader = nba_leaders.first
 
-      expect(leader.to_sentence).to eq 'Stephen Curry is in first place with 160 three_pointers_made'
+      expect(
+        leader.to_sentence
+      ).to eq 'Stephen Curry is in first place with 160 three_pointers_made'
     end
   end
 end
