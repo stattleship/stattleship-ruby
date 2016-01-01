@@ -1,13 +1,16 @@
 module Stattleship
   module Params
-    class GameLogsParams < Stattleship::Params::QueryParams
-      attr_accessor :player_id, :team_id
+    class GameLogsParams < Stattleship::Params::GameTimeParams
+      attr_accessor :player_id, :team_id, :game_id
 
       def params
-        {
-          'player_id' => player_id,
-          'team_id' => team_id,
-        }
+        super.merge(
+          {
+            'player_id' => player_id,
+            'team_id' => team_id,
+            'game_id' => game_id,
+          }
+        )
       end
     end
   end

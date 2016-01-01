@@ -38,6 +38,19 @@ module Stattleship
           expect(query_parameters.size).to eq 1
           expect(query_parameters['team_id']).to eq 'nfl-ne'
         end
+
+        it 'constructs for a team and week' do
+          params = FootballGameLogsParams.new
+
+          params.team_id = 'nfl-ne'
+          params.week = 7
+
+          query_parameters = params.query['query']
+
+          expect(query_parameters.size).to eq 2
+          expect(query_parameters['team_id']).to eq 'nfl-ne'
+          expect(query_parameters['week']).to eq 7
+        end
       end
     end
   end
