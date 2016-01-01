@@ -19,6 +19,11 @@ require 'stattleship/models/season'
 require 'stattleship/models/team'
 require 'stattleship/models/venue'
 
+require 'stattleship/validators/base_validator'
+require 'stattleship/validators/game_id_validator'
+require 'stattleship/validators/player_id_validator'
+require 'stattleship/validators/team_id_validator'
+
 require 'stattleship/params/query_params'
 require 'stattleship/params/stat_leaders_params'
 require 'stattleship/params/basketball_stat_leaders_params'
