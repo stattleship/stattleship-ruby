@@ -19,6 +19,12 @@ require 'stattleship/models/season'
 require 'stattleship/models/team'
 require 'stattleship/models/venue'
 
+require 'stattleship/params/query_params'
+require 'stattleship/params/stat_leaders_params'
+require 'stattleship/params/basketball_stat_leaders_params'
+require 'stattleship/params/football_stat_leaders_params'
+require 'stattleship/params/hockey_stat_leaders_params'
+
 require 'stattleship/game_logs'
 require 'stattleship/basketball_game_logs'
 require 'stattleship/football_game_logs'

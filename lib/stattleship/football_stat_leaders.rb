@@ -2,14 +2,10 @@ module Stattleship
   class FootballStatLeaders < Stattleship::StatLeaders
     FOOTBALL_STAT_LEADERS = 'football/nfl/stat_leaders'.freeze
 
-    def self.fetch(stat: 'passes_touchdowns',
-                   type: 'football_passing_stat',
-                   place: 3)
+    def self.fetch(params:)
 
       super(path: FOOTBALL_STAT_LEADERS,
-            stat: stat,
-            type: type,
-            place: place)
+            params: params)
     end
   end
 

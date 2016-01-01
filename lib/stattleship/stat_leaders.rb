@@ -6,14 +6,9 @@ module Stattleship
   end
 
   class StatLeaders < OpenStruct
-    def self.fetch(path:, stat:, type:, place: 3)
-      query = { 'query' =>
-                  { 'stat' => stat,
-                    'type' => type,
-                    'place' => place } }
-
+    def self.fetch(path:, params:)
       Stattleship::Client.new(path: path,
-                              query: query).
+                              query: params.query).
         paginate(model: self)
     end
 

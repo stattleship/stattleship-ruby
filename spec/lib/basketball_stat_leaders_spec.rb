@@ -13,9 +13,7 @@ module Stattleship
         stub_request(:get, /#{base_api_url}.*/).
           to_return(body: File.read('spec/fixtures/nba/stat_leaders.json'))
 
-        BasketballStatLeaders.fetch(stat: 'three_pointers_made',
-                                    type: 'basketball_offensive_stat',
-                                    place: 5)
+        BasketballStatLeaders.fetch(params: params)
 
         expect(
           a_request(:get,
@@ -27,12 +25,20 @@ module Stattleship
         stub_request(:get, /#{base_api_url}.*/).
           to_return(body: File.read('spec/fixtures/nba/stat_leaders.json'))
 
-        stat_leaders = BasketballStatLeaders.fetch
+        stat_leaders = BasketballStatLeaders.fetch(params: params)
 
         expect(stat_leaders.count).to eq 5
 
         stat_leaders.each do |stat_leader|
           expect(stat_leader).to be_a Leader
+        end
+      end
+
+      def params
+        Stattleship::Params::BasketballStatLeadersParams.new.tap do |params|
+          params.stat = 'three_pointers_made'
+          params.type = 'basketball_offensive_stat'
+          params.place = 5
         end
       end
     end

@@ -13,9 +13,7 @@ module Stattleship
         stub_request(:get, /#{base_api_url}.*/).
           to_return(body: File.read('spec/fixtures/nhl/stat_leaders.json'))
 
-        HockeyStatLeaders.fetch(stat: 'goals',
-                                type: 'hockey_offensive_stat',
-                                place: 3)
+        HockeyStatLeaders.fetch(params: params)
 
         expect(
           a_request(:get,
@@ -27,12 +25,20 @@ module Stattleship
         stub_request(:get, /#{base_api_url}.*/).
           to_return(body: File.read('spec/fixtures/nhl/stat_leaders.json'))
 
-        stat_leaders = HockeyStatLeaders.fetch
+        stat_leaders = HockeyStatLeaders.fetch(params: params)
 
         expect(stat_leaders.count).to eq 6
 
         stat_leaders.each do |stat_leader|
           expect(stat_leader).to be_a Leader
+        end
+      end
+
+      def params
+        Stattleship::Params::HockeyStatLeadersParams.new.tap do |params|
+          params.stat = 'goals'
+          params.type = 'hockey_offensive_stat'
+          params.place = 3
         end
       end
     end
