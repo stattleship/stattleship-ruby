@@ -13,7 +13,7 @@ module Stattleship
         stub_request(:get, /#{base_api_url}.*/).
           to_return(body: File.read('spec/fixtures/nba/game_log.json'))
 
-        BasketballGameLogs.fetch(team_id: 'nba-cle')
+        BasketballGameLogs.fetch(params: params)
 
         expect(
           a_request(:get,
@@ -25,12 +25,18 @@ module Stattleship
         stub_request(:get, /#{base_api_url}.*/).
           to_return(body: File.read('spec/fixtures/nba/game_log.json'))
 
-        game_logs = BasketballGameLogs.fetch(team_id: 'nba-cle')
+        game_logs = BasketballGameLogs.fetch(params: params)
 
         expect(game_logs.count).to eq 3
 
         game_logs.each do |game_log|
           expect(game_log).to be_a BasketballGameLog
+        end
+      end
+
+      def params
+        Stattleship::Params::BasketballGameLogsParams.new.tap do |params|
+          params.team_id = 'nba-cle'
         end
       end
     end

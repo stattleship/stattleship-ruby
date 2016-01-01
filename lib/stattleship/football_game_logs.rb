@@ -14,9 +14,9 @@ module Stattleship
   class FootballGameLogs < Stattleship::GameLogs
     FOOTBALL_GAME_LOGS = 'football/nfl/game_logs'.freeze
 
-    def self.fetch(team_id:)
+    def self.fetch(params:)
       super(path: FOOTBALL_GAME_LOGS,
-            team_id: team_id)
+            params: params)
     end
   end
 

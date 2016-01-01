@@ -19,9 +19,9 @@ module Stattleship
   class HockeyGameLogs < Stattleship::GameLogs
     HOCKEY_GAME_LOGS = 'hockey/nhl/game_logs'.freeze
 
-    def self.fetch(team_id:)
+    def self.fetch(params:)
       super(path: HOCKEY_GAME_LOGS,
-            team_id: team_id)
+            params: params)
     end
   end
 

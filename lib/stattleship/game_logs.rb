@@ -22,12 +22,9 @@ module Stattleship
   end
 
   class GameLogs < OpenStruct
-    def self.fetch(path:, team_id:)
-      query = { 'query' =>
-                { 'team_id' => team_id } }
-
+    def self.fetch(path:, params:)
       Stattleship::Client.new(path: path,
-                              query: query).
+                              query: params.query).
         paginate(model: self)
     end
 
