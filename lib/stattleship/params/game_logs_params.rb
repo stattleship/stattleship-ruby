@@ -3,8 +3,6 @@ module Stattleship
     class GameLogsParams < Stattleship::Params::QueryParams
       attr_accessor :player_id, :team_id
 
-      private
-
       def params
         {
           'player_id' => player_id,

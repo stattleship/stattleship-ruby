@@ -3,7 +3,6 @@ module Stattleship
     FOOTBALL_STAT_LEADERS = 'football/nfl/stat_leaders'.freeze
 
     def self.fetch(params:)
-
       super(path: FOOTBALL_STAT_LEADERS,
             params: params)
     end
