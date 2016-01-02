@@ -8,7 +8,7 @@ module Stattleship
       end
 
       def validate
-        fail 'Validator subclass must implement validate method'
+        raise 'Validator subclass must implement validate method'
       end
 
       def validates_positive_integer
@@ -21,6 +21,8 @@ module Stattleship
 
       def validates_sports_prefix
         if blank?(value)
+          return
+        elsif blank?(sport_prefix)
           return
         else
           if value.start_with?("#{sport_prefix}-")
@@ -60,7 +62,7 @@ module Stattleship
         elsif query_parameter_class.start_with?('Hockey')
           'nhl'
         else
-          fail "expected to find a sport prefix for #{class_name}"
+          ''
         end
       end
     end
