@@ -11,6 +11,19 @@ module Stattleship
         raise 'Validator subclass must implement validate method'
       end
 
+      def validates_sports_prefix
+        if blank?(value)
+          return
+        else
+          if value.start_with?("#{sport_prefix}-")
+            return
+          end
+        end
+
+        raise ArgumentError.
+          new("Invalid #{key} '#{value}'. Must start with '#{sport_prefix}'.")
+      end
+
       private
 
       attr_reader :class_name, :key, :params
