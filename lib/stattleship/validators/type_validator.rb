@@ -2,7 +2,7 @@ module Stattleship
   module Validators
     class TypeValidator < Stattleship::Validators::BaseValidator
       def validate
-        true
+        validates_sport_prefix
       end
     end
   end

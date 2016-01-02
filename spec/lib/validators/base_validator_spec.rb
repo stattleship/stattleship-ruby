@@ -81,7 +81,7 @@ module Stattleship
         end
       end
 
-      describe '#validates_sports_prefix' do
+      describe '#validates_league_prefix' do
         context 'when the value is blank' do
           it 'passes validation' do
             key = 'team_id'
@@ -93,12 +93,12 @@ module Stattleship
                                           class_name: class_name)
 
             expect {
-              validator.validates_sports_prefix
+              validator.validates_league_prefix
             }.not_to raise_error
           end
         end
 
-        context 'when the value matches the sport' do
+        context 'when the value matches the sport/league' do
           context 'for basketball' do
             it 'passes validation' do
               key = 'team_id'
@@ -110,7 +110,7 @@ module Stattleship
                                             class_name: class_name)
 
               expect {
-                validator.validates_sports_prefix
+                validator.validates_league_prefix
               }.not_to raise_error
             end
           end
@@ -126,7 +126,7 @@ module Stattleship
                                             class_name: class_name)
 
               expect {
-                validator.validates_sports_prefix
+                validator.validates_league_prefix
               }.not_to raise_error
             end
           end
@@ -142,7 +142,7 @@ module Stattleship
                                             class_name: class_name)
 
               expect {
-                validator.validates_sports_prefix
+                validator.validates_league_prefix
               }.not_to raise_error
             end
           end
@@ -160,7 +160,7 @@ module Stattleship
                                             class_name: class_name)
 
               expect {
-                validator.validates_sports_prefix
+                validator.validates_league_prefix
               }.to raise_error ArgumentError
             end
           end
@@ -176,7 +176,7 @@ module Stattleship
                                             class_name: class_name)
 
               expect {
-                validator.validates_sports_prefix
+                validator.validates_league_prefix
               }.to raise_error ArgumentError
             end
           end
@@ -192,7 +192,125 @@ module Stattleship
                                             class_name: class_name)
 
               expect {
-                validator.validates_sports_prefix
+                validator.validates_league_prefix
+              }.to raise_error ArgumentError
+            end
+          end
+        end
+      end
+
+      describe '#validates_sport_prefix' do
+        context 'when the value is blank' do
+          it 'passes validation' do
+            key = 'type'
+            params = { 'type' => nil }
+            class_name = 'Stattleship::Params::HockeyGameLogsParams'
+
+            validator = BaseValidator.new(key: key,
+                                          params: params,
+                                          class_name: class_name)
+
+            expect {
+              validator.validates_sport_prefix
+            }.not_to raise_error
+          end
+        end
+
+        context 'when the value matches the sport/league' do
+          context 'for basketball' do
+            it 'passes validation' do
+              key = 'type'
+              params = { 'type' => 'basketball_offensive_stat' }
+              class_name = 'Stattleship::Params::BasketballGameLogsParams'
+
+              validator = BaseValidator.new(key: key,
+                                            params: params,
+                                            class_name: class_name)
+
+              expect {
+                validator.validates_sport_prefix
+              }.not_to raise_error
+            end
+          end
+
+          context 'for football' do
+            it 'passes validation' do
+              key = 'type'
+              params = { 'type' => 'football_passing_stat' }
+              class_name = 'Stattleship::Params::FootballStatLeadersParams'
+
+              validator = BaseValidator.new(key: key,
+                                            params: params,
+                                            class_name: class_name)
+
+              expect {
+                validator.validates_sport_prefix
+              }.not_to raise_error
+            end
+          end
+
+          context 'for hockey' do
+            it 'passes validation' do
+              key = 'type'
+              params = { 'type' => 'hockey_player_stat' }
+              class_name = 'Stattleship::Params::HockeyStatLeadersParams'
+
+              validator = BaseValidator.new(key: key,
+                                            params: params,
+                                            class_name: class_name)
+
+              expect {
+                validator.validates_sport_prefix
+              }.not_to raise_error
+            end
+          end
+        end
+
+        context 'when the value fails to match the sport' do
+          context 'for basketball' do
+            it 'fails validation' do
+              key = 'type'
+              params = { 'type' => 'football_passing_stat' }
+              class_name = 'Stattleship::Params::BasketballGameLogsParams'
+
+              validator = BaseValidator.new(key: key,
+                                            params: params,
+                                            class_name: class_name)
+
+              expect {
+                validator.validates_sport_prefix
+              }.to raise_error ArgumentError
+            end
+          end
+
+          context 'for football' do
+            it 'fails validation' do
+              key = 'type'
+              params = { 'type' => 'hockey_defensive_stat' }
+              class_name = 'Stattleship::Params::FootballStatLeadersParams'
+
+              validator = BaseValidator.new(key: key,
+                                            params: params,
+                                            class_name: class_name)
+
+              expect {
+                validator.validates_sport_prefix
+              }.to raise_error ArgumentError
+            end
+          end
+
+          context 'for hockey' do
+            it 'fails validation' do
+              key = 'type'
+              params = { 'type' => 'basketball_rebounding_stat' }
+              class_name = 'Stattleship::Params::HockeyStatLeadersParams'
+
+              validator = BaseValidator.new(key: key,
+                                            params: params,
+                                            class_name: class_name)
+
+              expect {
+                validator.validates_sport_prefix
               }.to raise_error ArgumentError
             end
           end
