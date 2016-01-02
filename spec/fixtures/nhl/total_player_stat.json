@@ -1,0 +1,94 @@
+{
+  "players": [
+    {
+      "id": "49c461c7-0cbb-47fc-8cf2-281741b02059",
+      "created_at": "2015-12-18T01:12:08-05:00",
+      "updated_at": "2015-12-21T11:18:16-05:00",
+      "active": true,
+      "defensive": false,
+      "first_name": "Patrick",
+      "handedness": "left",
+      "height": 71,
+      "unit_of_height": "inches",
+      "last_name": "Kane",
+      "name": "Patrick Kane",
+      "offensive": true,
+      "position_abbreviation": "RW",
+      "position_name": "Right Wing",
+      "salary": 13800000,
+      "humanized_salary": "13,800,000",
+      "salary_currency": "USD",
+      "school": null,
+      "slug": "nhl-patrick-kane",
+      "sport": "hockey",
+      "weight": 177,
+      "unit_of_weight": "pounds",
+      "years_of_experience": 9,
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9",
+      "playing_position_id": "0d13fcf4-862c-4e9e-82ad-6642f18527eb",
+      "team_id": "a345b10e-87b5-4635-bf24-fd6be058346f"
+    }
+  ],
+  "leagues": [
+    {
+      "id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "abbreviation": "NHL",
+      "color": null,
+      "minutes_per_period": null,
+      "name": "National Hockey League",
+      "periods": null,
+      "slug": "nhl",
+      "sport": "hockey"
+    }
+  ],
+  "playing_positions": [
+    {
+      "id": "0d13fcf4-862c-4e9e-82ad-6642f18527eb",
+      "created_at": "2015-12-09T05:04:21-05:00",
+      "updated_at": "2015-12-09T05:04:21-05:00",
+      "abbreviation": "RW",
+      "description": null,
+      "formation": "offensive",
+      "name": "Right Wing",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    }
+  ],
+  "teams": [
+    {
+      "id": "a345b10e-87b5-4635-bf24-fd6be058346f",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-14T08:38:31-05:00",
+      "location": "Chicago",
+      "name": "Chicago",
+      "nickname": "Blackhawks",
+      "slug": "nhl-chi",
+      "division_id": "8e46750a-615a-4362-8468-26a8541fc713",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    }
+  ],
+  "divisions": [
+    {
+      "id": "8e46750a-615a-4362-8468-26a8541fc713",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "Central",
+      "conference_id": "95e3218b-fa5e-4bb8-a6ff-acb61da1876c"
+    }
+  ],
+  "conferences": [
+    {
+      "id": "95e3218b-fa5e-4bb8-a6ff-acb61da1876c",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "Western Conference",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    }
+  ],
+  "total_player_stat": {
+    "stat": "points",
+    "total": 50,
+    "player_id": "49c461c7-0cbb-47fc-8cf2-281741b02059"
+  }
+}

@@ -43,6 +43,10 @@ require 'stattleship/params/game_logs_params'
 require 'stattleship/params/basketball_game_logs_params'
 require 'stattleship/params/football_game_logs_params'
 require 'stattleship/params/hockey_game_logs_params'
+require 'stattleship/params/total_player_stat_params'
+require 'stattleship/params/basketball_total_player_stat_params'
+require 'stattleship/params/football_total_player_stat_params'
+require 'stattleship/params/hockey_total_player_stat_params'
 
 require 'stattleship/game_logs'
 require 'stattleship/basketball_game_logs'
@@ -53,5 +57,10 @@ require 'stattleship/stat_leaders'
 require 'stattleship/basketball_stat_leaders'
 require 'stattleship/football_stat_leaders'
 require 'stattleship/hockey_stat_leaders'
+
+require 'stattleship/total_player_stat'
+require 'stattleship/basketball_total_player_stat'
+require 'stattleship/football_total_player_stat'
+require 'stattleship/hockey_total_player_stat'
 
 Dotenv.load

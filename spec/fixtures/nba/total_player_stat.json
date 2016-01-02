@@ -1,0 +1,94 @@
+{
+  "players": [
+    {
+      "id": "b6ea1a38-b9d1-47e0-84f7-d77b4c4555b9",
+      "created_at": "2015-12-26T02:21:01-05:00",
+      "updated_at": "2016-01-02T13:40:11-05:00",
+      "active": false,
+      "defensive": false,
+      "first_name": "Stephen",
+      "handedness": "unknown",
+      "height": 75,
+      "unit_of_height": "inches",
+      "last_name": "Curry",
+      "name": "Stephen Curry",
+      "offensive": true,
+      "position_abbreviation": "PG",
+      "position_name": "Point Guard",
+      "salary": 11370786,
+      "humanized_salary": "11,370,786",
+      "salary_currency": "USD",
+      "school": null,
+      "slug": "nba-stephen-curry",
+      "sport": "basketball",
+      "weight": 190,
+      "unit_of_weight": "pounds",
+      "years_of_experience": 6,
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e",
+      "playing_position_id": "fff1b6b8-9e02-4071-8dc6-9356ddd1b292",
+      "team_id": "2a173568-fca6-4891-8c3b-3573547b0b6b"
+    }
+  ],
+  "leagues": [
+    {
+      "id": "3c805f57-ef31-407d-b633-54bac8745b9e",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "abbreviation": "NBA",
+      "color": null,
+      "minutes_per_period": null,
+      "name": "National Basketball Association",
+      "periods": null,
+      "slug": "nba",
+      "sport": "basketball"
+    }
+  ],
+  "playing_positions": [
+    {
+      "id": "fff1b6b8-9e02-4071-8dc6-9356ddd1b292",
+      "created_at": "2015-12-09T05:30:50-05:00",
+      "updated_at": "2015-12-09T05:30:50-05:00",
+      "abbreviation": "PG",
+      "description": null,
+      "formation": "offensive",
+      "name": "Point Guard",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    }
+  ],
+  "teams": [
+    {
+      "id": "2a173568-fca6-4891-8c3b-3573547b0b6b",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Golden State",
+      "name": "Golden State",
+      "nickname": "Warriors",
+      "slug": "nba-gs",
+      "division_id": "0df84c15-1dbc-471e-b9d9-d277eeba9eba",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    }
+  ],
+  "divisions": [
+    {
+      "id": "0df84c15-1dbc-471e-b9d9-d277eeba9eba",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "NBA Pacific",
+      "conference_id": "dc6e9ed8-63b6-49bc-87af-9d0a8779792e"
+    }
+  ],
+  "conferences": [
+    {
+      "id": "dc6e9ed8-63b6-49bc-87af-9d0a8779792e",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "Western Conference",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    }
+  ],
+  "total_player_stat": {
+    "stat": "three_pointers_made",
+    "total": 140,
+    "player_id": "b6ea1a38-b9d1-47e0-84f7-d77b4c4555b9"
+  }
+}

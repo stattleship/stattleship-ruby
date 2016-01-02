@@ -68,4 +68,45 @@ module Endpoints
     stat_leaders.from_json(json)
     stat_leaders.data
   end
+
+  def total_player_stat
+    tps = Stattleship::TotalPlayerStat.new
+    tps.extend(Stattleship::TotalPlayerStatRepresenter)
+
+    json = File.read('spec/fixtures/nfl/total_player_stat.json')
+
+    tps.from_json(json)
+    tps.data
+  end
+
+
+  def nba_total_player_stat
+    tps = Stattleship::TotalPlayerStat.new
+    tps.extend(Stattleship::TotalPlayerStatRepresenter)
+
+    json = File.read('spec/fixtures/nba/total_player_stat.json')
+
+    tps.from_json(json)
+    tps.data
+  end
+
+  def nfl_total_player_stat
+    tps = Stattleship::TotalPlayerStat.new
+    tps.extend(Stattleship::TotalPlayerStatRepresenter)
+
+    json = File.read('spec/fixtures/nfl/total_player_stat.json')
+
+    tps.from_json(json)
+    tps.data
+  end
+
+  def nhl_total_player_stat
+    tps = Stattleship::TotalPlayerStat.new
+    tps.extend(Stattleship::TotalPlayerStatRepresenter)
+
+    json = File.read('spec/fixtures/nhl/total_player_stat.json')
+
+    tps.from_json(json)
+    tps.data
+  end
 end

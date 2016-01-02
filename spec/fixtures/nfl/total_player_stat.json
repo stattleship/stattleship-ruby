@@ -1,0 +1,94 @@
+{
+  "players": [
+    {
+      "id": "cb44b3a3-0c44-41ab-bc8a-b819ce0fbf3b",
+      "created_at": "2015-12-26T01:38:29-05:00",
+      "updated_at": "2015-12-28T10:38:59-05:00",
+      "active": true,
+      "defensive": false,
+      "first_name": "Tom",
+      "handedness": "unknown",
+      "height": null,
+      "unit_of_height": "inches",
+      "last_name": "Brady",
+      "name": "Tom Brady",
+      "offensive": true,
+      "position_abbreviation": "QB",
+      "position_name": "Quarterback",
+      "salary": null,
+      "humanized_salary": "",
+      "salary_currency": "USD",
+      "school": null,
+      "slug": "nfl-tom-brady",
+      "sport": "football",
+      "weight": null,
+      "unit_of_weight": "pounds",
+      "years_of_experience": null,
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c",
+      "playing_position_id": "ab89a348-3e52-4bb1-b055-4b4e639903c6",
+      "team_id": "5546974d-27c2-4d93-a63e-d8320952e871"
+    }
+  ],
+  "leagues": [
+    {
+      "id": "ebb52980-4b25-4384-bb32-26d354568f0c",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "abbreviation": "NFL",
+      "color": null,
+      "minutes_per_period": null,
+      "name": "National Football League",
+      "periods": null,
+      "slug": "nfl",
+      "sport": "football"
+    }
+  ],
+  "playing_positions": [
+    {
+      "id": "ab89a348-3e52-4bb1-b055-4b4e639903c6",
+      "created_at": "2015-11-29T22:31:29-05:00",
+      "updated_at": "2015-11-29T22:31:29-05:00",
+      "abbreviation": "QB",
+      "description": null,
+      "formation": "offensive",
+      "name": "Quarterback",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    }
+  ],
+  "teams": [
+    {
+      "id": "5546974d-27c2-4d93-a63e-d8320952e871",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T16:56:07-05:00",
+      "location": "New England",
+      "name": "New England",
+      "nickname": "Patriots",
+      "slug": "nfl-ne",
+      "division_id": "7eb2130f-0d1d-4396-9595-649708fe5a6a",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    }
+  ],
+  "divisions": [
+    {
+      "id": "7eb2130f-0d1d-4396-9595-649708fe5a6a",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "AFC East",
+      "conference_id": "44513ca2-438a-4112-83e8-caf2a4494f25"
+    }
+  ],
+  "conferences": [
+    {
+      "id": "44513ca2-438a-4112-83e8-caf2a4494f25",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "American Football Conference",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    }
+  ],
+  "total_player_stat": {
+    "stat": "passes_touchdowns",
+    "total": 36,
+    "player_id": "cb44b3a3-0c44-41ab-bc8a-b819ce0fbf3b"
+  }
+}
