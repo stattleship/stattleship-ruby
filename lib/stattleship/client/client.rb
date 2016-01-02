@@ -23,6 +23,7 @@ module Stattleship
       Stattleship.configuration.http.request(endpoint)
     rescue StandardError => e
       puts "HTTP Request failed (#{e.message})"
+      raise e
     end
 
     def paginate(model:)
