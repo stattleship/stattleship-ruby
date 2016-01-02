@@ -11,6 +11,14 @@ module Stattleship
         raise 'Validator subclass must implement validate method'
       end
 
+      def validates_positive_integer
+        if value.is_a?(Integer) && value > 0
+          return
+        else
+          raise ArgumentError.new("expected #{key} to be an integer > 0")
+        end
+      end
+
       def validates_sports_prefix
         if blank?(value)
           return
@@ -21,7 +29,7 @@ module Stattleship
         end
 
         raise ArgumentError.
-          new("Invalid #{key} '#{value}'. Must start with '#{sport_prefix}'.")
+          new("expected #{key} to start with '#{sport_prefix}'")
       end
 
       private
@@ -52,7 +60,7 @@ module Stattleship
         elsif query_parameter_class.start_with?('Hockey')
           'nhl'
         else
-          raise "Invalid sport_prefix for '#{class_name}'"
+          raise "expected to find a sport prefix for #{class_name}"
         end
       end
     end

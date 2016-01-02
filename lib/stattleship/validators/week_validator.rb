@@ -2,7 +2,7 @@ module Stattleship
   module Validators
     class WeekValidator < Stattleship::Validators::BaseValidator
       def validate
-        true
+        validates_positive_integer
       end
     end
   end
