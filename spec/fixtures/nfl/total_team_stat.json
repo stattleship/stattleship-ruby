@@ -1,0 +1,52 @@
+{
+  "teams": [
+    {
+      "id": "47b8904b-4d56-481a-ab06-6e56dfe59f78",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-31T18:29:53-05:00",
+      "location": "New York",
+      "name": "N.Y. Giants",
+      "nickname": "Giants",
+      "slug": "nfl-nyg",
+      "division_id": "804da3bf-894a-4066-8f43-61617e7bfcb5",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    }
+  ],
+  "divisions": [
+    {
+      "id": "804da3bf-894a-4066-8f43-61617e7bfcb5",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "NFC East",
+      "conference_id": "ac05cc63-30f7-4dc8-b202-91ccfd57d896"
+    }
+  ],
+  "conferences": [
+    {
+      "id": "ac05cc63-30f7-4dc8-b202-91ccfd57d896",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "National Football Conference",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    }
+  ],
+  "leagues": [
+    {
+      "id": "ebb52980-4b25-4384-bb32-26d354568f0c",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "abbreviation": "NFL",
+      "color": null,
+      "minutes_per_period": null,
+      "name": "National Football League",
+      "periods": null,
+      "slug": "nfl",
+      "sport": "football"
+    }
+  ],
+  "total_team_stat": {
+    "stat": "passing_gross_yards",
+    "total": 4202,
+    "team_id": "47b8904b-4d56-481a-ab06-6e56dfe59f78"
+  }
+}

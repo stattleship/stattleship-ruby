@@ -1,37 +1,17 @@
 module Stattleship
-  class TotalPlayerStat < OpenStruct
+  class TotalPlayerStat < Stattleship::Endpoint
     def to_sentence
       "#{player.name} has #{total} #{stat}"
     end
 
     def self.fetch(path:, params:)
-      Stattleship::Client.new(path: path,
-                              query: params.query).
-        paginate(model: self)
+      super.first
     end
-
-    def data
-      @data ||= populate
-    end
-
-    private
 
     def populate
       populate_players(total_player_stat)
-      populate_teams(total_player_stat)
+      populate_player_teams(total_player_stat)
       total_player_stat
-    end
-
-    def populate_players(model)
-      model.player = players.detect do |player|
-        player.id == model.player_id
-      end
-    end
-
-    def populate_teams(model)
-      model.team = teams.detect do |team|
-        team.id == model.player.team_id
-      end
     end
   end
 

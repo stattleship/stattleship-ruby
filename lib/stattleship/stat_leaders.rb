@@ -5,35 +5,11 @@ module Stattleship
     end
   end
 
-  class StatLeaders < OpenStruct
-    def self.fetch(path:, params:)
-      Stattleship::Client.new(path: path,
-                              query: params.query).
-        paginate(model: self)
-    end
-
-    def data
-      @data ||= populate
-    end
-
-    private
-
+  class StatLeaders < Stattleship::Endpoint
     def populate
       stat_leaders.each do |leader|
         populate_players(leader)
-        populate_teams(leader)
-      end
-    end
-
-    def populate_players(model)
-      model.player = players.detect do |player|
-        player.id == model.player_id
-      end
-    end
-
-    def populate_teams(model)
-      model.team = teams.detect do |team|
-        team.id == model.player.team_id
+        populate_player_teams(leader)
       end
     end
   end

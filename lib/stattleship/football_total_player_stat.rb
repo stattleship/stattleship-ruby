@@ -4,7 +4,7 @@ module Stattleship
 
     def self.fetch(params:)
       super(path: FOOTBALL_TOTAL_PLAYER_STAT,
-            params: params).first
+            params: params)
     end
   end
 

@@ -79,10 +79,9 @@ module Endpoints
     tps.data
   end
 
-
   def nba_total_player_stat
-    tps = Stattleship::TotalPlayerStat.new
-    tps.extend(Stattleship::TotalPlayerStatRepresenter)
+    tps = Stattleship::BasketballTotalPlayerStat.new
+    tps.extend(Stattleship::BasketballTotalPlayerStatRepresenter)
 
     json = File.read('spec/fixtures/nba/total_player_stat.json')
 
@@ -91,8 +90,8 @@ module Endpoints
   end
 
   def nfl_total_player_stat
-    tps = Stattleship::TotalPlayerStat.new
-    tps.extend(Stattleship::TotalPlayerStatRepresenter)
+    tps = Stattleship::FootballTotalPlayerStat.new
+    tps.extend(Stattleship::FootballTotalPlayerStatRepresenter)
 
     json = File.read('spec/fixtures/nfl/total_player_stat.json')
 
@@ -101,12 +100,92 @@ module Endpoints
   end
 
   def nhl_total_player_stat
-    tps = Stattleship::TotalPlayerStat.new
-    tps.extend(Stattleship::TotalPlayerStatRepresenter)
+    tps = Stattleship::HockeyTotalPlayerStat.new
+    tps.extend(Stattleship::HockeyTotalPlayerStatRepresenter)
 
     json = File.read('spec/fixtures/nhl/total_player_stat.json')
 
     tps.from_json(json)
     tps.data
+  end
+
+  def total_team_stat
+    tps = Stattleship::TotalTeamStat.new
+    tps.extend(Stattleship::TotalTeamStatRepresenter)
+
+    json = File.read('spec/fixtures/nfl/total_team_stat.json')
+
+    tps.from_json(json)
+    tps.data
+  end
+
+  def nba_total_team_stat
+    tps = Stattleship::BasketballTotalTeamStat.new
+    tps.extend(Stattleship::BasketballTotalTeamStatRepresenter)
+
+    json = File.read('spec/fixtures/nba/total_team_stat.json')
+
+    tps.from_json(json)
+    tps.data
+  end
+
+  def nfl_total_team_stat
+    tps = Stattleship::FootballTotalTeamStat.new
+    tps.extend(Stattleship::FootballTotalTeamStatRepresenter)
+
+    json = File.read('spec/fixtures/nfl/total_team_stat.json')
+
+    tps.from_json(json)
+    tps.data
+  end
+
+  def nhl_total_team_stat
+    tps = Stattleship::HockeyTotalTeamStat.new
+    tps.extend(Stattleship::HockeyTotalTeamStatRepresenter)
+
+    json = File.read('spec/fixtures/nhl/total_team_stat.json')
+
+    tps.from_json(json)
+    tps.data
+  end
+
+  def top_stats
+    top_stats = Stattleship::TopStats.new
+    top_stats.extend(Stattleship::TopStatsRepresenter)
+
+    json = File.read('spec/fixtures/nba/top_stats.json')
+
+    top_stats.from_json(json)
+    top_stats.data
+  end
+
+  def nba_top_stats
+    top_stats = Stattleship::BasketballTopStats.new
+    top_stats.extend(Stattleship::BasketballTopStatsRepresenter)
+
+    json = File.read('spec/fixtures/nba/top_stats.json')
+
+    top_stats.from_json(json)
+    top_stats.data
+  end
+
+  def nfl_top_stats
+    top_stats = Stattleship::FootballTopStats.new
+    top_stats.extend(Stattleship::FootballTopStatsRepresenter)
+
+    json = File.read('spec/fixtures/nfl/top_stats.json')
+
+    top_stats.from_json(json)
+    top_stats.data
+  end
+
+  def nhl_top_stats
+    top_stats = Stattleship::HockeyTopStats.new
+    top_stats.extend(Stattleship::HockeyTopStatsRepresenter)
+
+    json = File.read('spec/fixtures/nhl/top_stats.json')
+
+    top_stats.from_json(json)
+    top_stats.data
   end
 end

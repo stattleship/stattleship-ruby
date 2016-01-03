@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'stattleship'
+
+params = Stattleship::Params::BasketballTotalTeamStatParams.new
+params.stat = 'free_throws_attempted'
+params.team_id = 'nba-gs'
+
+puts Stattleship::BasketballTotalTeamStat.fetch(params: params).to_sentence
+
+params = Stattleship::Params::FootballTotalTeamStatParams.new
+params.stat = 'passing_touchdowns'
+params.team_id = 'nfl-ne'
+
+puts Stattleship::FootballTotalTeamStat.fetch(params: params).to_sentence
+
+params = Stattleship::Params::HockeyTotalTeamStatParams.new
+params.stat = 'shots'
+params.team_id = 'nhl-bos'
+
+puts Stattleship::HockeyTotalTeamStat.fetch(params: params).to_sentence

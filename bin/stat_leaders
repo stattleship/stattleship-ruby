@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'stattleship'
+
+params = Stattleship::Params::BasketballStatLeadersParams.new
+params.stat = 'free_throws_attempted'
+params.type = 'basketball_offensive_stat'
+params.place = 4
+
+puts Stattleship::BasketballStatLeaders.fetch(params: params).map(&:to_sentence)
+
+params = Stattleship::Params::FootballStatLeadersParams.new
+params.stat = 'passes_touchdowns'
+params.type = 'football_passing_stat'
+params.place = 5
+
+puts Stattleship::FootballStatLeaders.fetch(params: params).map(&:to_sentence)
+
+params = Stattleship::Params::HockeyStatLeadersParams.new
+params.stat = 'shots'
+params.type = 'hockey_offensive_stat'
+params.place = 5
+
+puts Stattleship::HockeyStatLeaders.fetch(params: params).map(&:to_sentence)

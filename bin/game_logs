@@ -1,0 +1,60 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'stattleship'
+
+params = Stattleship::Params::BasketballGameLogsParams.new
+params.player_id = 'nba-lebron-james'
+params.since = '2 weeks ago'
+
+game_logs = Stattleship::BasketballGameLogs.fetch(params: params).
+              map(&:to_sentence)
+
+puts game_logs
+
+params.player_id = nil
+params.team_id = 'nba-gs'
+
+game_logs = Stattleship::BasketballGameLogs.fetch(params: params).
+              map(&:to_sentence)
+
+puts game_logs
+
+#
+
+params = Stattleship::Params::FootballGameLogsParams.new
+params.player_id = 'nfl-rob-gronkowski'
+params.since = '2 months ago'
+
+game_logs = Stattleship::FootballGameLogs.fetch(params: params).
+              map(&:to_sentence)
+
+puts game_logs
+
+params.player_id = nil
+params.team_id = 'nfl-gb'
+params.since = '2 weeks ago'
+
+game_logs = Stattleship::FootballGameLogs.fetch(params: params).
+              map(&:to_sentence)
+
+puts game_logs
+
+#
+
+params = Stattleship::Params::HockeyGameLogsParams.new
+params.player_id = 'nhl-patrick-kane'
+params.since = '1 month ago'
+
+game_logs = Stattleship::HockeyGameLogs.fetch(params: params).
+              map(&:to_sentence)
+
+puts game_logs
+
+params.player_id = nil
+params.team_id = 'nhl-chi'
+
+game_logs = Stattleship::HockeyGameLogs.fetch(params: params).
+              map(&:to_sentence)
+
+puts game_logs

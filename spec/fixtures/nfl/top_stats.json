@@ -1,0 +1,238 @@
+{
+  "games": [
+    {
+      "id": "0cf8c697-0f10-40f3-ae12-280f20bcfc75",
+      "created_at": "2015-12-26T01:55:25-05:00",
+      "updated_at": "2015-12-26T03:48:16-05:00",
+      "at_neutral_site": false,
+      "attendance": 73019,
+      "away_team_outcome": "loss",
+      "away_team_score": 49,
+      "daytime": false,
+      "duration": 12780,
+      "ended_at": "2015-11-01T16:36:59-05:00",
+      "home_team_outcome": "win",
+      "home_team_score": 52,
+      "interval": "Week 8",
+      "interval_number": "8",
+      "interval_type": "week",
+      "label": "Giants vs Saints",
+      "name": "Giants vs Saints November  1, 2015 at  1:00pm",
+      "on": "on November  1, 2015",
+      "score": "49-52",
+      "score_differential": 3,
+      "scoreline": "Giants 49 - Saints 52",
+      "slug": "nfl-2015-2016-nyg-no-2015-11-1-1200",
+      "started_at": "2015-11-01T13:00:00-05:00",
+      "temperature": null,
+      "temperature_unit": null,
+      "timestamp": 1446400800,
+      "title": "Giants vs Saints",
+      "weather_conditions": "dome",
+      "wind_direction": null,
+      "wind_speed": null,
+      "wind_speed_unit": null,
+      "home_team_id": "a192531d-e60c-4256-8220-f3538dd8b020",
+      "away_team_id": "47b8904b-4d56-481a-ab06-6e56dfe59f78",
+      "winning_team_id": "a192531d-e60c-4256-8220-f3538dd8b020",
+      "season_id": "07f6794a-5312-4ce9-b5b0-2010c5975ff2",
+      "venue_id": "ed17274e-8c04-4508-8d6f-6f30f2a3687d"
+    }
+  ],
+  "home_teams": [
+    {
+      "id": "a192531d-e60c-4256-8220-f3538dd8b020",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T19:29:39-05:00",
+      "location": "New Orleans",
+      "name": "New Orleans",
+      "nickname": "Saints",
+      "slug": "nfl-no",
+      "division_id": "b8563ecf-1402-415e-8576-e4dfbda8ae70",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    }
+  ],
+  "leagues": [
+    {
+      "id": "ebb52980-4b25-4384-bb32-26d354568f0c",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "abbreviation": "NFL",
+      "color": null,
+      "minutes_per_period": null,
+      "name": "National Football League",
+      "periods": null,
+      "slug": "nfl",
+      "sport": "football"
+    }
+  ],
+  "away_teams": [
+    {
+      "id": "47b8904b-4d56-481a-ab06-6e56dfe59f78",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-31T18:29:53-05:00",
+      "location": "New York",
+      "name": "N.Y. Giants",
+      "nickname": "Giants",
+      "slug": "nfl-nyg",
+      "division_id": "804da3bf-894a-4066-8f43-61617e7bfcb5",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    }
+  ],
+  "winning_teams": [
+    {
+      "id": "a192531d-e60c-4256-8220-f3538dd8b020",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T19:29:39-05:00",
+      "location": "New Orleans",
+      "name": "New Orleans",
+      "nickname": "Saints",
+      "slug": "nfl-no",
+      "division_id": "b8563ecf-1402-415e-8576-e4dfbda8ae70",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    }
+  ],
+  "seasons": [
+    {
+      "id": "07f6794a-5312-4ce9-b5b0-2010c5975ff2",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "2015-2016",
+      "starts_on": "2015-08-01",
+      "ends_on": "2016-02-14",
+      "slug": "nfl-2015-2016",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    }
+  ],
+  "venues": [
+    {
+      "id": "ed17274e-8c04-4508-8d6f-6f30f2a3687d",
+      "created_at": "2015-12-26T03:48:13-05:00",
+      "updated_at": "2015-12-26T03:48:13-05:00",
+      "abbreviation": "FS",
+      "city": "Canton",
+      "country": "USA",
+      "field_type": "FieldTurf",
+      "name": "Fawcett Stadium",
+      "slug": "fs",
+      "state": "Ohio",
+      "time_zone": "US/Eastern"
+    }
+  ],
+  "players": [
+    {
+      "id": "8a343383-9e21-4a52-b2d9-10ec515d6edb",
+      "created_at": "2015-12-26T01:34:51-05:00",
+      "updated_at": "2015-12-31T20:53:23-05:00",
+      "active": false,
+      "defensive": false,
+      "first_name": "Drew",
+      "handedness": "unknown",
+      "height": null,
+      "unit_of_height": "inches",
+      "last_name": "Brees",
+      "name": "Drew Brees",
+      "offensive": true,
+      "position_abbreviation": "QB",
+      "position_name": "Quarterback",
+      "salary": null,
+      "humanized_salary": "",
+      "salary_currency": "USD",
+      "school": null,
+      "slug": "nfl-drew-brees",
+      "sport": "football",
+      "weight": null,
+      "unit_of_weight": "pounds",
+      "years_of_experience": null,
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c",
+      "playing_position_id": "ab89a348-3e52-4bb1-b055-4b4e639903c6",
+      "team_id": "a192531d-e60c-4256-8220-f3538dd8b020"
+    },
+    {
+      "id": "120fb626-137e-483d-92b4-4ab18b448762",
+      "created_at": "2015-12-26T01:37:09-05:00",
+      "updated_at": "2015-12-31T18:29:24-05:00",
+      "active": true,
+      "defensive": false,
+      "first_name": "Eli",
+      "handedness": "unknown",
+      "height": null,
+      "unit_of_height": "inches",
+      "last_name": "Manning",
+      "name": "Eli Manning",
+      "offensive": true,
+      "position_abbreviation": "QB",
+      "position_name": "Quarterback",
+      "salary": null,
+      "humanized_salary": "",
+      "salary_currency": "USD",
+      "school": null,
+      "slug": "nfl-eli-manning",
+      "sport": "football",
+      "weight": null,
+      "unit_of_weight": "pounds",
+      "years_of_experience": null,
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c",
+      "playing_position_id": "ab89a348-3e52-4bb1-b055-4b4e639903c6",
+      "team_id": "47b8904b-4d56-481a-ab06-6e56dfe59f78"
+    }
+  ],
+  "playing_positions": [
+    {
+      "id": "ab89a348-3e52-4bb1-b055-4b4e639903c6",
+      "created_at": "2015-11-29T22:31:29-05:00",
+      "updated_at": "2015-11-29T22:31:29-05:00",
+      "abbreviation": "QB",
+      "description": null,
+      "formation": "offensive",
+      "name": "Quarterback",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    }
+  ],
+  "teams": [
+    {
+      "id": "a192531d-e60c-4256-8220-f3538dd8b020",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T19:29:39-05:00",
+      "location": "New Orleans",
+      "name": "New Orleans",
+      "nickname": "Saints",
+      "slug": "nfl-no",
+      "division_id": "b8563ecf-1402-415e-8576-e4dfbda8ae70",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "47b8904b-4d56-481a-ab06-6e56dfe59f78",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-31T18:29:53-05:00",
+      "location": "New York",
+      "name": "N.Y. Giants",
+      "nickname": "Giants",
+      "slug": "nfl-nyg",
+      "division_id": "804da3bf-894a-4066-8f43-61617e7bfcb5",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    }
+  ],
+  "top_stats": [
+    {
+      "id": "a21b5b03-d0d8-4809-9c9f-6a55388afc1b",
+      "created_at": "2015-12-26T01:55:26-05:00",
+      "updated_at": "2015-12-26T01:55:26-05:00",
+      "stat_name": "passes_touchdowns",
+      "stat": 7,
+      "place": 1,
+      "game_id": "0cf8c697-0f10-40f3-ae12-280f20bcfc75",
+      "player_id": "8a343383-9e21-4a52-b2d9-10ec515d6edb"
+    },
+    {
+      "id": "df64cf8b-b089-45b0-9980-e87541a79413",
+      "created_at": "2015-12-26T01:55:38-05:00",
+      "updated_at": "2015-12-26T01:55:38-05:00",
+      "stat_name": "passes_touchdowns",
+      "stat": 6,
+      "place": 2,
+      "game_id": "0cf8c697-0f10-40f3-ae12-280f20bcfc75",
+      "player_id": "120fb626-137e-483d-92b4-4ab18b448762"
+    }
+  ]
+}

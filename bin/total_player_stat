@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'stattleship'
+
+params = Stattleship::Params::BasketballTotalPlayerStatParams.new
+params.stat = 'free_throws_attempted'
+params.type = 'basketball_offensive_stat'
+params.player_id = 'nba-stephen-curry'
+
+puts Stattleship::BasketballTotalPlayerStat.fetch(params: params).to_sentence
+
+params = Stattleship::Params::FootballTotalPlayerStatParams.new
+params.stat = 'passes_touchdowns'
+params.type = 'football_passing_stat'
+params.player_id = 'nfl-tom-brady'
+
+puts Stattleship::FootballTotalPlayerStat.fetch(params: params).to_sentence
+
+params = Stattleship::Params::HockeyTotalPlayerStatParams.new
+params.stat = 'shots'
+params.type = 'hockey_offensive_stat'
+params.player_id = 'nhl-tyler-seguin'
+
+puts Stattleship::HockeyTotalPlayerStat.fetch(params: params).to_sentence
