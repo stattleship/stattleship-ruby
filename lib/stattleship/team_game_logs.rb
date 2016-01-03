@@ -20,6 +20,10 @@ module Stattleship
       opponent.full_name
     end
 
+    def scoreline
+      game.scoreline
+    end
+
     def team_name
       team.name
     end

@@ -17,6 +17,11 @@ require 'stattleship/models'
 require 'stattleship/params'
 require 'stattleship/validators'
 
+require 'stattleship/games'
+require 'stattleship/basketball_games'
+require 'stattleship/football_games'
+require 'stattleship/hockey_games'
+
 require 'stattleship/game_logs'
 require 'stattleship/basketball_game_logs'
 require 'stattleship/football_game_logs'

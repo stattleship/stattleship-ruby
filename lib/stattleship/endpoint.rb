@@ -51,15 +51,26 @@ module Stattleship
         game.id == model.game_id
       end
 
-      populate_game(model)
+      populate_model_game(model)
+      populate_game(model.game)
     end
 
-    def populate_game(model)
+    def populate_game(game)
+      populate_season(game)
+      populate_venue(game)
+
+      if game && game.season
+        populate_league(game.season)
+        game.league = game.season.league
+      end
+    end
+
+    def populate_model_game(model)
       populate_season(model.game)
-      populate_league(model.game.season)
       populate_venue(model.game)
 
       if model.game && model.game.season
+        populate_league(model.game.season)
         model.game.league = model.game.season.league
       end
 

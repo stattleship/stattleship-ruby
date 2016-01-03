@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'stattleship'
+
+params = Stattleship::Params::BasketballGamesParams.new
+params.team_id = 'nba-gs'
+params.since = '2 weeks ago'
+
+game_names = Stattleship::BasketballGames.fetch(params: params).
+              map(&:name)
+
+puts game_names
+
+#
+
+params = Stattleship::Params::FootballGamesParams.new
+params.status = 'in_progress'
+
+game_names = Stattleship::FootballGames.fetch(params: params).
+              map(&:name)
+
+puts game_names
+
+#
+
+params = Stattleship::Params::HockeyGamesParams.new
+params.team_id = 'nhl-chi'
+params.since = '1 month ago'
+
+game_names = Stattleship::HockeyGames.fetch(params: params).
+              map(&:name)
+
+puts game_names

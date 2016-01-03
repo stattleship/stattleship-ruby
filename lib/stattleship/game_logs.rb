@@ -16,6 +16,26 @@ module Stattleship
       player.name
     end
 
+    def opponent_name
+      opponent.name
+    end
+
+    def opponent_full_name
+      opponent.full_name
+    end
+
+    def scoreline
+      game.scoreline
+    end
+
+    def team_name
+      team.name
+    end
+
+    def team_full_name
+      team.full_name
+    end
+
     def venue
       game.venue
     end
