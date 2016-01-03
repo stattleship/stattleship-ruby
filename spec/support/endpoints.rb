@@ -188,4 +188,34 @@ module Endpoints
     top_stats.from_json(json)
     top_stats.data
   end
+
+  def nba_team_game_logs
+    nba_team_game_logs = Stattleship::BasketballTeamGameLogs.new
+    nba_team_game_logs.extend(Stattleship::BasketballTeamGameLogsRepresenter)
+
+    json = File.read('spec/fixtures/nba/team_game_logs.json')
+
+    nba_team_game_logs.from_json(json)
+    nba_team_game_logs.data
+  end
+
+  def nfl_team_game_logs
+    nfl_team_game_logs = Stattleship::FootballTeamGameLogs.new
+    nfl_team_game_logs.extend(Stattleship::FootballTeamGameLogsRepresenter)
+
+    json = File.read('spec/fixtures/nfl/team_game_logs.json')
+
+    nfl_team_game_logs.from_json(json)
+    nfl_team_game_logs.data
+  end
+
+  def nhl_team_game_logs
+    nhl_team_game_logs = Stattleship::HockeyTeamGameLogs.new
+    nhl_team_game_logs.extend(Stattleship::HockeyTeamGameLogsRepresenter)
+
+    json = File.read('spec/fixtures/nhl/team_game_logs.json')
+
+    nhl_team_game_logs.from_json(json)
+    nhl_team_game_logs.data
+  end
 end

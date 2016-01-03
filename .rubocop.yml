@@ -1,6 +1,7 @@
 AllCops:
   Exclude:
     - bin/**/*
+    - spec/**/*
     - stattleship-ruby.gemspec
     - Gemfile.lock
 

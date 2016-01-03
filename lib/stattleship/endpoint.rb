@@ -16,6 +16,14 @@ module Stattleship
 
     private
 
+    def populate_opponents(model)
+      return if opponents.nil?
+
+      model.opponent = opponents.detect do |opponent|
+        opponent.id == model.opponent_id
+      end
+    end
+
     def populate_players(model)
       return if players.nil?
 

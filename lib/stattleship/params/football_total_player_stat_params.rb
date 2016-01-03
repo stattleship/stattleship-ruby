@@ -1,6 +1,6 @@
 module Stattleship
   module Params
-    class FootballTotalPlayerStatParams < Stattleship::Params::TotalPlayerStatParams
+    class FootballTotalPlayerStatParams < TotalPlayerStatParams
     end
   end
 end

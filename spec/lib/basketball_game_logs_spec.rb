@@ -44,6 +44,10 @@ module Stattleship
 
   module Models
     RSpec.describe BasketballGameLog do
+      it 'returns assists' do
+        expect(nba_game_logs.first.assists).to eq 5
+      end
+
       describe Game do
         it 'returns a Game' do
           expect(game).to be_a Game
