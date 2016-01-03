@@ -1,6 +1,17 @@
 module Stattleship
   module Models
     class Player < OpenStruct
+      def label
+        "#{name} (#{position_abbreviation}) - #{team_nickname}"
+      end
+
+      def team_name
+        team.name
+      end
+
+      def team_nickname
+        team.nickname
+      end
     end
 
     module PlayerRepresenter

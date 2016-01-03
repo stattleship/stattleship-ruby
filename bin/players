@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'stattleship'
+
+params = Stattleship::Params::BasketballPlayersParams.new
+params.team_id = 'nba-gs'
+
+player_names = Stattleship::BasketballPlayers.fetch(params: params).
+                 map(&:label)
+
+puts player_names
+
+#
+
+params = Stattleship::Params::FootballPlayersParams.new
+params.team_id = 'nfl-ne'
+
+player_names = Stattleship::FootballPlayers.fetch(params: params).
+                 map(&:label)
+
+puts player_names
+
+#
+
+params = Stattleship::Params::HockeyPlayersParams.new
+params.team_id = 'nhl-chi'
+
+player_names = Stattleship::HockeyPlayers.fetch(params: params).
+                 map(&:label)
+
+puts player_names

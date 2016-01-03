@@ -27,6 +27,11 @@ require 'stattleship/basketball_game_logs'
 require 'stattleship/football_game_logs'
 require 'stattleship/hockey_game_logs'
 
+require 'stattleship/players'
+require 'stattleship/basketball_players'
+require 'stattleship/football_players'
+require 'stattleship/hockey_players'
+
 require 'stattleship/stat_leaders'
 require 'stattleship/basketball_stat_leaders'
 require 'stattleship/football_stat_leaders'

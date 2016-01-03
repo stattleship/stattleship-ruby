@@ -41,6 +41,27 @@ module Stattleship
 
       if model.player
         model.player.team = model.team
+        populate_player_playing_position(model.player)
+      end
+    end
+
+    def populate_player(player)
+      populate_player_team(player)
+    end
+
+    def populate_player_team(player)
+      return if teams.nil?
+
+      player.team = teams.detect do |team|
+        team.id == player.team_id
+      end
+    end
+
+    def populate_player_playing_position(model)
+      return if playing_positions.nil?
+
+      model.playing_position = playing_positions.detect do |playing_position|
+        playing_position.id == model.player.playing_position_id
       end
     end
 
