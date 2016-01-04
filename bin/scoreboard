@@ -10,12 +10,34 @@ Stattleship::FootballGames.fetch(params: params).each do |game|
   puts "#{game.scoreline} in #{game.city}"
 end
 
-
 params = Stattleship::Params::BasketballGamesParams.new
 params.status = 'in_progress'
 puts  Stattleship::BasketballGames.fetch(params: params).map(&:scoreline)
 
 params = Stattleship::Params::HockeyGamesParams.new
 params.status = 'in_progress'
-puts  Stattleship::HockeyGames.fetch(params: params).map(&:scoreline)
 
+Stattleship::HockeyGames.fetch(params: params).each do |game|
+  puts "#{game.scoreline} in #{game.city}"
+end
+
+# params = Stattleship::Params::HockeyGamesParams.new
+# params.status = 'ended'
+# params.on = 'today'
+
+# Stattleship::HockeyGames.fetch(params: params).each do |game|
+#   puts "#{game.scoreline} in #{game.city}"
+# end
+
+# params.on = '15 days ago'
+
+# Stattleship::HockeyGames.fetch(params: params).each do |game|
+#   puts "#{game.scoreline} in #{game.city} on #{game.started_at}"
+# end
+
+# params.on = nil
+# params.since = '5 days ago'
+
+# Stattleship::HockeyGames.fetch(params: params).each do |game|
+#   puts "#{game.scoreline} in #{game.city} on #{game.started_at}"
+# end

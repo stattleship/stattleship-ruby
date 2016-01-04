@@ -1,0 +1,408 @@
+{
+  "divisions": [
+    {
+      "id": "2fe91f9b-20b4-4bd0-a17a-fcf7f481aec9",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "NBA Southeast",
+      "conference_id": "a8044871-3668-4130-ba8e-93d6ba38febb"
+    },
+    {
+      "id": "8256a4da-413c-4f03-8438-56963be591c4",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "NBA Atlantic",
+      "conference_id": "a8044871-3668-4130-ba8e-93d6ba38febb"
+    },
+    {
+      "id": "a0694588-40a0-47e8-9a72-68d118eb68a8",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "NBA Central",
+      "conference_id": "a8044871-3668-4130-ba8e-93d6ba38febb"
+    },
+    {
+      "id": "855ee1c8-446b-4120-96f9-af6b041e9c26",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "NBA Southwest",
+      "conference_id": "dc6e9ed8-63b6-49bc-87af-9d0a8779792e"
+    },
+    {
+      "id": "99f54b82-4f3e-44f1-b311-f7806d4ba9a9",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "NBA Northwest",
+      "conference_id": "dc6e9ed8-63b6-49bc-87af-9d0a8779792e"
+    },
+    {
+      "id": "0df84c15-1dbc-471e-b9d9-d277eeba9eba",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "NBA Pacific",
+      "conference_id": "dc6e9ed8-63b6-49bc-87af-9d0a8779792e"
+    }
+  ],
+  "conferences": [
+    {
+      "id": "a8044871-3668-4130-ba8e-93d6ba38febb",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "Eastern Conference",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "dc6e9ed8-63b6-49bc-87af-9d0a8779792e",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "Western Conference",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    }
+  ],
+  "leagues": [
+    {
+      "id": "3c805f57-ef31-407d-b633-54bac8745b9e",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "abbreviation": "NBA",
+      "color": null,
+      "minutes_per_period": null,
+      "name": "National Basketball Association",
+      "periods": null,
+      "slug": "nba",
+      "sport": "basketball"
+    }
+  ],
+  "teams": [
+    {
+      "id": "20901970-53a0-417c-b5b4-832a74148af6",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Atlanta",
+      "name": "Atlanta",
+      "nickname": "Hawks",
+      "slug": "nba-atl",
+      "division_id": "2fe91f9b-20b4-4bd0-a17a-fcf7f481aec9",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "1c65bbb6-bd10-4ef6-831a-89050d57fe16",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Boston",
+      "name": "Boston",
+      "nickname": "Celtics",
+      "slug": "nba-bos",
+      "division_id": "8256a4da-413c-4f03-8438-56963be591c4",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "84eb19ca-1e66-416f-9e00-90b20fe4bb5e",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Brooklyn",
+      "name": "Brooklyn",
+      "nickname": "Nets",
+      "slug": "nba-bk",
+      "division_id": "8256a4da-413c-4f03-8438-56963be591c4",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "68b04d26-12c3-4e06-8ae0-5bab39686213",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Charlotte",
+      "name": "Charlotte",
+      "nickname": "Hornets",
+      "slug": "nba-cha",
+      "division_id": "2fe91f9b-20b4-4bd0-a17a-fcf7f481aec9",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "7e670063-ef8d-4356-947b-786a802205bd",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Chicago",
+      "name": "Chicago",
+      "nickname": "Bulls",
+      "slug": "nba-chi",
+      "division_id": "a0694588-40a0-47e8-9a72-68d118eb68a8",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "a9abb922-3a47-4d37-9250-2e5224a2b58a",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Cleveland",
+      "name": "Cleveland",
+      "nickname": "Cavaliers",
+      "slug": "nba-cle",
+      "division_id": "a0694588-40a0-47e8-9a72-68d118eb68a8",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "35ded680-b7b1-4cd9-a223-7bc4ab0b77ed",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Dallas",
+      "name": "Dallas",
+      "nickname": "Mavericks",
+      "slug": "nba-dal",
+      "division_id": "855ee1c8-446b-4120-96f9-af6b041e9c26",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "cb0629eb-a7ed-4775-8d2f-3f1929e82311",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Denver",
+      "name": "Denver",
+      "nickname": "Nuggets",
+      "slug": "nba-den",
+      "division_id": "99f54b82-4f3e-44f1-b311-f7806d4ba9a9",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "a93b4a16-d3ac-4dd0-9f3f-e556626eb498",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Detroit",
+      "name": "Detroit",
+      "nickname": "Pistons",
+      "slug": "nba-det",
+      "division_id": "a0694588-40a0-47e8-9a72-68d118eb68a8",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "2a173568-fca6-4891-8c3b-3573547b0b6b",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Golden State",
+      "name": "Golden State",
+      "nickname": "Warriors",
+      "slug": "nba-gs",
+      "division_id": "0df84c15-1dbc-471e-b9d9-d277eeba9eba",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "52084e2c-8311-47d7-9157-12dadbfb0f41",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Houston",
+      "name": "Houston",
+      "nickname": "Rockets",
+      "slug": "nba-hou",
+      "division_id": "855ee1c8-446b-4120-96f9-af6b041e9c26",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "88710a85-be5d-429f-b0ba-10a27f1c1d79",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Indiana",
+      "name": "Indiana",
+      "nickname": "Pacers",
+      "slug": "nba-ind",
+      "division_id": "a0694588-40a0-47e8-9a72-68d118eb68a8",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "5bf2300f-777b-4caa-9ef3-3fda11f17ad1",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Los Angeles",
+      "name": "L.A. Clippers",
+      "nickname": "Clippers",
+      "slug": "nba-lac",
+      "division_id": "0df84c15-1dbc-471e-b9d9-d277eeba9eba",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "ed6fc9b7-bfa2-4f04-a78d-f1876b6b4823",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Los Angeles",
+      "name": "L.A. Lakers",
+      "nickname": "Lakers",
+      "slug": "nba-lal",
+      "division_id": "0df84c15-1dbc-471e-b9d9-d277eeba9eba",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "52b6ddeb-ef1e-4146-9170-595c083c35b0",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Memphis",
+      "name": "Memphis",
+      "nickname": "Grizzlies",
+      "slug": "nba-mem",
+      "division_id": "855ee1c8-446b-4120-96f9-af6b041e9c26",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "437c3537-8171-40c6-91ce-f690faf149f9",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Miami",
+      "name": "Miami",
+      "nickname": "Heat",
+      "slug": "nba-mia",
+      "division_id": "2fe91f9b-20b4-4bd0-a17a-fcf7f481aec9",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "1bc89428-fb96-49cb-aae0-f6bf07a482a1",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Milwaukee",
+      "name": "Milwaukee",
+      "nickname": "Bucks",
+      "slug": "nba-mil",
+      "division_id": "a0694588-40a0-47e8-9a72-68d118eb68a8",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "2a8639cf-f27b-49c9-ae4c-16f77c1a2567",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Minnesota",
+      "name": "Minnesota",
+      "nickname": "Timberwolves",
+      "slug": "nba-min",
+      "division_id": "99f54b82-4f3e-44f1-b311-f7806d4ba9a9",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "c29ace8e-5203-4891-b4e1-92f0a62bbced",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "New Orleans",
+      "name": "New Orleans",
+      "nickname": "Pelicans",
+      "slug": "nba-no",
+      "division_id": "855ee1c8-446b-4120-96f9-af6b041e9c26",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "d0e50d36-35cc-454b-a2b3-d56b2cbc029d",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "New York",
+      "name": "New York",
+      "nickname": "Knicks",
+      "slug": "nba-ny",
+      "division_id": "8256a4da-413c-4f03-8438-56963be591c4",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "18e967b2-07e1-473c-8dda-bac32defc28e",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Oklahoma City",
+      "name": "Oklahoma City",
+      "nickname": "Thunder",
+      "slug": "nba-okc",
+      "division_id": "99f54b82-4f3e-44f1-b311-f7806d4ba9a9",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "c7f2a75a-d6fc-4d6d-b75f-acbfb9a4aeed",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Orlando",
+      "name": "Orlando",
+      "nickname": "Magic",
+      "slug": "nba-orl",
+      "division_id": "2fe91f9b-20b4-4bd0-a17a-fcf7f481aec9",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "3d81c773-7502-4799-a2a4-61d0669207e4",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Philadelphia",
+      "name": "Philadelphia",
+      "nickname": "76ers",
+      "slug": "nba-phi",
+      "division_id": "8256a4da-413c-4f03-8438-56963be591c4",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "4163a809-e128-41eb-aae1-e5feb3bbd572",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Phoenix",
+      "name": "Phoenix",
+      "nickname": "Suns",
+      "slug": "nba-pho",
+      "division_id": "0df84c15-1dbc-471e-b9d9-d277eeba9eba",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "181740b1-0645-421e-aa03-7b01268bd639",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Portland",
+      "name": "Portland",
+      "nickname": "Trail Blazers",
+      "slug": "nba-por",
+      "division_id": "99f54b82-4f3e-44f1-b311-f7806d4ba9a9",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "1572a867-7efd-4338-9f64-b7b961676f37",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Sacramento",
+      "name": "Sacramento",
+      "nickname": "Kings",
+      "slug": "nba-sac",
+      "division_id": "0df84c15-1dbc-471e-b9d9-d277eeba9eba",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "ed803cc0-8e6e-4798-b5aa-9eecbc977801",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "San Antonio",
+      "name": "San Antonio",
+      "nickname": "Spurs",
+      "slug": "nba-sa",
+      "division_id": "855ee1c8-446b-4120-96f9-af6b041e9c26",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "4d457218-ccdf-45cf-8f07-2d7ee7b5032c",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Toronto",
+      "name": "Toronto",
+      "nickname": "Raptors",
+      "slug": "nba-tor",
+      "division_id": "8256a4da-413c-4f03-8438-56963be591c4",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "3d25723a-25c7-48b1-9c69-f92ff957a4c8",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Utah",
+      "name": "Utah",
+      "nickname": "Jazz",
+      "slug": "nba-uta",
+      "division_id": "99f54b82-4f3e-44f1-b311-f7806d4ba9a9",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    },
+    {
+      "id": "f42aa2e5-5f90-4325-8c35-24c780c9756e",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Washington",
+      "name": "Washington",
+      "nickname": "Wizards",
+      "slug": "nba-was",
+      "division_id": "2fe91f9b-20b4-4bd0-a17a-fcf7f481aec9",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    }
+  ]
+}

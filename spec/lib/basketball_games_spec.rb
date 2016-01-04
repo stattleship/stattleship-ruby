@@ -6,6 +6,14 @@ module Stattleship
       it 'returns all the nba_games' do
         expect(nba_games.count).to eq 6
       end
+
+      it 'populates the game' do
+        nba_games.each do |game|
+          expect(game).to be_a Models::Game
+          expect(game.league).to be_a Models::League
+          expect(game.league_abbreviation).to eq 'NBA'
+        end
+      end
     end
 
     describe '.fetch' do

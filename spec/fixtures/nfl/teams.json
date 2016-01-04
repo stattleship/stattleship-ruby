@@ -1,0 +1,444 @@
+{
+  "divisions": [
+    {
+      "id": "70c14524-5ddd-432b-8728-9c5f9af9b565",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "NFC West",
+      "conference_id": "ac05cc63-30f7-4dc8-b202-91ccfd57d896"
+    },
+    {
+      "id": "b8563ecf-1402-415e-8576-e4dfbda8ae70",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "NFC South",
+      "conference_id": "ac05cc63-30f7-4dc8-b202-91ccfd57d896"
+    },
+    {
+      "id": "9cf5e881-62fa-4401-bced-e55fd0fd8fa4",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "AFC North",
+      "conference_id": "44513ca2-438a-4112-83e8-caf2a4494f25"
+    },
+    {
+      "id": "7eb2130f-0d1d-4396-9595-649708fe5a6a",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "AFC East",
+      "conference_id": "44513ca2-438a-4112-83e8-caf2a4494f25"
+    },
+    {
+      "id": "0e65eafb-0ce0-4b26-b79a-e0ae41991878",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "NFC North",
+      "conference_id": "ac05cc63-30f7-4dc8-b202-91ccfd57d896"
+    },
+    {
+      "id": "804da3bf-894a-4066-8f43-61617e7bfcb5",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "NFC East",
+      "conference_id": "ac05cc63-30f7-4dc8-b202-91ccfd57d896"
+    },
+    {
+      "id": "f643f66d-3c3f-4665-9367-7a995a9e702e",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "AFC West",
+      "conference_id": "44513ca2-438a-4112-83e8-caf2a4494f25"
+    },
+    {
+      "id": "a83ba728-0bd9-4b46-8a19-64515e176c00",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "AFC South",
+      "conference_id": "44513ca2-438a-4112-83e8-caf2a4494f25"
+    }
+  ],
+  "conferences": [
+    {
+      "id": "ac05cc63-30f7-4dc8-b202-91ccfd57d896",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "National Football Conference",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "44513ca2-438a-4112-83e8-caf2a4494f25",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "American Football Conference",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    }
+  ],
+  "leagues": [
+    {
+      "id": "ebb52980-4b25-4384-bb32-26d354568f0c",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "abbreviation": "NFL",
+      "color": null,
+      "minutes_per_period": null,
+      "name": "National Football League",
+      "periods": null,
+      "slug": "nfl",
+      "sport": "football"
+    }
+  ],
+  "teams": [
+    {
+      "id": "77c57737-b688-4bbf-a127-7b7f0ef8bcdd",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T20:46:45-05:00",
+      "location": "Arizona",
+      "name": "Arizona",
+      "nickname": "Cardinals",
+      "slug": "nfl-ari",
+      "division_id": "70c14524-5ddd-432b-8728-9c5f9af9b565",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "c1618ca6-3dad-485d-b237-ad34f8d0bf83",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T17:19:47-05:00",
+      "location": "Atlanta",
+      "name": "Atlanta",
+      "nickname": "Falcons",
+      "slug": "nfl-atl",
+      "division_id": "b8563ecf-1402-415e-8576-e4dfbda8ae70",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "15cdbc22-7b1e-4012-a731-987ca52e3c05",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-31T18:22:56-05:00",
+      "location": "Baltimore",
+      "name": "Baltimore",
+      "nickname": "Ravens",
+      "slug": "nfl-bal",
+      "division_id": "9cf5e881-62fa-4401-bced-e55fd0fd8fa4",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "50990622-f5d7-4597-b9b3-c73c9be32af2",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T17:08:48-05:00",
+      "location": "Buffalo",
+      "name": "Buffalo",
+      "nickname": "Bills",
+      "slug": "nfl-buf",
+      "division_id": "7eb2130f-0d1d-4396-9595-649708fe5a6a",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "767f5024-184b-434b-9e52-90bb4375ca84",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T17:19:47-05:00",
+      "location": "Carolina",
+      "name": "Carolina",
+      "nickname": "Panthers",
+      "slug": "nfl-car",
+      "division_id": "b8563ecf-1402-415e-8576-e4dfbda8ae70",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "009ff336-845b-411b-8ee5-9b3089e99398",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-31T18:09:59-05:00",
+      "location": "Chicago",
+      "name": "Chicago",
+      "nickname": "Bears",
+      "slug": "nfl-chi",
+      "division_id": "0e65eafb-0ce0-4b26-b79a-e0ae41991878",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "6bb48096-ca08-40e3-8dd2-2d93d96e346e",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-29T05:48:59-05:00",
+      "location": "Cincinnati",
+      "name": "Cincinnati",
+      "nickname": "Bengals",
+      "slug": "nfl-cin",
+      "division_id": "9cf5e881-62fa-4401-bced-e55fd0fd8fa4",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "ecf6a705-7a54-4f36-9dcd-09a0c53e733b",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-31T18:09:22-05:00",
+      "location": "Cleveland",
+      "name": "Cleveland",
+      "nickname": "Browns",
+      "slug": "nfl-cle",
+      "division_id": "9cf5e881-62fa-4401-bced-e55fd0fd8fa4",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "d61f132b-29f6-4140-847b-efb50ea9ccba",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T17:08:49-05:00",
+      "location": "Dallas",
+      "name": "Dallas",
+      "nickname": "Cowboys",
+      "slug": "nfl-dal",
+      "division_id": "804da3bf-894a-4066-8f43-61617e7bfcb5",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "6e1ae482-bd5e-40b3-a2d8-24c0a9eec333",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-29T00:53:20-05:00",
+      "location": "Denver",
+      "name": "Denver",
+      "nickname": "Broncos",
+      "slug": "nfl-den",
+      "division_id": "f643f66d-3c3f-4665-9367-7a995a9e702e",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "82fedbfa-8c2c-46cc-b02f-ea16abf5ffc9",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T17:58:10-05:00",
+      "location": "Detroit",
+      "name": "Detroit",
+      "nickname": "Lions",
+      "slug": "nfl-det",
+      "division_id": "0e65eafb-0ce0-4b26-b79a-e0ae41991878",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "ade9a19b-3dfb-4436-aefd-e54f1c0d1a20",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T20:46:42-05:00",
+      "location": "Green Bay",
+      "name": "Green Bay",
+      "nickname": "Packers",
+      "slug": "nfl-gb",
+      "division_id": "0e65eafb-0ce0-4b26-b79a-e0ae41991878",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "545d6178-62b4-4e6e-a118-60e4f66d257d",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T16:50:56-05:00",
+      "location": "Houston",
+      "name": "Houston",
+      "nickname": "Texans",
+      "slug": "nfl-hou",
+      "division_id": "a83ba728-0bd9-4b46-8a19-64515e176c00",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "557d1013-6b50-4998-885b-d121af071867",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T17:40:20-05:00",
+      "location": "Indianapolis",
+      "name": "Indianapolis",
+      "nickname": "Colts",
+      "slug": "nfl-ind",
+      "division_id": "a83ba728-0bd9-4b46-8a19-64515e176c00",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "0fc8a1cb-bb61-4eba-b448-1d313813f0d1",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-28T10:46:36-05:00",
+      "location": "Jacksonville",
+      "name": "Jacksonville",
+      "nickname": "Jaguars",
+      "slug": "nfl-jac",
+      "division_id": "a83ba728-0bd9-4b46-8a19-64515e176c00",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "3a857729-4c8c-4dde-9cad-359cab5990de",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T18:31:46-05:00",
+      "location": "Kansas City",
+      "name": "Kansas City",
+      "nickname": "Chiefs",
+      "slug": "nfl-kc",
+      "division_id": "f643f66d-3c3f-4665-9367-7a995a9e702e",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "49b7f5ba-da40-4b42-be4b-c68b4f9257e8",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T17:40:19-05:00",
+      "location": "Miami",
+      "name": "Miami",
+      "nickname": "Dolphins",
+      "slug": "nfl-mia",
+      "division_id": "7eb2130f-0d1d-4396-9595-649708fe5a6a",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "273bc0eb-8984-4474-bbc8-5cce491aa662",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-28T03:43:40-05:00",
+      "location": "Minnesota",
+      "name": "Minnesota",
+      "nickname": "Vikings",
+      "slug": "nfl-min",
+      "division_id": "0e65eafb-0ce0-4b26-b79a-e0ae41991878",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "5546974d-27c2-4d93-a63e-d8320952e871",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T16:56:07-05:00",
+      "location": "New England",
+      "name": "New England",
+      "nickname": "Patriots",
+      "slug": "nfl-ne",
+      "division_id": "7eb2130f-0d1d-4396-9595-649708fe5a6a",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "a192531d-e60c-4256-8220-f3538dd8b020",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T19:29:39-05:00",
+      "location": "New Orleans",
+      "name": "New Orleans",
+      "nickname": "Saints",
+      "slug": "nfl-no",
+      "division_id": "b8563ecf-1402-415e-8576-e4dfbda8ae70",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "47b8904b-4d56-481a-ab06-6e56dfe59f78",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-31T18:29:53-05:00",
+      "location": "New York",
+      "name": "N.Y. Giants",
+      "nickname": "Giants",
+      "slug": "nfl-nyg",
+      "division_id": "804da3bf-894a-4066-8f43-61617e7bfcb5",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "8112be50-1ec2-47c0-ab27-b4fc4654aa5b",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T18:22:10-05:00",
+      "location": "New York",
+      "name": "N.Y. Jets",
+      "nickname": "Jets",
+      "slug": "nfl-nyj",
+      "division_id": "7eb2130f-0d1d-4396-9595-649708fe5a6a",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "bf836ba5-77d0-4125-aa8a-ab785705eb29",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-26T03:54:46-05:00",
+      "location": "Oakland",
+      "name": "Oakland",
+      "nickname": "Raiders",
+      "slug": "nfl-oak",
+      "division_id": "f643f66d-3c3f-4665-9367-7a995a9e702e",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "9990f062-0d8d-4dbf-82cc-73f3d5dfe532",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-31T18:09:08-05:00",
+      "location": "Philadelphia",
+      "name": "Philadelphia",
+      "nickname": "Eagles",
+      "slug": "nfl-phi",
+      "division_id": "804da3bf-894a-4066-8f43-61617e7bfcb5",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "e5796fc5-4c5e-486d-a76d-5879fd2f5117",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-31T18:22:56-05:00",
+      "location": "Pittsburgh",
+      "name": "Pittsburgh",
+      "nickname": "Steelers",
+      "slug": "nfl-pit",
+      "division_id": "9cf5e881-62fa-4401-bced-e55fd0fd8fa4",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "d1f76207-7303-484f-a25f-b00d1eb46ecd",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-31T18:01:53-05:00",
+      "location": "San Diego",
+      "name": "San Diego",
+      "nickname": "Chargers",
+      "slug": "nfl-sd",
+      "division_id": "f643f66d-3c3f-4665-9367-7a995a9e702e",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "62b050a0-42c8-4cdd-aaaf-1ee5bbb01bf3",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T17:58:06-05:00",
+      "location": "San Francisco",
+      "name": "San Francisco",
+      "nickname": "49ers",
+      "slug": "nfl-sf",
+      "division_id": "70c14524-5ddd-432b-8728-9c5f9af9b565",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "e6094723-20f3-417a-87d2-1ccc0b7a6388",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T21:00:09-05:00",
+      "location": "Seattle",
+      "name": "Seattle",
+      "nickname": "Seahawks",
+      "slug": "nfl-sea",
+      "division_id": "70c14524-5ddd-432b-8728-9c5f9af9b565",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "3f53d6c3-46ae-4a68-833e-fc29c8ecbdb2",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-31T12:28:59-05:00",
+      "location": "St. Louis",
+      "name": "St. Louis",
+      "nickname": "Rams",
+      "slug": "nfl-stl",
+      "division_id": "70c14524-5ddd-432b-8728-9c5f9af9b565",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "0d0cfd49-bea6-4ad0-a263-5a350865b99e",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T18:39:20-05:00",
+      "location": "Tampa Bay",
+      "name": "Tampa Bay",
+      "nickname": "Buccaneers",
+      "slug": "nfl-tb",
+      "division_id": "b8563ecf-1402-415e-8576-e4dfbda8ae70",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "a8004516-b1d9-44df-b6ba-d5e4b7d9d1d7",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-27T17:51:28-05:00",
+      "location": "Tennessee",
+      "name": "Tennessee",
+      "nickname": "Titans",
+      "slug": "nfl-ten",
+      "division_id": "a83ba728-0bd9-4b46-8a19-64515e176c00",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    },
+    {
+      "id": "1c4f553a-bde3-4229-8565-9c40401a9956",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-31T18:09:09-05:00",
+      "location": "Washington",
+      "name": "Washington",
+      "nickname": "Redskins",
+      "slug": "nfl-was",
+      "division_id": "804da3bf-894a-4066-8f43-61617e7bfcb5",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    }
+  ]
+}

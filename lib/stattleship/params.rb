@@ -21,6 +21,11 @@ require 'stattleship/params/basketball_players_params'
 require 'stattleship/params/football_players_params'
 require 'stattleship/params/hockey_players_params'
 
+require 'stattleship/params/teams_params'
+require 'stattleship/params/basketball_teams_params'
+require 'stattleship/params/football_teams_params'
+require 'stattleship/params/hockey_teams_params'
+
 require 'stattleship/params/team_game_logs_params'
 require 'stattleship/params/basketball_team_game_logs_params'
 require 'stattleship/params/football_team_game_logs_params'

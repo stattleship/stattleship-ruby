@@ -1,0 +1,394 @@
+{
+  "divisions": [
+    {
+      "id": "11740eea-c575-44e9-b4f5-a80805703ad0",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "Pacific",
+      "conference_id": "95e3218b-fa5e-4bb8-a6ff-acb61da1876c"
+    },
+    {
+      "id": "15ca4e46-2b49-4f37-84ea-befb62de28c5",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "Atlantic",
+      "conference_id": "b6a5910b-bd9b-4fb3-b7e5-654c2ae17fa3"
+    },
+    {
+      "id": "2a45d995-a56b-43c8-838d-700e5cf1f922",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "Metropolitan",
+      "conference_id": "b6a5910b-bd9b-4fb3-b7e5-654c2ae17fa3"
+    },
+    {
+      "id": "8e46750a-615a-4362-8468-26a8541fc713",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "Central",
+      "conference_id": "95e3218b-fa5e-4bb8-a6ff-acb61da1876c"
+    }
+  ],
+  "conferences": [
+    {
+      "id": "95e3218b-fa5e-4bb8-a6ff-acb61da1876c",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "Western Conference",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "b6a5910b-bd9b-4fb3-b7e5-654c2ae17fa3",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "Eastern Conference",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    }
+  ],
+  "leagues": [
+    {
+      "id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "abbreviation": "NHL",
+      "color": null,
+      "minutes_per_period": null,
+      "name": "National Hockey League",
+      "periods": null,
+      "slug": "nhl",
+      "sport": "hockey"
+    }
+  ],
+  "teams": [
+    {
+      "id": "0e39b5fe-bbac-4488-8a4c-6556fa1fff88",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Anaheim",
+      "name": "Anaheim",
+      "nickname": "Ducks",
+      "slug": "nhl-ana",
+      "division_id": "11740eea-c575-44e9-b4f5-a80805703ad0",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "06bab022-21a6-4999-b7a1-fe569971c68a",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Arizona",
+      "name": "Arizona",
+      "nickname": "Coyotes",
+      "slug": "nhl-ari",
+      "division_id": "11740eea-c575-44e9-b4f5-a80805703ad0",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "e9d7bcb5-6723-4ca9-b1d9-1ccd026be1cb",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Boston",
+      "name": "Boston",
+      "nickname": "Bruins",
+      "slug": "nhl-bos",
+      "division_id": "15ca4e46-2b49-4f37-84ea-befb62de28c5",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "1deb863f-6919-4b88-8a38-51753f3f3032",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Buffalo",
+      "name": "Buffalo",
+      "nickname": "Sabres",
+      "slug": "nhl-buf",
+      "division_id": "15ca4e46-2b49-4f37-84ea-befb62de28c5",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "926ad5ca-c17f-4b20-8b72-9043b6066bc9",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Calgary",
+      "name": "Calgary",
+      "nickname": "Flames",
+      "slug": "nhl-cal",
+      "division_id": "11740eea-c575-44e9-b4f5-a80805703ad0",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "b0c4bd8e-fba7-4374-87d2-68bd4ab20875",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Carolina",
+      "name": "Carolina",
+      "nickname": "Hurricanes",
+      "slug": "nhl-car",
+      "division_id": "2a45d995-a56b-43c8-838d-700e5cf1f922",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "a345b10e-87b5-4635-bf24-fd6be058346f",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-14T08:38:31-05:00",
+      "location": "Chicago",
+      "name": "Chicago",
+      "nickname": "Blackhawks",
+      "slug": "nhl-chi",
+      "division_id": "8e46750a-615a-4362-8468-26a8541fc713",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "4cab4924-a7f5-43c5-8c16-73276fe5b485",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Colorado",
+      "name": "Colorado",
+      "nickname": "Avalanche",
+      "slug": "nhl-col",
+      "division_id": "8e46750a-615a-4362-8468-26a8541fc713",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "54410a6b-c9e0-443e-a4cf-b3e22f2cbb75",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-15T10:55:07-05:00",
+      "location": "Columbus",
+      "name": "Columbus",
+      "nickname": "Blue Jackets",
+      "slug": "nhl-clb",
+      "division_id": "2a45d995-a56b-43c8-838d-700e5cf1f922",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "5786217b-24e4-4827-8fb9-b4bcd388b869",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Dallas",
+      "name": "Dallas",
+      "nickname": "Stars",
+      "slug": "nhl-dal",
+      "division_id": "8e46750a-615a-4362-8468-26a8541fc713",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "c2a7d98a-fa2c-446e-9682-a8949854023e",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Detroit",
+      "name": "Detroit",
+      "nickname": "Red Wings",
+      "slug": "nhl-det",
+      "division_id": "15ca4e46-2b49-4f37-84ea-befb62de28c5",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "10c78613-f4e5-4ebf-a259-e3643aa3785a",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Edmonton",
+      "name": "Edmonton",
+      "nickname": "Oilers",
+      "slug": "nhl-edm",
+      "division_id": "11740eea-c575-44e9-b4f5-a80805703ad0",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "7e5c2566-c3cc-4b2e-98e6-d8bce74b7fbc",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Florida",
+      "name": "Florida",
+      "nickname": "Panthers",
+      "slug": "nhl-fla",
+      "division_id": "15ca4e46-2b49-4f37-84ea-befb62de28c5",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "ae19bcc6-3f57-46a0-9a14-6b0752155691",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-15T10:39:14-05:00",
+      "location": "Los Angeles",
+      "name": "Los Angeles",
+      "nickname": "Kings",
+      "slug": "nhl-la",
+      "division_id": "11740eea-c575-44e9-b4f5-a80805703ad0",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "4043825f-90d4-4f0d-8eb6-c734a2eafe9f",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Minnesota",
+      "name": "Minnesota",
+      "nickname": "Wild",
+      "slug": "nhl-min",
+      "division_id": "8e46750a-615a-4362-8468-26a8541fc713",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "80d99c5a-882e-4296-ae9d-048d2830b154",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Montreal",
+      "name": "Montreal",
+      "nickname": "Canadiens",
+      "slug": "nhl-mon",
+      "division_id": "15ca4e46-2b49-4f37-84ea-befb62de28c5",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "098b2599-0a70-47af-b38e-0e4e7a0acace",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Nashville",
+      "name": "Nashville",
+      "nickname": "Predators",
+      "slug": "nhl-nas",
+      "division_id": "8e46750a-615a-4362-8468-26a8541fc713",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "fbbff0b0-b4e4-41eb-a179-f505bc922c14",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "New Jersey",
+      "name": "New Jersey",
+      "nickname": "Devils",
+      "slug": "nhl-nj",
+      "division_id": "2a45d995-a56b-43c8-838d-700e5cf1f922",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "1f2dbc61-cced-4d84-9ee9-81bae4c9c70f",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-15T10:58:22-05:00",
+      "location": "New York",
+      "name": "NY Islanders",
+      "nickname": "Islanders",
+      "slug": "nhl-nyi",
+      "division_id": "2a45d995-a56b-43c8-838d-700e5cf1f922",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "d32b9696-2d78-40a0-bf6d-3cd16dc48c96",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "New York",
+      "name": "NY Rangers",
+      "nickname": "Rangers",
+      "slug": "nhl-nyr",
+      "division_id": "2a45d995-a56b-43c8-838d-700e5cf1f922",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "42add1c3-7eed-4356-bd0b-cc3aa88693e8",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Ottawa",
+      "name": "Ottawa",
+      "nickname": "Senators",
+      "slug": "nhl-ott",
+      "division_id": "15ca4e46-2b49-4f37-84ea-befb62de28c5",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "c94be617-bf0c-4516-82b8-782d7aa783ae",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Philadelphia",
+      "name": "Philadelphia",
+      "nickname": "Flyers",
+      "slug": "nhl-phi",
+      "division_id": "2a45d995-a56b-43c8-838d-700e5cf1f922",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "26390f10-d08d-4a78-acf6-ac0a5d31a78c",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Pittsburgh",
+      "name": "Pittsburgh",
+      "nickname": "Penguins",
+      "slug": "nhl-pit",
+      "division_id": "2a45d995-a56b-43c8-838d-700e5cf1f922",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "4a2527de-0e8b-49cb-9d36-8101ccac5265",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "San Jose",
+      "name": "San Jose",
+      "nickname": "Sharks",
+      "slug": "nhl-sj",
+      "division_id": "11740eea-c575-44e9-b4f5-a80805703ad0",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "4ca89483-65ae-484d-bda9-eacba9ff4915",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "St. Louis",
+      "name": "St. Louis",
+      "nickname": "Blues",
+      "slug": "nhl-stl",
+      "division_id": "8e46750a-615a-4362-8468-26a8541fc713",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "efd97f2d-fe29-4fe8-9f01-cfad8488c0c2",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-15T10:55:04-05:00",
+      "location": "Tampa Bay",
+      "name": "Tampa Bay",
+      "nickname": "Lightning",
+      "slug": "nhl-tb",
+      "division_id": "15ca4e46-2b49-4f37-84ea-befb62de28c5",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "2d8d4fda-a9b9-4978-abcc-31b9dfb47175",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Toronto",
+      "name": "Toronto",
+      "nickname": "Maple Leafs",
+      "slug": "nhl-tor",
+      "division_id": "15ca4e46-2b49-4f37-84ea-befb62de28c5",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "b6bc24e7-bd37-461e-a7b2-af79f68b2438",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Vancouver",
+      "name": "Vancouver",
+      "nickname": "Canucks",
+      "slug": "nhl-van",
+      "division_id": "11740eea-c575-44e9-b4f5-a80805703ad0",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "54276c06-42a0-4649-838c-a462451d54c8",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "Washington",
+      "name": "Washington",
+      "nickname": "Capitals",
+      "slug": "nhl-was",
+      "division_id": "2a45d995-a56b-43c8-838d-700e5cf1f922",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    },
+    {
+      "id": "157c2242-afa5-499d-906d-6a992927e58d",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-15T10:51:26-05:00",
+      "location": "Winnipeg",
+      "name": "Winnipeg",
+      "nickname": "Jets",
+      "slug": "nhl-win",
+      "division_id": "8e46750a-615a-4362-8468-26a8541fc713",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    }
+  ]
+}

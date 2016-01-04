@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'stattleship'
+
+params = Stattleship::Params::BasketballTeamsParams.new
+
+teams_names = Stattleship::BasketballTeams.fetch(params: params).
+                 map(&:title)
+
+puts teams_names
+
+#
+
+params = Stattleship::Params::FootballTeamsParams.new
+
+teams_names = Stattleship::FootballTeams.fetch(params: params).
+                 map(&:title)
+
+puts teams_names
+
+#
+
+params = Stattleship::Params::HockeyTeamsParams.new
+
+teams_names = Stattleship::HockeyTeams.fetch(params: params).
+                 map(&:title)
+
+puts teams_names

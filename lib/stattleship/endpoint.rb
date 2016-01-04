@@ -73,7 +73,6 @@ module Stattleship
       end
 
       populate_model_game(model)
-      populate_game(model.game)
     end
 
     def populate_game(game)
@@ -116,12 +115,8 @@ module Stattleship
       end
     end
 
-    def populate_venue(model)
-      return if venues.nil?
-
-      model.venue = venues.detect do |venue|
-        venue.id == model.venue_id
-      end
+    def populate_team(team)
+      populate_league(team)
     end
 
     def populate_teams(model)
@@ -129,6 +124,14 @@ module Stattleship
 
       model.team = teams.detect do |team|
         team.id == model.team_id
+      end
+    end
+
+    def populate_venue(model)
+      return if venues.nil?
+
+      model.venue = venues.detect do |venue|
+        venue.id == model.venue_id
       end
     end
   end

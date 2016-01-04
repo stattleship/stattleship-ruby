@@ -278,4 +278,34 @@ module Endpoints
     nhl_players.from_json(json)
     nhl_players.data
   end
+
+  def nba_teams
+    nba_teams = Stattleship::BasketballTeams.new
+    nba_teams.extend(Stattleship::BasketballTeamsRepresenter)
+
+    json = File.read('spec/fixtures/nba/teams.json')
+
+    nba_teams.from_json(json)
+    nba_teams.data
+  end
+
+  def nfl_teams
+    nfl_teams = Stattleship::FootballTeams.new
+    nfl_teams.extend(Stattleship::FootballTeamsRepresenter)
+
+    json = File.read('spec/fixtures/nfl/teams.json')
+
+    nfl_teams.from_json(json)
+    nfl_teams.data
+  end
+
+  def nhl_teams
+    nhl_teams = Stattleship::HockeyTeams.new
+    nhl_teams.extend(Stattleship::HockeyTeamsRepresenter)
+
+    json = File.read('spec/fixtures/nhl/teams.json')
+
+    nhl_teams.from_json(json)
+    nhl_teams.data
+  end
 end
