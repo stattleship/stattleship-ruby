@@ -1,11 +1,6 @@
 require 'stattleship/params/query_params'
 require 'stattleship/params/game_time_params'
 
-require 'stattleship/params/stat_leaders_params'
-require 'stattleship/params/basketball_stat_leaders_params'
-require 'stattleship/params/football_stat_leaders_params'
-require 'stattleship/params/hockey_stat_leaders_params'
-
 require 'stattleship/params/game_logs_params'
 require 'stattleship/params/basketball_game_logs_params'
 require 'stattleship/params/football_game_logs_params'
@@ -20,6 +15,19 @@ require 'stattleship/params/players_params'
 require 'stattleship/params/basketball_players_params'
 require 'stattleship/params/football_players_params'
 require 'stattleship/params/hockey_players_params'
+
+require 'stattleship/params/stat_leaders_params'
+require 'stattleship/params/basketball_stat_leaders_params'
+require 'stattleship/params/football_stat_leaders_params'
+require 'stattleship/params/hockey_stat_leaders_params'
+
+require 'stattleship/params/stats_params'
+require 'stattleship/params/basketball_stats_params'
+require 'stattleship/params/basketball_team_stats_params'
+require 'stattleship/params/football_stats_params'
+require 'stattleship/params/football_team_stats_params'
+require 'stattleship/params/hockey_stats_params'
+require 'stattleship/params/hockey_team_stats_params'
 
 require 'stattleship/params/teams_params'
 require 'stattleship/params/basketball_teams_params'

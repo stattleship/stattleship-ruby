@@ -23,3 +23,11 @@ params.type = 'hockey_offensive_stat'
 params.player_id = 'nhl-tyler-seguin'
 
 puts Stattleship::HockeyTotalPlayerStat.fetch(params: params).to_sentence
+
+
+params = Stattleship::Params::FootballTotalPlayerStatParams.new
+params.stat = 'receptions_total'
+params.type = 'football_passing_stat'
+params.player_id = 'nfl-kenny-stills'
+
+puts Stattleship::FootballTotalPlayerStat.fetch(params: params).to_sentence

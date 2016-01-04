@@ -37,6 +37,11 @@ require 'stattleship/basketball_stat_leaders'
 require 'stattleship/football_stat_leaders'
 require 'stattleship/hockey_stat_leaders'
 
+require 'stattleship/stats'
+require 'stattleship/basketball_stats'
+require 'stattleship/football_stats'
+require 'stattleship/hockey_stats'
+
 require 'stattleship/teams'
 require 'stattleship/basketball_teams'
 require 'stattleship/football_teams'

@@ -308,4 +308,84 @@ module Endpoints
     nhl_teams.from_json(json)
     nhl_teams.data
   end
+
+  def player_stats
+    stats = Stattleship::Stats.new
+    stats.extend(Stattleship::StatsRepresenter)
+
+    json = File.read('spec/fixtures/nba/player_stats.json')
+
+    stats.from_json(json)
+    stats.data
+  end
+
+  def nba_player_stats
+    stats = Stattleship::Stats.new
+    stats.extend(Stattleship::StatsRepresenter)
+
+    json = File.read('spec/fixtures/nba/player_stats.json')
+
+    stats.from_json(json)
+    stats.data
+  end
+
+  def nfl_player_stats
+    stats = Stattleship::Stats.new
+    stats.extend(Stattleship::StatsRepresenter)
+
+    json = File.read('spec/fixtures/nfl/player_stats.json')
+
+    stats.from_json(json)
+    stats.data
+  end
+
+  def nhl_player_stats
+    stats = Stattleship::Stats.new
+    stats.extend(Stattleship::StatsRepresenter)
+
+    json = File.read('spec/fixtures/nhl/player_stats.json')
+
+    stats.from_json(json)
+    stats.data
+  end
+
+  def team_stats
+    stats = Stattleship::Stats.new
+    stats.extend(Stattleship::StatsRepresenter)
+
+    json = File.read('spec/fixtures/nba/team_stats.json')
+
+    stats.from_json(json)
+    stats.data
+  end
+
+  def nba_team_stats
+    stats = Stattleship::Stats.new
+    stats.extend(Stattleship::StatsRepresenter)
+
+    json = File.read('spec/fixtures/nba/team_stats.json')
+
+    stats.from_json(json)
+    stats.data
+  end
+
+  def nfl_team_stats
+    stats = Stattleship::Stats.new
+    stats.extend(Stattleship::StatsRepresenter)
+
+    json = File.read('spec/fixtures/nfl/team_stats.json')
+
+    stats.from_json(json)
+    stats.data
+  end
+
+  def nhl_team_stats
+    stats = Stattleship::Stats.new
+    stats.extend(Stattleship::StatsRepresenter)
+
+    json = File.read('spec/fixtures/nhl/team_stats.json')
+
+    stats.from_json(json)
+    stats.data
+  end
 end
