@@ -13,6 +13,90 @@ module Stattleship
         end
       end
 
+      describe '#validates_positive_or_zero_integer' do
+        context 'when the value is not an integer' do
+          context 'because it is a string' do
+            it 'fails validation' do
+              key = 'number'
+              params = { 'number' => 'foo' }
+              class_name = ''
+
+              validator = BaseValidator.new(key: key,
+                                            params: params,
+                                            class_name: class_name)
+
+              expect {
+                validator.validates_positive_or_zero_integer
+              }.to raise_error ArgumentError
+            end
+          end
+
+          context 'because it is a decimal' do
+            it 'fails validation' do
+              key = 'number'
+              params = { 'number' => 2.4 }
+              class_name = ''
+
+              validator = BaseValidator.new(key: key,
+                                            params: params,
+                                            class_name: class_name)
+
+              expect {
+                validator.validates_positive_or_zero_integer
+              }.to raise_error ArgumentError
+            end
+          end
+        end
+
+        context 'when the value is negative' do
+          it 'fails validation' do
+            key = 'number'
+            params = { 'number' => -3 }
+            class_name = ''
+
+            validator = BaseValidator.new(key: key,
+                                          params: params,
+                                          class_name: class_name)
+
+            expect {
+              validator.validates_positive_or_zero_integer
+            }.to raise_error ArgumentError
+          end
+        end
+
+        context 'when the value is positive' do
+          it 'passes validation' do
+            key = 'number'
+            params = { 'number' => 3 }
+            class_name = ''
+
+            validator = BaseValidator.new(key: key,
+                                          params: params,
+                                          class_name: class_name)
+
+            expect {
+              validator.validates_positive_or_zero_integer
+            }.not_to raise_error
+          end
+        end
+
+        context 'when the value is 0' do
+          it 'passes validation' do
+            key = 'number'
+            params = { 'number' =>03 }
+            class_name = ''
+
+            validator = BaseValidator.new(key: key,
+                                          params: params,
+                                          class_name: class_name)
+
+            expect {
+              validator.validates_positive_or_zero_integer
+            }.not_to raise_error
+          end
+        end
+      end
+
       describe '#validates_positive_integer' do
         context 'when the value is not an integer' do
           context 'because it is a string' do

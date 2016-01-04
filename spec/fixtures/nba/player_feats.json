@@ -1,0 +1,212 @@
+{
+  "games": [
+    {
+      "id": "c672341d-f1a5-4429-80a8-16ebb9f67345",
+      "created_at": "2016-01-04T01:27:17-05:00",
+      "updated_at": "2016-01-04T02:03:11-05:00",
+      "at_neutral_site": false,
+      "attendance": 19812,
+      "away_team_outcome": "loss",
+      "away_team_score": 97,
+      "daytime": false,
+      "duration": 7380,
+      "ended_at": "2016-01-03T17:58:00-05:00",
+      "home_team_outcome": "win",
+      "home_team_score": 111,
+      "interval": "Regular Season",
+      "interval_number": "",
+      "interval_type": "regularseason",
+      "label": "Hawks vs Knicks",
+      "name": "Hawks vs Knicks January  3, 2016 at  3:30pm",
+      "on": "on January  3, 2016",
+      "score": "97-111",
+      "score_differential": 14,
+      "scoreline": "Hawks 97 - Knicks 111",
+      "slug": "nba-2015-2016-atl-ny-2016-01-3-1530",
+      "started_at": "2016-01-03T15:30:00-05:00",
+      "temperature": null,
+      "temperature_unit": null,
+      "timestamp": 1451853000,
+      "title": "Hawks vs Knicks",
+      "weather_conditions": null,
+      "wind_direction": null,
+      "wind_speed": null,
+      "wind_speed_unit": null,
+      "home_team_id": "d0e50d36-35cc-454b-a2b3-d56b2cbc029d",
+      "away_team_id": "20901970-53a0-417c-b5b4-832a74148af6",
+      "winning_team_id": "d0e50d36-35cc-454b-a2b3-d56b2cbc029d",
+      "season_id": "e56321f3-1c81-4f91-9bdf-8dac07129648",
+      "venue_id": "a933f6e9-9a9c-42b9-9f65-d5d3ef31cffe"
+    }
+  ],
+  "home_teams": [
+    {
+      "id": "d0e50d36-35cc-454b-a2b3-d56b2cbc029d",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "New York",
+      "name": "New York",
+      "nickname": "Knicks",
+      "slug": "nba-ny",
+      "division_id": "8256a4da-413c-4f03-8438-56963be591c4",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    }
+  ],
+  "leagues": [
+    {
+      "id": "3c805f57-ef31-407d-b633-54bac8745b9e",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "abbreviation": "NBA",
+      "color": null,
+      "minutes_per_period": null,
+      "name": "National Basketball Association",
+      "periods": null,
+      "slug": "nba",
+      "sport": "basketball"
+    }
+  ],
+  "away_teams": [
+    {
+      "id": "20901970-53a0-417c-b5b4-832a74148af6",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:47-05:00",
+      "location": "Atlanta",
+      "name": "Atlanta",
+      "nickname": "Hawks",
+      "slug": "nba-atl",
+      "division_id": "2fe91f9b-20b4-4bd0-a17a-fcf7f481aec9",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    }
+  ],
+  "winning_teams": [
+    {
+      "id": "d0e50d36-35cc-454b-a2b3-d56b2cbc029d",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "New York",
+      "name": "New York",
+      "nickname": "Knicks",
+      "slug": "nba-ny",
+      "division_id": "8256a4da-413c-4f03-8438-56963be591c4",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    }
+  ],
+  "seasons": [
+    {
+      "id": "e56321f3-1c81-4f91-9bdf-8dac07129648",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "2015-2016",
+      "starts_on": "2015-10-01",
+      "ends_on": "2016-06-30",
+      "slug": "nba-2015-2016",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    }
+  ],
+  "venues": [
+    {
+      "id": "a933f6e9-9a9c-42b9-9f65-d5d3ef31cffe",
+      "created_at": "2016-01-04T01:12:59-05:00",
+      "updated_at": "2016-01-04T01:12:59-05:00",
+      "abbreviation": "MSG",
+      "city": "New York",
+      "country": "USA",
+      "field_type": null,
+      "name": "Madison Square Garden",
+      "slug": "madison-square-garden",
+      "state": "New York",
+      "time_zone": "US/Eastern"
+    }
+  ],
+  "players": [
+    {
+      "id": "6716b906-fa3f-449f-8121-6946cbad077b",
+      "created_at": "2016-01-04T01:12:47-05:00",
+      "updated_at": "2016-01-04T15:31:24-05:00",
+      "active": true,
+      "defensive": false,
+      "first_name": "Arron",
+      "handedness": "unknown",
+      "height": null,
+      "unit_of_height": "inches",
+      "last_name": "Afflalo",
+      "name": "Arron Afflalo",
+      "offensive": true,
+      "position_abbreviation": "G",
+      "position_name": "Guard",
+      "salary": null,
+      "humanized_salary": "",
+      "salary_currency": "USD",
+      "school": null,
+      "slug": "nba-arron-afflalo",
+      "sport": "basketball",
+      "weight": null,
+      "unit_of_weight": "pounds",
+      "years_of_experience": null,
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e",
+      "playing_position_id": "3a0e278f-e18f-4eca-aa75-b69884503359",
+      "team_id": "d0e50d36-35cc-454b-a2b3-d56b2cbc029d"
+    }
+  ],
+  "teams": [
+    {
+      "id": "d0e50d36-35cc-454b-a2b3-d56b2cbc029d",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-12-09T09:15:48-05:00",
+      "location": "New York",
+      "name": "New York",
+      "nickname": "Knicks",
+      "slug": "nba-ny",
+      "division_id": "8256a4da-413c-4f03-8438-56963be591c4",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    }
+  ],
+  "feats": [
+    {
+      "id": "2aff2c28-2b72-4a6e-9111-b8649273e171",
+      "created_at": "2016-01-04T02:03:02-05:00",
+      "updated_at": "2016-01-04T02:03:02-05:00",
+      "accomplished_vs": "made 7 three pointers vs. the Hawks",
+      "accomplishment": "made 7 three pointers",
+      "actual": "7.0",
+      "category": "single",
+      "game_id": "c672341d-f1a5-4429-80a8-16ebb9f67345",
+      "game_slug": "nba-2015-2016-atl-ny-2016-01-3-1530",
+      "humanized_stat_type": "three_pointers",
+      "level": "rare",
+      "name": "three_pointers_made",
+      "on": "Sunday January  3, 2016 at  3:30pm",
+      "opponent_abbrev": "ATL",
+      "opponent_location": "Atlanta",
+      "opponent_name": "Atlanta",
+      "opponent_nickname": "Hawks",
+      "opponent_slug": "nba-atl",
+      "player_id": "6716b906-fa3f-449f-8121-6946cbad077b",
+      "player_slug": "nba-arron-afflalo",
+      "sentence": "Arron Afflalo made 7 three pointers",
+      "sentence_on": "Arron Afflalo made 7 three pointers on Sunday January  3, 2016 at  3:30pm",
+      "sentence_vs": "Arron Afflalo made 7 three pointers vs. the Hawks",
+      "sentence_vs_on": "Arron Afflalo made 7 three pointers vs. the Hawks on Sunday January  3, 2016 at  3:30pm",
+      "subject_id": "6716b906-fa3f-449f-8121-6946cbad077b",
+      "subject_name": "Arron Afflalo",
+      "subject_team_name": "New York",
+      "subject_team_abbrev": "NY",
+      "subject_team_location": "New York",
+      "subject_team_nickname": "Knicks",
+      "subject_team_slug": "nba-ny",
+      "subject_type": "Player",
+      "subject_slug": "nba-arron-afflalo",
+      "team_id": null,
+      "team_slug": null,
+      "verb": "made 7 three pointers",
+      "vs": "vs. the Hawks",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e",
+      "season_id": "e56321f3-1c81-4f91-9bdf-8dac07129648",
+      "subject": {
+        "type": "player",
+        "id": "6716b906-fa3f-449f-8121-6946cbad077b"
+      }
+    }
+  ]
+}

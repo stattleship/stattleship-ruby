@@ -1,6 +1,11 @@
 require 'stattleship/params/query_params'
 require 'stattleship/params/game_time_params'
 
+require 'stattleship/params/feats_params'
+require 'stattleship/params/basketball_feats_params'
+require 'stattleship/params/football_feats_params'
+require 'stattleship/params/hockey_feats_params'
+
 require 'stattleship/params/game_logs_params'
 require 'stattleship/params/basketball_game_logs_params'
 require 'stattleship/params/football_game_logs_params'

@@ -50,6 +50,7 @@ module Stattleship
     end
 
     def populate_player_team(player)
+      return if player.nil?
       return if teams.nil?
 
       player.team = teams.detect do |team|

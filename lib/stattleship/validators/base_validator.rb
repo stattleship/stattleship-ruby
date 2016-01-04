@@ -11,6 +11,14 @@ module Stattleship
         raise 'Validator subclass must implement validate method'
       end
 
+      def validates_positive_or_zero_integer
+        if value.is_a?(Integer) && value >= 0
+          return
+        else
+          fail ArgumentError.new("expected #{key} to be an integer >= 0")
+        end
+      end
+
       def validates_positive_integer
         if value.is_a?(Integer) && value > 0
           return

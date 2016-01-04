@@ -388,4 +388,84 @@ module Endpoints
     stats.from_json(json)
     stats.data
   end
+
+  def player_feats
+    feats = Stattleship::Feats.new
+    feats.extend(Stattleship::FeatsRepresenter)
+
+    json = File.read('spec/fixtures/nfl/player_feats.json')
+
+    feats.from_json(json)
+    feats.data
+  end
+
+  def nba_player_feats
+    feats = Stattleship::Feats.new
+    feats.extend(Stattleship::FeatsRepresenter)
+
+    json = File.read('spec/fixtures/nba/player_feats.json')
+
+    feats.from_json(json)
+    feats.data
+  end
+
+  def nfl_player_feats
+    feats = Stattleship::Feats.new
+    feats.extend(Stattleship::FeatsRepresenter)
+
+    json = File.read('spec/fixtures/nfl/player_feats.json')
+
+    feats.from_json(json)
+    feats.data
+  end
+
+  def nhl_player_feats
+    feats = Stattleship::Feats.new
+    feats.extend(Stattleship::FeatsRepresenter)
+
+    json = File.read('spec/fixtures/nhl/player_feats.json')
+
+    feats.from_json(json)
+    feats.data
+  end
+
+  def team_feats
+    feats = Stattleship::Feats.new
+    feats.extend(Stattleship::FeatsRepresenter)
+
+    json = File.read('spec/fixtures/nfl/team_feats.json')
+
+    feats.from_json(json)
+    feats.data
+  end
+
+  def nba_team_feats
+    feats = Stattleship::Feats.new
+    feats.extend(Stattleship::FeatsRepresenter)
+
+    json = File.read('spec/fixtures/nba/team_feats.json')
+
+    feats.from_json(json)
+    feats.data
+  end
+
+  def nfl_team_feats
+    feats = Stattleship::Feats.new
+    feats.extend(Stattleship::FeatsRepresenter)
+
+    json = File.read('spec/fixtures/nfl/team_feats.json')
+
+    feats.from_json(json)
+    feats.data
+  end
+
+  def nhl_team_feats
+    feats = Stattleship::Feats.new
+    feats.extend(Stattleship::FeatsRepresenter)
+
+    json = File.read('spec/fixtures/nhl/team_feats.json')
+
+    feats.from_json(json)
+    feats.data
+  end
 end
