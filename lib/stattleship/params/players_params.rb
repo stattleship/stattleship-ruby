@@ -4,11 +4,7 @@ module Stattleship
       attr_accessor :team_id
 
       def params
-        super.merge(
-          {
-            'team_id' => team_id,
-          }
-        )
+        super.merge('team_id' => team_id)
       end
     end
   end

@@ -16,5 +16,5 @@ module Stattleship
 
     collection :teams, extend: TeamRepresenter,
                        class: Team
- end
+  end
 end

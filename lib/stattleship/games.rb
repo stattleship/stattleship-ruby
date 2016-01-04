@@ -22,5 +22,5 @@ module Stattleship
 
     collection :venues, extend: VenueRepresenter,
                         class: Venue
- end
+  end
 end

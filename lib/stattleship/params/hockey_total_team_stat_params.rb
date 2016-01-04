@@ -4,7 +4,7 @@ module Stattleship
       private
 
       def params
-        super.merge({ 'type' => 'hockey_team_stat' })
+        super.merge('type' => 'hockey_team_stat')
       end
     end
   end

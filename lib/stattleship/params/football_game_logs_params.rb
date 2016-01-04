@@ -4,7 +4,7 @@ module Stattleship
       attr_accessor :week
 
       def params
-        super.merge({ 'week' => week })
+        super.merge('week' => week)
       end
     end
   end
