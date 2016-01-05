@@ -10,9 +10,14 @@ module Stattleship
       it 'populates the game' do
         nfl_games.each do |game|
           expect(game).to be_a Models::Game
+          expect(game.away_team).to be_a Models::Team
+          expect(game.home_team).to be_a Models::Team
           expect(game.league).to be_a Models::League
           expect(game.league_abbreviation).to eq 'NFL'
         end
+
+        expect(nfl_games.first.away_team_name).to eq 'N.Y. Jets'
+        expect(nfl_games.first.home_team_name).to eq 'Buffalo'
       end
     end
 

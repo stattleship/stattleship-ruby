@@ -22,6 +22,10 @@ module Stattleship
       feats.each do |feat|
         populate_games(feat)
 
+        games.each do |game|
+          populate_game(game)
+        end
+
         populate_teams(feat)
 
         populate_players(feat)
@@ -32,6 +36,7 @@ module Stattleship
 
   module FeatsRepresenter
     include Roar::JSON
+    include Stattleship::Models
 
     collection :feats, class: Stattleship::Feat do
       property :accomplished_vs
@@ -70,29 +75,33 @@ module Stattleship
       property :vs
       property :league_id
       property :season_id
-
-      # property :subject, class: OpenStruct do
-      #   property :type
-      #   property :id
-      # end
     end
 
-    collection :games, extend: Stattleship::Models::GameRepresenter,
-                       class: Stattleship::Models::Game
+    collection :away_teams, extend: TeamRepresenter,
+                            class: Team
 
-    collection :leagues, extend: Stattleship::Models::LeagueRepresenter,
-                         class: Stattleship::Models::League
+    collection :home_teams, extend: TeamRepresenter,
+                            class: Team
 
-    collection :seasons, extend: Stattleship::Models::SeasonRepresenter,
-                         class: Stattleship::Models::Season
+    collection :winning_teams, extend: TeamRepresenter,
+                               class: Team
 
-    collection :venues, extend: Stattleship::Models::VenueRepresenter,
-                        class: Stattleship::Models::Venue
+    collection :games, extend: GameRepresenter,
+                       class: Game
 
-    collection :players, extend: Stattleship::Models::PlayerRepresenter,
-                         class: Stattleship::Models::Player
+    collection :leagues, extend: LeagueRepresenter,
+                         class: League
 
-    collection :teams, extend: Stattleship::Models::TeamRepresenter,
-                       class: Stattleship::Models::Team
+    collection :seasons, extend: SeasonRepresenter,
+                         class: Season
+
+    collection :venues, extend: VenueRepresenter,
+                        class: Venue
+
+    collection :players, extend: PlayerRepresenter,
+                         class: Player
+
+    collection :teams, extend: TeamRepresenter,
+                       class: Team
   end
 end

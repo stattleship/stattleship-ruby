@@ -45,7 +45,7 @@ module Stattleship
   module Models
     RSpec.describe BasketballGameLog do
       it 'returns assists' do
-        expect(nba_game_logs.first.assists).to eq 5
+        expect(nba_game_logs.first.assists).to eq 4
       end
 
       describe Game do
@@ -65,12 +65,24 @@ module Stattleship
           expect(game.venue).to be_a Venue
         end
 
+        it 'returns a home team' do
+          expect(game.home_team).to be_a Team
+        end
+
+        it 'returns a away team' do
+          expect(game.away_team).to be_a Team
+        end
+
+        it 'returns a winning team' do
+          expect(game.winning_team).to be_a Team
+        end
+
         it 'returns the score' do
-          expect(game.score).to eq '95-97'
+          expect(game.score).to eq '97-101'
         end
 
         it 'returns the city' do
-          expect(game.city).to eq 'Los Angeles'
+          expect(game.city).to eq 'Cleveland'
         end
 
         it 'returns the league_abbreviation' do
@@ -90,7 +102,7 @@ module Stattleship
 
       describe 'attributes' do
         it 'returns the city' do
-          expect(nba_game_logs.first.city).to eq 'Los Angeles'
+          expect(nba_game_logs.first.city).to eq 'Cleveland'
         end
 
         it 'returns the player_name' do

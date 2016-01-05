@@ -17,6 +17,9 @@ module Stattleship
             expect(stat.player.name).to eq 'Stephen Curry'
             expect(stat.subject.name).to eq 'Stephen Curry'
             expect(stat.stat_name).to eq 'three_pointers_made'
+            expect(stat.game.away_team).to be_a Stattleship::Models::Team
+            expect(stat.game.home_team).to be_a Stattleship::Models::Team
+            expect(stat.game.winning_team).to be_a Stattleship::Models::Team
           end
 
           expect(player_stats.first.stat).to eq 1
@@ -36,6 +39,9 @@ module Stattleship
             expect(stat.team.name).to eq 'Atlanta'
             expect(stat.subject.name).to eq 'Atlanta'
             expect(stat.stat_name).to eq 'points_quarter_1'
+            expect(stat.game.away_team).to be_a Stattleship::Models::Team
+            expect(stat.game.home_team).to be_a Stattleship::Models::Team
+            expect(stat.game.winning_team).to be_a Stattleship::Models::Team
           end
 
           expect(team_stats.first.stat).to eq 21

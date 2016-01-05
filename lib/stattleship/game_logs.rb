@@ -45,6 +45,11 @@ module Stattleship
     def populate
       game_logs.each do |game_log|
         populate_games(game_log)
+
+        games.each do |game|
+          populate_game(game)
+        end
+
         populate_players(game_log)
         populate_player_teams(game_log)
         populate_opponents(game_log)
@@ -55,6 +60,15 @@ module Stattleship
   module GameLogsRepresenter
     include Roar::JSON
     include Stattleship::Models
+
+    collection :away_teams, extend: TeamRepresenter,
+                            class: Team
+
+    collection :home_teams, extend: TeamRepresenter,
+                            class: Team
+
+    collection :winning_teams, extend: TeamRepresenter,
+                               class: Team
 
     collection :games, extend: GameRepresenter,
                        class: Game

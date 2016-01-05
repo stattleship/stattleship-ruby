@@ -61,15 +61,15 @@ module Stattleship
       end
 
       it 'returns kickoff_return_yards' do
-        expect(nfl_team_game_log.kickoff_return_yards).to eq 61
+        expect(nfl_team_game_log.kickoff_return_yards).to eq 26
       end
 
       it 'returns passing_plays_attempted' do
-        expect(nfl_team_game_log.passing_plays_attempted).to eq 36
+        expect(nfl_team_game_log.passing_plays_attempted).to eq 44
       end
 
       it 'returns passer_rating' do
-        expect(nfl_team_game_log.passer_rating).to eq '96.18056'
+        expect(nfl_team_game_log.passer_rating).to eq '80.77652'
       end
 
       def nfl_team_game_log
@@ -93,12 +93,24 @@ module Stattleship
           expect(game.venue).to be_a Venue
         end
 
+        it 'returns a home team' do
+          expect(game.home_team).to be_a Team
+        end
+
+        it 'returns a away team' do
+          expect(game.away_team).to be_a Team
+        end
+
+        it 'returns a winning team' do
+          expect(game.winning_team).to be_a Team
+        end
+
         it 'returns the score' do
-          expect(game.score).to eq '27-23'
+          expect(game.score).to eq '20-13'
         end
 
         it 'returns the city' do
-          expect(game.city).to eq 'Canton'
+          expect(game.city).to eq 'Green Bay'
         end
 
         it 'returns the league_abbreviation' do
@@ -118,7 +130,7 @@ module Stattleship
 
       describe 'attributes' do
         it 'returns the city' do
-          expect(nfl_team_game_logs.first.city).to eq 'Canton'
+          expect(nfl_team_game_logs.first.city).to eq 'Green Bay'
         end
 
         it 'returns the league_abbreviation' do
@@ -134,11 +146,11 @@ module Stattleship
         end
 
         it 'returns the opponent_name' do
-          expect(nfl_team_game_log.opponent_name).to eq 'Detroit'
+          expect(nfl_team_game_log.opponent_name).to eq 'Minnesota'
         end
 
         it 'returns the opponent_full_name' do
-          expect(nfl_team_game_log.opponent_full_name).to eq 'Detroit Lions'
+          expect(nfl_team_game_log.opponent_full_name).to eq 'Minnesota Vikings'
         end
 
         it 'returns the league_name' do
@@ -150,7 +162,7 @@ module Stattleship
         it 'returns a sentence' do
           expect(
             nfl_team_game_logs.first.to_sentence
-          ).to eq 'Green Bay 27 score, 2 Pass TD, 1 Rush TD, 96.18056 rating (Packers vs Lions December  3, 2015 at  8:25pm)'
+          ).to eq 'Green Bay 13 score, 1 Pass TD,  Rush TD, 80.77652 rating (Vikings vs Packers January  3, 2016 at  7:30pm)'
         end
       end
     end

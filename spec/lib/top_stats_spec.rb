@@ -65,6 +65,24 @@ module Stattleship
       expect(top_stat.game.name).to eq('76ers vs Grizzlies November 29, 2015 at  5:00pm')
     end
 
+    it 'knows the away team' do
+      game = top_stats.first.game
+      expect(game.away_team).to be_a Stattleship::Models::Team
+      expect(game.away_team_name).to eq 'Philadelphia'
+    end
+
+    it 'knows the home team' do
+      game = top_stats.first.game
+      expect(game.home_team).to be_a Stattleship::Models::Team
+      expect(game.home_team_name).to eq 'Houston'
+    end
+
+    it 'knows the winning team' do
+      game = top_stats.first.game
+      expect(game.winning_team).to be_a Stattleship::Models::Team
+      expect(game.winning_team_name).to eq 'Houston'
+    end
+
     it 'can format a readable sentence' do
       top_stat = top_stats.last
 

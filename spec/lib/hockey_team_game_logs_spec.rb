@@ -4,7 +4,7 @@ module Stattleship
   RSpec.describe HockeyTeamGameLogs do
     describe '#team_game_logs' do
       it 'returns all the team_game_logs' do
-        expect(nhl_team_game_logs.count).to eq 4
+        expect(nhl_team_game_logs.count).to eq 5
       end
     end
 
@@ -43,7 +43,7 @@ module Stattleship
   module Models
     RSpec.describe HockeyTeamGameLog do
       it 'parses all the logs' do
-        expect(nhl_team_game_logs.count).to eq 4
+        expect(nhl_team_game_logs.count).to eq 5
       end
 
       describe Team do
@@ -91,6 +91,18 @@ module Stattleship
 
         it 'returns a Venue' do
           expect(game.venue).to be_a Venue
+        end
+
+        it 'returns a home team' do
+          expect(game.home_team).to be_a Team
+        end
+
+        it 'returns a away team' do
+          expect(game.away_team).to be_a Team
+        end
+
+        it 'returns a winning team' do
+          expect(game.winning_team).to be_a Team
         end
 
         it 'returns the score' do

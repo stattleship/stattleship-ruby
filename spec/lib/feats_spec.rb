@@ -15,6 +15,9 @@ module Stattleship
             expect(feat.subject).to be_a Stattleship::Models::Player
             expect(feat.player.team).to be_a Stattleship::Models::Team
             expect(feat.level).to eq 'rare'
+            expect(feat.game.away_team).to be_a Stattleship::Models::Team
+            expect(feat.game.home_team).to be_a Stattleship::Models::Team
+            expect(feat.game.winning_team).to be_a Stattleship::Models::Team
           end
 
           expect(player_feats.first.actual).to eq "9.0"
@@ -38,6 +41,9 @@ module Stattleship
             expect(feat.team.name).to eq 'Denver'
             expect(feat.subject.name).to eq 'Denver'
             expect(feat.level).to eq 'typical'
+            expect(feat.game.away_team).to be_a Stattleship::Models::Team
+            expect(feat.game.home_team).to be_a Stattleship::Models::Team
+            expect(feat.game.winning_team).to be_a Stattleship::Models::Team
           end
 
           expect(team_feats.first.actual).to eq "3.0"

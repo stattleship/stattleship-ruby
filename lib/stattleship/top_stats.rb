@@ -9,6 +9,11 @@ module Stattleship
     def populate
       top_stats.each do |top_stat|
         populate_games(top_stat)
+
+        games.each do |game|
+          populate_game(game)
+        end
+
         populate_players(top_stat)
         populate_player_teams(top_stat)
       end
@@ -17,6 +22,7 @@ module Stattleship
 
   module TopStatsRepresenter
     include Roar::JSON
+    include Stattleship::Models
 
     collection :top_stats, class: Stattleship::TopStat do
       property :game_id
@@ -26,13 +32,22 @@ module Stattleship
       property :stat_name
     end
 
-    collection :games, extend: Stattleship::Models::GameRepresenter,
-                       class: Stattleship::Models::Game
+    collection :away_teams, extend: TeamRepresenter,
+                            class: Team
 
-    collection :players, extend: Stattleship::Models::PlayerRepresenter,
-                         class: Stattleship::Models::Player
+    collection :home_teams, extend: TeamRepresenter,
+                            class: Team
 
-    collection :teams, extend: Stattleship::Models::TeamRepresenter,
-                       class: Stattleship::Models::Team
+    collection :winning_teams, extend: TeamRepresenter,
+                               class: Team
+
+    collection :games, extend: GameRepresenter,
+                       class: Game
+
+    collection :players, extend: PlayerRepresenter,
+                         class: Player
+
+    collection :teams, extend: TeamRepresenter,
+                       class: Team
   end
 end

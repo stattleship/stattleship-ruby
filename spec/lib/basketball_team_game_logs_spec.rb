@@ -93,6 +93,18 @@ module Stattleship
           expect(game.venue).to be_a Venue
         end
 
+        it 'returns a home team' do
+          expect(game.home_team).to be_a Team
+        end
+
+        it 'returns a away team' do
+          expect(game.away_team).to be_a Team
+        end
+
+        it 'returns a winning team' do
+          expect(game.winning_team).to be_a Team
+        end
+
         it 'returns the score' do
           expect(game.score).to eq '111-118'
         end

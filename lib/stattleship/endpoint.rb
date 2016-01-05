@@ -77,6 +77,9 @@ module Stattleship
     end
 
     def populate_game(game)
+      populate_away_team(game)
+      populate_home_team(game)
+      populate_winning_team(game)
       populate_season(game)
       populate_venue(game)
 
@@ -118,6 +121,29 @@ module Stattleship
 
     def populate_team(team)
       populate_league(team)
+    end
+
+    def populate_away_team(model)
+      return if away_teams.nil?
+      model.away_team = away_teams.detect do |away_team|
+        away_team.id == model.away_team_id
+      end
+    end
+
+    def populate_home_team(model)
+      return if home_teams.nil?
+
+      model.home_team = home_teams.detect do |home_team|
+        home_team.id == model.home_team_id
+      end
+    end
+
+    def populate_winning_team(model)
+      return if winning_teams.nil?
+
+      model.winning_team = winning_teams.detect do |winning_team|
+        winning_team.id == model.winning_team_id
+      end
     end
 
     def populate_teams(model)

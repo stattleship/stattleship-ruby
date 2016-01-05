@@ -4,7 +4,7 @@ module Stattleship
   RSpec.describe HockeyGameLogs do
     describe '#game_logs' do
       it 'returns all the game_logs' do
-        expect(nhl_game_logs.count).to eq 7
+        expect(nhl_game_logs.count).to eq 3
       end
     end
 
@@ -27,7 +27,7 @@ module Stattleship
 
         game_logs = HockeyGameLogs.fetch(params: params)
 
-        expect(game_logs.count).to eq 7
+        expect(game_logs.count).to eq 3
 
         game_logs.each do |game_log|
           expect(game_log).to be_a HockeyGameLog
@@ -61,12 +61,24 @@ module Stattleship
           expect(game.venue).to be_a Venue
         end
 
+        it 'returns a home team' do
+          expect(game.home_team).to be_a Team
+        end
+
+        it 'returns a away team' do
+          expect(game.away_team).to be_a Team
+        end
+
+        it 'returns a winning team' do
+          expect(game.winning_team).to be_a Team
+        end
+
         it 'returns the score' do
-          expect(game.score).to eq '6-3'
+          expect(game.score).to eq '2-0'
         end
 
         it 'returns the city' do
-          expect(game.city).to eq 'Nashville'
+          expect(game.city).to eq 'Boston'
         end
 
         it 'returns the league_abbreviation' do
@@ -84,11 +96,11 @@ module Stattleship
 
       describe 'attributes' do
         it 'returns the city' do
-          expect(nhl_game_logs.first.city).to eq 'Nashville'
+          expect(nhl_game_logs.first.city).to eq 'Boston'
         end
 
         it 'returns the player_name' do
-          expect(nhl_game_logs.first.player_name).to eq 'Matt Beleskey'
+          expect(nhl_game_logs.first.player_name).to eq 'David Krejci'
         end
 
         it 'returns the league_abbreviation' do

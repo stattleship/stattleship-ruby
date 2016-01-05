@@ -17,12 +17,17 @@ module Stattleship
     def populate
       stats.each do |stat|
         populate_games(stat)
+
+        games.each do |game|
+          populate_game(game)
+        end
       end
     end
   end
 
   module StatsRepresenter
     include Roar::JSON
+    include Stattleship::Models
 
     collection :stats, class: Stattleship::Stat do
       property :game_id
@@ -30,33 +35,42 @@ module Stattleship
       property :stat_name
 
       property :player,
-               extend: Stattleship::Models::PlayerRepresenter,
-               class: Stattleship::Models::Player
+               extend: PlayerRepresenter,
+               class: Player
 
       property :team,
-               extend: Stattleship::Models::TeamRepresenter,
-               class: Stattleship::Models::Team
+               extend: TeamRepresenter,
+               class: Team
     end
 
-    collection :games, extend: Stattleship::Models::GameRepresenter,
-                       class: Stattleship::Models::Game
+    collection :away_teams, extend: TeamRepresenter,
+                            class: Team
 
-    collection :leagues, extend: Stattleship::Models::LeagueRepresenter,
-                         class: Stattleship::Models::League
+    collection :home_teams, extend: TeamRepresenter,
+                            class: Team
 
-    collection :seasons, extend: Stattleship::Models::SeasonRepresenter,
-                         class: Stattleship::Models::Season
+    collection :winning_teams, extend: TeamRepresenter,
+                               class: Team
 
-    collection :venues, extend: Stattleship::Models::VenueRepresenter,
-                        class: Stattleship::Models::Venue
+    collection :games, extend: GameRepresenter,
+                       class: Game
 
-    collection :players, extend: Stattleship::Models::PlayerRepresenter,
-                         class: Stattleship::Models::Player
+    collection :leagues, extend: LeagueRepresenter,
+                         class: League
 
-    collection :playing_positions, extend: Stattleship::Models::PlayingPositionRepresenter,
-                                   class: Stattleship::Models::PlayingPosition
+    collection :seasons, extend: SeasonRepresenter,
+                         class: Season
 
-    collection :teams, extend: Stattleship::Models::TeamRepresenter,
-                       class: Stattleship::Models::Team
+    collection :venues, extend: VenueRepresenter,
+                        class: Venue
+
+    collection :players, extend: PlayerRepresenter,
+                         class: Player
+
+    collection :playing_positions, extend: PlayingPositionRepresenter,
+                                   class: PlayingPosition
+
+    collection :teams, extend: TeamRepresenter,
+                       class: Team
   end
 end

@@ -11,6 +11,15 @@ module Stattleship
     include Roar::JSON
     include Stattleship::Models
 
+    collection :away_teams, extend: TeamRepresenter,
+                            class: Team
+
+    collection :home_teams, extend: TeamRepresenter,
+                            class: Team
+
+    collection :winning_teams, extend: TeamRepresenter,
+                               class: Team
+
     collection :games, extend: GameRepresenter,
                        class: Game
 

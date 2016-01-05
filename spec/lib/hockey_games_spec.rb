@@ -11,8 +11,15 @@ module Stattleship
         nhl_games.each do |game|
           expect(game).to be_a Models::Game
           expect(game.league).to be_a Models::League
+          expect(game.away_team).to be_a Models::Team
+          expect(game.home_team).to be_a Models::Team
+          expect(game.winning_team).to be_a Models::Team
           expect(game.league_abbreviation).to eq 'NHL'
         end
+
+        expect(nhl_games.first.away_team_name).to eq 'Calgary'
+        expect(nhl_games.first.home_team_name).to eq 'Colorado'
+        expect(nhl_games.first.winning_team_name).to eq 'Calgary'
       end
     end
 

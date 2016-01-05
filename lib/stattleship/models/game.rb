@@ -12,6 +12,24 @@ module Stattleship
       def league_abbreviation
         league.abbreviation
       end
+
+      def away_team_name
+        if away_team
+          away_team.name
+        end
+      end
+
+      def home_team_name
+        if home_team
+          home_team.name
+        end
+      end
+
+      def winning_team_name
+        if winning_team
+          winning_team.name
+        end
+      end
     end
 
     module GameRepresenter
