@@ -19,14 +19,14 @@ Gem::Specification.new do |spec|
   end
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'addressable', '~> 2.4'
+  spec.add_runtime_dependency 'addressable', '~> 2.4'
   spec.add_development_dependency 'bundler', '~> 1.10'
-  spec.add_development_dependency 'dotenv', '~> 2.0', '>= 2.0.2'
-  spec.add_development_dependency 'link_header', '~> 0.0.8'
-  spec.add_development_dependency 'multi_json', '~> 1.11', '>= 1.11.2'
-  spec.add_development_dependency 'oj', '~> 2.14', '>= 2.14.2'
-  spec.add_development_dependency 'oj_mimic_json', '~> 1.0', '>= 1.0.1'
-  spec.add_development_dependency 'ordinalize', '~> 0.0.3'
+  spec.add_runtime_dependency 'dotenv', '~> 2.0', '>= 2.0.2'
+  spec.add_runtime_dependency 'link_header', '~> 0.0.8'
+  spec.add_runtime_dependency 'multi_json', '~> 1.11', '>= 1.11.2'
+  spec.add_runtime_dependency 'oj', '~> 2.14', '>= 2.14.2'
+  spec.add_runtime_dependency 'oj_mimic_json', '~> 1.0', '>= 1.0.1'
+  spec.add_runtime_dependency 'ordinalize', '~> 0.0.3'
   spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'roar', '~> 1.0', '>= 1.0.4'
+  spec.add_runtime_dependency 'roar', '~> 1.0', '>= 1.0.4'
 end
