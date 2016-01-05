@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'stattleship'
+
+params = Stattleship::Params::BasketballInjuriesParams.new
+puts Stattleship::BasketballInjuries.fetch(params: params).map(&:note)
+
+#
+
+params = Stattleship::Params::FootballInjuriesParams.new
+puts Stattleship::BasketballInjuries.fetch(params: params).map(&:note)
+
+#
+
+params = Stattleship::Params::HockeyInjuriesParams.new
+puts Stattleship::BasketballInjuries.fetch(params: params).map(&:note)
+

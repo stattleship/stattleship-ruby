@@ -468,4 +468,44 @@ module Endpoints
     feats.from_json(json)
     feats.data
   end
+
+  def injuries
+    injuries = Stattleship::Injuries.new
+    injuries.extend(Stattleship::InjuriesRepresenter)
+
+    json = File.read('spec/fixtures/nfl/injuries.json')
+
+    injuries.from_json(json)
+    injuries.data
+  end
+
+  def nba_injuries
+    injuries = Stattleship::Injuries.new
+    injuries.extend(Stattleship::InjuriesRepresenter)
+
+    json = File.read('spec/fixtures/nba/injuries.json')
+
+    injuries.from_json(json)
+    injuries.data
+  end
+
+  def nfl_injuries
+    injuries = Stattleship::Injuries.new
+    injuries.extend(Stattleship::InjuriesRepresenter)
+
+    json = File.read('spec/fixtures/nfl/injuries.json')
+
+    injuries.from_json(json)
+    injuries.data
+  end
+
+  def nhl_injuries
+    injuries = Stattleship::Injuries.new
+    injuries.extend(Stattleship::InjuriesRepresenter)
+
+    json = File.read('spec/fixtures/nhl/injuries.json')
+
+    injuries.from_json(json)
+    injuries.data
+  end
 end

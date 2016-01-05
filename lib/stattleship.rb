@@ -32,6 +32,11 @@ require 'stattleship/basketball_game_logs'
 require 'stattleship/football_game_logs'
 require 'stattleship/hockey_game_logs'
 
+require 'stattleship/injuries'
+require 'stattleship/basketball_injuries'
+require 'stattleship/football_injuries'
+require 'stattleship/hockey_injuries'
+
 require 'stattleship/players'
 require 'stattleship/basketball_players'
 require 'stattleship/football_players'

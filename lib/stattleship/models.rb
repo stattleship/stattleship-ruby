@@ -1,4 +1,5 @@
 require 'stattleship/models/game'
+require 'stattleship/models/injury'
 require 'stattleship/models/league'
 require 'stattleship/models/player'
 require 'stattleship/models/playing_position'

@@ -1,0 +1,14 @@
+{
+  "id": "352c27f9-8f89-45f3-9f9c-1469fd5409a0",
+  "created_at": "2016-01-04T20:42:22-05:00",
+  "updated_at": "2016-01-04T20:42:22-05:00",
+  "location_name": "Calf",
+  "started_on": "2015-12-20",
+  "status_updated_at": "2016-01-04T17:26:07-05:00",
+  "note": "Okung is recovering from a strained calf but is expected to return for the NFC Wild Card game against the Vikings.",
+  "status": "probable",
+  "status_label": "Prob Sun",
+  "player_id": "c10a5520-7cda-43cf-be19-30e0bb877c54",
+  "season_id": "07f6794a-5312-4ce9-b5b0-2010c5975ff2",
+  "team_id": "e6094723-20f3-417a-87d2-1ccc0b7a6388"
+}

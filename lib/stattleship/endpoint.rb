@@ -111,6 +111,17 @@ module Stattleship
       end
     end
 
+    def populate_season_league(model)
+      return if leagues.nil?
+      return if model.season.nil?
+
+      model.season.league = leagues.detect do |league|
+        league.id == model.season.league_id
+      end
+
+      model.league = model.season.league
+    end
+
     def populate_league(model)
       return if leagues.nil?
 
