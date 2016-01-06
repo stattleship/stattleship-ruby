@@ -32,3 +32,11 @@ game_names = Stattleship::HockeyGames.fetch(params: params).
               map(&:name)
 
 puts game_names
+
+params = Stattleship::Params::HockeyGamesParams.new
+params.on = 'tomorrow'
+
+game_names = Stattleship::HockeyGames.fetch(params: params).
+              map(&:name)
+
+puts game_names
