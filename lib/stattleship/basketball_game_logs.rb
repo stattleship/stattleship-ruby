@@ -30,26 +30,37 @@ module Stattleship
     include Stattleship::GameLogsRepresenter
 
     collection :game_logs, class: Stattleship::BasketballGameLog do
+
+      [
+        :away_team_outcome,
+        :home_team_outcome,
+        :team_outcome,
+      ].each do |attribute|
+        property attribute
+      end
+
+      [
+        :field_goals_pct,
+        :free_throws_pct,
+        :three_pointers_pct,
+      ].each do |attribute|
+        property attribute, type: BigDecimal
+      end
+
       [
         :game_played,
         :game_started,
-        :home_team_outcome,
         :home_team_score,
-        :away_team_outcome,
         :away_team_score,
-        :team_outcome,
         :team_score,
         :assists,
         :field_goals_attempted,
         :field_goals_made,
-        :field_goals_pct,
         :free_throws_attempted,
         :free_throws_made,
-        :free_throws_pct,
         :points,
         :three_pointers_attempted,
         :three_pointers_made,
-        :three_pointers_pct,
         :turnovers,
         :steals,
         :blocks,
@@ -73,7 +84,7 @@ module Stattleship
         :thirty_thirty,
         :triple_double,
       ].each do |attribute|
-        property attribute
+        property attribute, type: Integer
       end
 
       [
