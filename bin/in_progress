@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'stattleship'
+
+params = Stattleship::Params::BasketballGamesParams.new
+params.status = 'in_progress'
+puts  Stattleship::BasketballGames.fetch(params: params).map(&:scoreline)
+puts  Stattleship::BasketballGames.fetch(params: params).map { |l| l.slug }
+
+
+params = Stattleship::Params::BasketballGameLogsParams.new
+params.team_id = 'nba-bos'
+params.status = 'in_progress'
+
+game_logs = Stattleship::BasketballGameLogs.fetch(params: params).
+              map(&:to_sentence)
+
+puts game_logs

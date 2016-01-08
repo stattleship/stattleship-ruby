@@ -11,10 +11,10 @@ module Stattleship
       property :note
       property :player_id
       property :season_id
-      property :started_on
+      property :started_on, type: Date
       property :status
       property :status_label
-      property :status_updated_at
+      property :status_updated_at, type: DateTime
       property :team_id
     end
   end

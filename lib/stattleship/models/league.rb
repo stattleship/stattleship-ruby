@@ -9,9 +9,9 @@ module Stattleship
       property :abbreviation
       property :color
       property :id
-      property :minutes_per_period
+      property :minutes_per_period, type: Integer
       property :name
-      property :periods
+      property :periods, type: Integer
       property :slug
       property :sport
     end

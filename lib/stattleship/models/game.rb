@@ -40,26 +40,17 @@ module Stattleship
         :at_neutral_site,
         :attendance,
         :away_team_outcome,
-        :away_team_score,
         :daytime,
-        :duration,
-        :ended_at,
         :home_team_outcome,
-        :home_team_score,
         :interval,
-        :interval_number,
         :interval_type,
         :label,
         :name,
         :on,
         :score,
-        :score_differential,
         :scoreline,
         :slug,
-        :started_at,
-        :temperature,
         :temperature_unit,
-        :timestamp,
         :title,
         :weather_conditions,
         :wind_direction,
@@ -67,6 +58,25 @@ module Stattleship
         :wind_speed_unit,
       ].each do |attribute|
         property attribute
+      end
+
+      [
+        :away_team_score,
+        :home_team_score,
+        :duration,
+        :interval_number,
+        :score_differential,
+        :temperature,
+        :timestamp,
+      ].each do |attribute|
+        property attribute, type: Integer
+      end
+
+      [
+        :ended_at,
+        :started_at,
+      ].each do |attribute|
+        property attribute, type: DateTime
       end
 
       [
