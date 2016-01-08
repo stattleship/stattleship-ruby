@@ -34,16 +34,20 @@ module Stattleship
         :game_played,
         :game_started,
         :home_team_outcome,
-        :home_team_score,
         :away_team_outcome,
-        :away_team_score,
         :team_outcome,
+      ].each do |attribute|
+        property attribute
+      end
+
+      [
+        :away_team_score,
+        :home_team_score,
         :team_score,
         :assists,
         :blocked_shots,
         :faceoffs_won,
         :faceoffs_lost,
-        :faceoff_win_percentage,
         :goals,
         :goals_power_play,
         :goals_short_handed,
@@ -53,12 +57,31 @@ module Stattleship
         :points,
         :points_power_play,
         :shifts,
-        :shooting_pct,
         :shots,
         :takeaways,
         :time_on_ice_secs,
+        :time_on_ice_even_strength_secs,
+        :time_on_ice_power_play_secs,
+        :time_on_ice_short_handed_secs,
+        :assists_power_play,
+        :assists_short_handed,
+        :game_winning_goals,
+        :goals_overtime,
+        :goals_period_1,
+        :goals_period_2,
+        :goals_period_3,
+        :points_short_handed,
+        :shootouts_attempted,
+        :shootouts_scored
       ].each do |attribute|
-        property attribute
+        property attribute, type: Integer
+      end
+
+      [
+        :faceoff_win_percentage,
+        :shooting_pct,
+      ].each do |attribute|
+        property attribute, type: BigDecimal
       end
 
       [

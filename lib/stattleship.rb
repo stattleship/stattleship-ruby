@@ -1,5 +1,6 @@
 require 'addressable/uri'
 require 'addressable/template'
+require 'bigdecimal'
 require 'date'
 require 'dotenv'
 require 'link_header'

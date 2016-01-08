@@ -28,12 +28,21 @@ module Stattleship
     include Stattleship::TeamGameLogsRepresenter
 
     collection :team_game_logs, class: Stattleship::HockeyTeamGameLog do
+
       [
         :home_team_outcome,
-        :home_team_score,
         :away_team_outcome,
-        :away_team_score,
         :team_outcome,
+      ].each do |attribute|
+        property attribute
+      end
+
+
+      property :goalie_goals_against_average, type: BigDecimal
+
+      [
+        :home_team_score,
+        :away_team_score,
         :team_score,
         :faceoff_total_losses,
         :faceoff_total_wins,
@@ -46,7 +55,6 @@ module Stattleship
         :games_won_shootout,
         :goalie_assists,
         :goalie_goals_against,
-        :goalie_goals_against_average,
         :goalie_goals_scored,
         :goalie_hits,
         :goalie_penalty_minutes,
@@ -94,7 +102,7 @@ module Stattleship
         :shutouts,
         :total_play_time,
       ].each do |attribute|
-        property attribute
+        property attribute, type: Integer
       end
 
       [
