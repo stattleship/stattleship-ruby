@@ -20,7 +20,7 @@ module Stattleship
     collection :stat_leaders, class: Stattleship::Leader do
       property :place
       property :player_id
-      property :stat
+      property :stat, type: BigDecimal
       property :stat_name
     end
 

@@ -26,9 +26,9 @@ module Stattleship
 
     collection :top_stats, class: Stattleship::TopStat do
       property :game_id
-      property :place
+      property :place, type: Integer
       property :player_id
-      property :stat
+      property :stat, type: BigDecimal
       property :stat_name
     end
 

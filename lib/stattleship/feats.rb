@@ -41,12 +41,12 @@ module Stattleship
     collection :feats, class: Stattleship::Feat do
       property :accomplished_vs
       property :accomplishment
-      property :actual
+      property :actual, type: BigDecimal
       property :category
       property :game_id
       property :game_slug
       property :humanized_stat_type
-      property :level
+      property :level, type: Integer
       property :name
       property :on
       property :opponent_abbrev

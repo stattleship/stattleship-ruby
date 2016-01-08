@@ -20,7 +20,7 @@ module Stattleship
     property :total_team_stat, class: Stattleship::TotalTeamStat do
       property :team_id
       property :stat
-      property :total
+      property :total, type: BigDecimal
     end
 
     collection :teams, extend: Stattleship::Models::TeamRepresenter,

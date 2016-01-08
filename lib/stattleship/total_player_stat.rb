@@ -21,7 +21,7 @@ module Stattleship
     property :total_player_stat, class: Stattleship::TotalPlayerStat do
       property :player_id
       property :stat
-      property :total
+      property :total, type: BigDecimal
     end
 
     collection :players, extend: Stattleship::Models::PlayerRepresenter,
