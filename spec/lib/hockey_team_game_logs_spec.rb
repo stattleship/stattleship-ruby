@@ -69,7 +69,7 @@ module Stattleship
       end
 
       it 'returns goalie_goals_against_average' do
-        expect(nhl_team_game_log.goalie_goals_against_average).to eq '3.0'
+        expect(nhl_team_game_log.goalie_goals_against_average).to eq 3.0
       end
 
       def nhl_team_game_log

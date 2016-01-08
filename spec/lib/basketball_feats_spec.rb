@@ -38,8 +38,7 @@ module Stattleship
             expect(feat.level).to eq 'rare'
           end
 
-          expect(feats.first.actual).to eq "7.0"
-          expect(feats.first.actual_value).to eq 7
+          expect(feats.first.actual).to eq 7
           expect(feats.first.player.name).to eq 'Arron Afflalo'
           expect(feats.first.subject.name).to eq 'Arron Afflalo'
           expect(feats.first.subject_name).to eq 'Arron Afflalo'
@@ -73,8 +72,7 @@ module Stattleship
             expect(feat.subject).to be_a Stattleship::Models::Team
           end
 
-          expect(feats.first.actual).to eq "0.427"
-          expect(feats.first.actual_value).to eq 0.427
+          expect(feats.first.actual).to eq 0.427
           expect(feats.first.team.name).to eq 'Golden State'
           expect(feats.first.subject.name).to eq 'Golden State'
           expect(feats.first.subject_name).to eq 'Golden State'

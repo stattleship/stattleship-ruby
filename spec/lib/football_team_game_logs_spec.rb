@@ -69,7 +69,7 @@ module Stattleship
       end
 
       it 'returns passer_rating' do
-        expect(nfl_team_game_log.passer_rating).to eq '80.77652'
+        expect(nfl_team_game_log.passer_rating).to eq 80.77652
       end
 
       def nfl_team_game_log

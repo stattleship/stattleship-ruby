@@ -27,6 +27,7 @@ module Stattleship
 
   module HockeyGameLogsRepresenter
     include Roar::JSON
+    include Roar::Coercion
     include Stattleship::GameLogsRepresenter
 
     collection :game_logs, class: Stattleship::HockeyGameLog do

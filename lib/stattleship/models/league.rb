@@ -5,6 +5,7 @@ module Stattleship
 
     module LeagueRepresenter
       include Roar::JSON
+      include Roar::Coercion
 
       property :abbreviation
       property :color

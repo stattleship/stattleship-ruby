@@ -19,8 +19,8 @@ module Stattleship
       end
 
       it 'sets the game dates' do
-        expect(game.ended_at).to eq('2015-10-28T21:36:47-07:00')
-        expect(game.started_at).to eq('2015-10-28T19:00:00-07:00')
+        expect(game.ended_at).to eq(DateTime.parse('2015-10-28T21:36:47-07:00'))
+        expect(game.started_at).to eq(DateTime.parse('2015-10-28T19:00:00-07:00'))
         expect(game.timestamp).to eq(1446084000)
         expect(game.on).to eq('on October 28, 2015')
       end

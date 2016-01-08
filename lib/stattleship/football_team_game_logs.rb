@@ -2,10 +2,10 @@ module Stattleship
   class FootballTeamGameLog < Stattleship::TeamGameLog
     def stats
       [
-        "#{team_score.to_i} score",
-        "#{passing_touchdowns} Pass TD",
-        "#{rushing_touchdowns} Rush TD",
-        "#{passer_rating} rating"
+        "#{StatFormatter.format(value: team_score)} score",
+        "#{StatFormatter.format(value: passing_touchdowns)} Pass TD",
+        "#{StatFormatter.format(value: rushing_touchdowns)} Rush TD",
+        "#{StatFormatter.format(value: passer_rating, precision: 5)} rating"
       ]
     end
 
@@ -25,6 +25,7 @@ module Stattleship
 
   module FootballTeamGameLogsRepresenter
     include Roar::JSON
+    include Roar::Coercion
     include Stattleship::TeamGameLogsRepresenter
 
     collection :team_game_logs, class: Stattleship::FootballTeamGameLog do

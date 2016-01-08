@@ -2,7 +2,7 @@ module Stattleship
   class FootballGameLog < Stattleship::GameLog
     def stats
       [
-        "#{points.to_i} P",
+        "#{StatFormatter.format(value: points)} P",
       ]
     end
 
@@ -22,6 +22,7 @@ module Stattleship
 
   module FootballGameLogsRepresenter
     include Roar::JSON
+    include Roar::Coercion
     include Stattleship::GameLogsRepresenter
 
     collection :game_logs, class: Stattleship::FootballGameLog do

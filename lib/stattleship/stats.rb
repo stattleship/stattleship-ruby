@@ -9,7 +9,7 @@ module Stattleship
     end
 
     def to_sentence
-      "#{name} had #{stat || 'no'} #{stat_name} on #{game.name}"
+      "#{name} had #{StatFormatter.stat(stat_name: stat_name, value: stat) || 'no'} #{stat_name} on #{game.name}"
     end
   end
 

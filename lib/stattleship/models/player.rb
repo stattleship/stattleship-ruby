@@ -16,6 +16,7 @@ module Stattleship
 
     module PlayerRepresenter
       include Roar::JSON
+      include Roar::Coercion
 
       property :first_name
       property :handedness

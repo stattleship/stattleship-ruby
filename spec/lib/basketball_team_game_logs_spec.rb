@@ -69,7 +69,7 @@ module Stattleship
       end
 
       it 'returns three_pointers_percentage' do
-        expect(nba_team_game_log.three_pointers_percentage).to eq '0.381'
+        expect(nba_team_game_log.three_pointers_percentage).to eq 0.381
       end
 
       def nba_team_game_log

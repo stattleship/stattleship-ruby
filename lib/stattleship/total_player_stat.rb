@@ -1,7 +1,11 @@
 module Stattleship
   class TotalPlayerStat < Stattleship::Endpoint
     def to_sentence
-      "#{player.name} has #{total} #{stat}"
+      "#{player.name} has #{format_stat(total)} #{stat}"
+    end
+
+    def format_stat(value)
+      StatFormatter.stat(stat_name: stat, value: total)
     end
 
     def self.fetch(path:, params:)
@@ -17,6 +21,7 @@ module Stattleship
 
   module TotalPlayerStatRepresenter
     include Roar::JSON
+    include Roar::Coercion
 
     property :total_player_stat, class: Stattleship::TotalPlayerStat do
       property :player_id

@@ -18,8 +18,8 @@ module Stattleship
       end
 
       it 'sets the season dates' do
-        expect(season.starts_on).to eq('2015-08-01')
-        expect(season.ends_on).to eq('2016-02-14')
+        expect(season.starts_on).to eq(Date.parse('2015-08-01'))
+        expect(season.ends_on).to eq(Date.parse('2016-02-14'))
       end
 
       def season

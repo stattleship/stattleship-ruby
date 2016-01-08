@@ -20,8 +20,7 @@ module Stattleship
             expect(feat.game.winning_team).to be_a Stattleship::Models::Team
           end
 
-          expect(player_feats.first.actual).to eq "9.0"
-          expect(player_feats.first.actual_value).to eq 9
+          expect(player_feats.first.actual).to eq 9
           expect(player_feats.first.player.name).to eq 'Emmanuel Sanders'
           expect(player_feats.first.subject.name).to eq 'Emmanuel Sanders'
           expect(player_feats.first.subject_name).to eq 'Emmanuel Sanders'
@@ -46,8 +45,7 @@ module Stattleship
             expect(feat.game.winning_team).to be_a Stattleship::Models::Team
           end
 
-          expect(team_feats.first.actual).to eq "3.0"
-          expect(team_feats.first.actual_value).to eq 3
+          expect(team_feats.first.actual).to eq 3
           expect(team_feats.first.team.name).to eq 'Denver'
           expect(team_feats.first.subject.name).to eq 'Denver'
           expect(team_feats.first.subject_name).to eq 'Denver'

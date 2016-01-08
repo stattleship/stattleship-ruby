@@ -38,8 +38,7 @@ module Stattleship
             expect(feat.level).to eq 'rare'
           end
 
-          expect(feats.first.actual).to eq "9.0"
-          expect(feats.first.actual_value).to eq 9
+          expect(feats.first.actual).to eq 9
           expect(feats.first.player.name).to eq 'Emmanuel Sanders'
           expect(feats.first.subject.name).to eq 'Emmanuel Sanders'
           expect(feats.first.subject_name).to eq 'Emmanuel Sanders'
@@ -76,8 +75,7 @@ module Stattleship
             expect(feat.level).to eq 'typical'
           end
 
-          expect(feats.first.actual).to eq "3.0"
-          expect(feats.first.actual_value).to eq 3
+          expect(feats.first.actual).to eq 3
           expect(feats.first.team.name).to eq 'Denver'
           expect(feats.first.subject.name).to eq 'Denver'
           expect(feats.first.subject_name).to eq 'Denver'

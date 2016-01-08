@@ -8,10 +8,6 @@ module Stattleship
       player || team
     end
 
-    def actual_value
-      actual.to_f
-    end
-
     def to_sentence
       sentence_vs_on
     end
@@ -36,6 +32,7 @@ module Stattleship
 
   module FeatsRepresenter
     include Roar::JSON
+    include Roar::Coercion
     include Stattleship::Models
 
     collection :feats, class: Stattleship::Feat do

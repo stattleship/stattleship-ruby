@@ -34,11 +34,11 @@ module Stattleship
 
     module GameRepresenter
       include Roar::JSON
+      include Roar::Coercion
 
       [
         :id,
         :at_neutral_site,
-        :attendance,
         :away_team_outcome,
         :daytime,
         :home_team_outcome,
@@ -61,6 +61,7 @@ module Stattleship
       end
 
       [
+        :attendance,
         :away_team_score,
         :home_team_score,
         :duration,

@@ -5,6 +5,7 @@ module Stattleship
 
     module InjuryRepresenter
       include Roar::JSON
+      include Roar::Coercion
 
       property :id
       property :location_name

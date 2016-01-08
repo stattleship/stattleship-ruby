@@ -5,6 +5,7 @@ module Stattleship
 
     module SeasonRepresenter
       include Roar::JSON
+      include Roar::Coercion
 
       property :ends_on, type: Date
       property :id

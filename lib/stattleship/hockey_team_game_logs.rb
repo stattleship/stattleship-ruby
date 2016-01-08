@@ -2,10 +2,10 @@ module Stattleship
   class HockeyTeamGameLog < Stattleship::TeamGameLog
     def stats
       [
-        "#{goals} G",
-        "#{penalty_minutes} PIM",
-        "#{player_points} P",
-        "#{shots} S"
+        "#{StatFormatter.format(value: goals)} G",
+        "#{StatFormatter.format(value: penalty_minutes)} PIM",
+        "#{StatFormatter.format(value: player_points)} P",
+        "#{StatFormatter.format(value: shots)} S"
       ]
     end
 
@@ -25,6 +25,7 @@ module Stattleship
 
   module HockeyTeamGameLogsRepresenter
     include Roar::JSON
+    include Roar::Coercion
     include Stattleship::TeamGameLogsRepresenter
 
     collection :team_game_logs, class: Stattleship::HockeyTeamGameLog do

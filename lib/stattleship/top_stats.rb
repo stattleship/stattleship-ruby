@@ -1,7 +1,11 @@
 module Stattleship
   class TopStat < OpenStruct
     def to_sentence
-      "#{player.name} had #{stat} #{stat_name} in #{game.name} for the #{place.ordinalize} best performance"
+      "#{player.name} had #{format_stat(stat)} #{stat_name} in #{game.name} for the #{place.ordinalize} best performance"
+    end
+
+    def format_stat(value)
+      StatFormatter.stat(stat_name: stat_name, value: stat)
     end
   end
 
@@ -22,6 +26,7 @@ module Stattleship
 
   module TopStatsRepresenter
     include Roar::JSON
+    include Roar::Coercion
     include Stattleship::Models
 
     collection :top_stats, class: Stattleship::TopStat do

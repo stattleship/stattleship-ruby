@@ -15,8 +15,8 @@ module Stattleship
       end
 
       it 'sets the injury info' do
-        expect(injury.started_on).to eq '2015-12-20'
-        expect(injury.status_updated_at).to eq '2016-01-04T17:26:07-05:00'
+        expect(injury.started_on).to eq Date.parse('2015-12-20')
+        expect(injury.status_updated_at).to eq DateTime.parse('2016-01-04T17:26:07-05:00')
         expect(injury.note).to eq 'Okung is recovering from a strained calf but is expected to return for the NFC Wild Card game against the Vikings.'
         expect(injury.status).to eq 'probable'
         expect(injury.status_label).to eq 'Prob Sun'

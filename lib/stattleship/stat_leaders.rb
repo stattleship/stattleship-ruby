@@ -1,7 +1,11 @@
 module Stattleship
   class Leader < OpenStruct
     def to_sentence
-      "#{player.name} is in #{place.ordinalize} place with #{stat} #{stat_name}"
+      "#{player.name} is in #{place.ordinalize} place with #{format_stat(stat)} #{stat_name}"
+    end
+
+    def format_stat(value)
+      StatFormatter.stat(stat_name: stat_name, value: stat)
     end
   end
 
@@ -16,6 +20,7 @@ module Stattleship
 
   module StatLeadersRepresenter
     include Roar::JSON
+    include Roar::Coercion
 
     collection :stat_leaders, class: Stattleship::Leader do
       property :place
