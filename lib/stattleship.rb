@@ -7,6 +7,7 @@ require 'link_header'
 require 'net/https'
 require 'ordinalize'
 require 'ostruct'
+require 'roar/coercion'
 require 'roar/json'
 
 require 'stattleship/version'

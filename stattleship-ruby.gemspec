@@ -29,4 +29,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'ordinalize', '~> 0.0.3'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_runtime_dependency 'roar', '~> 1.0', '>= 1.0.4'
+  spec.add_runtime_dependency 'virtus', '~> 1.0', '>= 1.0.5'
 end
