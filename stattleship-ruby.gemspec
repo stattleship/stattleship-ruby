@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   end
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'addressable', '~> 2.4'
+  spec.add_runtime_dependency 'addressable', '~> 2.3', '<= 2.3.8'
   spec.add_development_dependency 'bundler', '~> 1.10'
   spec.add_runtime_dependency 'dotenv', '~> 2.0', '>= 2.0.2'
   spec.add_runtime_dependency 'link_header', '~> 0.0.8'
