@@ -28,12 +28,25 @@ module Stattleship
     include Stattleship::TeamGameLogsRepresenter
 
     collection :team_game_logs, class: Stattleship::FootballTeamGameLog do
+
       [
-        :home_team_outcome,
-        :home_team_score,
         :away_team_outcome,
-        :away_team_score,
+        :home_team_outcome,
         :team_outcome,
+      ].each do |attribute|
+        property attribute
+      end
+
+      [
+        :passer_rating,
+        :punting_net_yards_avg,
+      ].each do |attribute|
+        property attribute, type: BigDecimal
+      end
+
+      [
+        :home_team_score,
+        :away_team_score,
         :team_score,
         :extra_point_kicks_attempted,
         :extra_point_kicks_blocked,
@@ -71,7 +84,6 @@ module Stattleship
         :kickoffs,
         :kickoffs_in_end_zone,
         :other_touchdowns,
-        :passer_rating,
         :passing_first_downs,
         :passing_gross_yards,
         :passing_longest_yards,
@@ -113,7 +125,6 @@ module Stattleship
         :punting_longest_net_yards,
         :punting_longest_yards,
         :punting_net_yards,
-        :punting_net_yards_avg,
         :punting_plays,
         :punting_plays_blocked,
         :receiving_longest_yards,
@@ -139,7 +150,7 @@ module Stattleship
         :total_first_downs,
         :total_touchdowns,
       ].each do |attribute|
-        property attribute
+        property attribute, type: Integer
       end
 
       [

@@ -25,14 +25,29 @@ module Stattleship
     include Stattleship::GameLogsRepresenter
 
     collection :game_logs, class: Stattleship::FootballGameLog do
+
+      [
+        :away_team_outcome,
+        :home_team_outcome,
+        :team_outcome,
+      ].each do |attribute|
+        property attribute
+      end
+
+      [
+        :passes_percentage,
+        :receptions_average_yards_per,
+        :passer_rating,
+        :rushing_average_yards_per,
+      ].each do |attribute|
+        property attribute, type: BigDecimal
+      end
+
       [
         :game_played,
         :game_started,
-        :home_team_outcome,
         :home_team_score,
-        :away_team_outcome,
         :away_team_score,
-        :team_outcome,
         :team_score,
         :tackles_solo,
         :tackles_assists,
@@ -61,7 +76,6 @@ module Stattleship
         :defense_fumble_recoveries,
         :defense_miscellaneous_fumble_recoveries,
         :passes_completions,
-        :passes_percentage,
         :passes_yards_gross,
         :passes_touchdowns,
         :passes_interceptions,
@@ -69,18 +83,15 @@ module Stattleship
         :receptions_total,
         :receptions_yards,
         :receptions_touchdowns,
-        :receptions_average_yards_per,
         :receptions_looks,
         :receptions_longest,
         :passing_2pt_conversions_succeeded,
         :passing_touchdowns_longest_yards,
         :receiving_2pt_conversions_succeeded,
         :receiving_touchdowns_longest_yards,
-        :passer_rating,
         :rushes_attempts,
         :rushes_yards,
         :rushes_touchdowns,
-        :rushing_average_yards_per,
         :rushes_longest,
         :rushing_2pt_conversions_succeeded,
         :rushing_gross_yards,
