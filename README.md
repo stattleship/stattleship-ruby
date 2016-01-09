@@ -1,4 +1,6 @@
 # stattleship-ruby
+
+[![Join the chat at https://gitter.im/stattleship/stattleship-ruby](https://badges.gitter.im/stattleship/stattleship-ruby.svg)](https://gitter.im/stattleship/stattleship-ruby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Stattleship API Ruby client
 
 [![Build Status](https://travis-ci.org/stattleship/stattleship-ruby.svg?branch=master)](https://travis-ci.org/stattleship/stattleship-ruby)
