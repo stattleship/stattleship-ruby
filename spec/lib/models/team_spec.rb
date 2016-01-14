@@ -22,6 +22,16 @@ module Stattleship
         expect(team.location).to eq('Toronto')
       end
 
+      it 'sets the primary color' do
+        expect(team.color).to eq('ce1141')
+        expect(team.color_css).to eq('#ce1141')
+      end
+
+      it 'sets the list of colors' do
+        expect(team.colors).to eq(['ce1141', '061922', 'a1a1a4', 'b4975a'])
+        expect(team.colors_css).to eq(['#ce1141', '#061922', '#a1a1a4', '#b4975a'])
+      end
+
       def team
         json = File.read('spec/fixtures/nba/team.json')
         team = Team.new

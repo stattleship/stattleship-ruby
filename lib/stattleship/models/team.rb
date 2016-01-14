@@ -12,12 +12,24 @@ module Stattleship
       def league_abbreviation
         league.abbreviation
       end
+
+      def color_css
+        "##{color}"
+      end
+
+      def colors_css
+        if colors
+          colors.map { |c| "##{c}"}
+        end
+      end
     end
 
     module TeamRepresenter
       include Roar::JSON
 
       property :id
+      property :color
+      collection :colors
       property :league_id
       property :location
       property :name

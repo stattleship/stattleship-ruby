@@ -2,6 +2,13 @@
   "id": "4d457218-ccdf-45cf-8f07-2d7ee7b5032c",
   "created_at": "2015-11-28T22:33:56-05:00",
   "updated_at": "2015-12-09T09:15:47-05:00",
+  "color": "ce1141",
+  "colors": [
+    "ce1141",
+    "061922",
+    "a1a1a4",
+    "b4975a"
+  ],
   "location": "Toronto",
   "name": "Toronto",
   "nickname": "Raptors",
