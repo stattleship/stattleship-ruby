@@ -5,7 +5,7 @@ module Stattleship
         "#{field_goals_made.to_i} FGM",
         "#{(field_goals_pct.to_f * 100).round(1)} FG%",
         "#{points.to_i} PTS",
-        "#{rebounds_total.to_i} RB",
+        "#{rebounds_total.to_i} RBD",
         "#{steals.to_i} STL",
         "#{blocks.to_i} BLK"
       ]
