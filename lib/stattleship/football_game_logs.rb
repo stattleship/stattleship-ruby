@@ -2,12 +2,98 @@ module Stattleship
   class FootballGameLog < Stattleship::GameLog
     def stats
       [
-        "#{StatFormatter.format(value: points)} P",
-      ]
+        { passer_rating: passer_rating },
+        { tackles_solo: tackles_solo },
+        { tackles_assists: tackles_assists },
+        { sacks_total: sacks_total },
+        { sacks_yards: sacks_yards },
+        { passes_defensed: passes_defensed },
+        { interceptions_total: interceptions_total },
+        { interceptions_touchdown: interceptions_touchdown },
+        { fumbles_committed: fumbles_committed },
+        { passes_completions: passes_completions },
+        { passes_yards_gross: passes_yards_gross },
+        { passes_touchdowns: passes_touchdowns },
+        { passes_interceptions: passes_interceptions },
+        { receptions_total: receptions_total },
+        { receptions_yards: receptions_yards },
+        { receptions_touchdowns: receptions_touchdowns },
+        { receptions_looks: receptions_looks },
+        { rushes_attempts: rushes_attempts },
+        { rushes_yards: rushes_yards },
+        { rushes_touchdowns: rushes_touchdowns },
+        { field_goals_made: field_goals_made },
+        { extra_points_made: extra_points_made },
+        { punts_total: punts_total },
+        { points: points },
+      ].map { |stat| build_statline(stat: stat) }.compact
     end
 
     def to_sentence
       "#{player_name} #{stats.join(', ')} (#{game.name})"
+    end
+
+    def build_statline(stat:)
+      name = stat.keys.first
+      value = stat.values.first
+      if value && value != 0
+        "#{StatFormatter.format(value: value)} #{stat_abbreviation(stat_name: name)}"
+      end
+    end
+
+    def stat_abbreviation(stat_name:)
+      case stat_name.to_s
+      when 'passer_rating'
+        'RTG'
+      when 'tackles_solo'
+        'T'
+      when 'tackles_assists'
+        'TA'
+      when 'sacks_total'
+        'SCKS'
+      when 'sacks_yards'
+        'SYDS'
+      when 'passes_defensed'
+        'PD'
+      when 'interceptions_total'
+        'INT'
+      when 'interceptions_touchdown'
+        'INT TD'
+      when 'fumbles_committed'
+        'F'
+      when 'passes_completions'
+        'CMP'
+      when 'passes_yards_gross'
+        'YDS'
+      when 'passes_touchdowns'
+        'TD'
+      when 'passes_interceptions'
+        'INT'
+      when 'receptions_total'
+        'R'
+      when 'receptions_yards'
+        'RYDS'
+      when 'receptions_touchdowns'
+        'RTD'
+      when 'receptions_looks'
+        'L'
+      when 'rushes_attempts'
+        'R'
+      when 'rushes_yards'
+        'RYDS'
+      when 'rushes_touchdowns'
+        'RTD'
+      when 'field_goals_made'
+        'FG'
+      when 'extra_points_made'
+        'XP'
+      when 'punts_total'
+        'punts_total'
+      when 'points'
+        'PTS'
+      else
+        ''
+      end
     end
   end
 

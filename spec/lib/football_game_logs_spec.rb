@@ -112,6 +112,13 @@ module Stattleship
             nfl_game_logs.first.league_name
           ).to eq 'National Football League'
         end
+
+        it 'constructs a sentence' do
+         expect(
+          nfl_game_logs.first.to_sentence
+          ).to eq(
+          'Tom Brady 106 RTG, 1 F, 38 CMP, 466 YDS, 3 TD, 3 R, -4 RYDS (Patriots vs Bills September 20, 2015 at  1:00pm)')
+        end
       end
     end
   end
