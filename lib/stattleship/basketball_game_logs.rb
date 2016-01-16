@@ -7,7 +7,7 @@ module Stattleship
         "#{points.to_i} PTS",
         "#{rebounds_total.to_i} RB",
         "#{steals.to_i} STL",
-        "#{blocks} BLK"
+        "#{blocks.to_i} BLK"
       ]
     end
 
