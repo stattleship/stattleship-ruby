@@ -68,6 +68,38 @@ module Stattleship
       def venue_name
         venue.name
       end
+
+      def subject_name
+        if team_penalty
+          team_name
+        else
+          "#{player_name} (#{team_name})"
+        end
+      end
+
+      def period_time
+        Time.at(period_seconds).utc.strftime('%M:%S')
+      end
+
+      def period_abbreviation
+        if game.hockey?
+          "P"
+        else
+          "Q"
+        end
+      end
+
+      def period
+        "#{period_number}#{period_abbreviation}"
+      end
+
+      def at
+        "#{period_time} of #{period}"
+      end
+
+      def to_sentence
+        "#{subject_name} - #{label} - #{minutes} minutes - #{at}"
+      end
     end
 
     module PenaltyRepresenter

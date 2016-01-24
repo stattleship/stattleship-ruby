@@ -5,6 +5,10 @@ module Stattleship
         venue.city
       end
 
+      def sport
+        league.sport
+      end
+
       def league_name
         league.name
       end
@@ -29,6 +33,18 @@ module Stattleship
         if winning_team
           winning_team.name
         end
+      end
+
+      def hockey?
+        league.hockey?
+      end
+
+      def basketball?
+        league.basketball?
+      end
+
+      def football?
+        league.football?
       end
     end
 

@@ -1,6 +1,17 @@
 module Stattleship
   module Models
     class League < OpenStruct
+      def hockey?
+        sport == 'hockey'
+      end
+
+      def basketball?
+        sport == 'basketball'
+      end
+
+      def football?
+        sport == 'football'
+      end
     end
 
     module LeagueRepresenter

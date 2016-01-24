@@ -20,25 +20,40 @@ module Stattleship
           expect(penalty.winning_team).to be_a Models::Team
           expect(penalty.league_abbreviation).to eq 'NHL'
         end
+      end
 
-        expect(nhl_penalties.first.away_team_name).to eq 'Columbus'
-        expect(nhl_penalties.first.home_team_name).to eq 'Boston'
-        expect(nhl_penalties.first.winning_team_name).to eq 'Boston'
-        expect(nhl_penalties.first.opponent_name).to eq 'Columbus'
-        expect(nhl_penalties.first.opponent_full_name).to eq 'Columbus Blue Jackets'
-        expect(nhl_penalties.first.team_name).to eq 'Boston'
-        expect(nhl_penalties.first.team_full_name).to eq 'Boston Bruins'
-        expect(nhl_penalties.first.city).to eq 'Boston'
-        expect(nhl_penalties.first.venue_name).to eq 'TD Garden'
-        expect(nhl_penalties.first.player_name).to eq 'David Pastrnak'
-        expect(nhl_penalties.first.label).to eq 'Hooking'
-        expect(nhl_penalties.first.name).to eq 'hooking'
-        expect(nhl_penalties.first.minutes).to eq 2
-        expect(nhl_penalties.first.period_number).to eq 2
-        expect(nhl_penalties.first.period_seconds).to eq 49
-        expect(nhl_penalties.first.seconds).to eq 120
-        expect(nhl_penalties.first.team_penalty).to eq false
-        expect(nhl_penalties.first.time_code).to eq 'PT0M49S'
+      it 'sets penalty properties' do
+        penalty = nhl_penalties.first
+
+        expect(penalty.away_team_name).to eq 'Columbus'
+        expect(penalty.home_team_name).to eq 'Boston'
+        expect(penalty.winning_team_name).to eq 'Boston'
+        expect(penalty.opponent_name).to eq 'Columbus'
+        expect(penalty.opponent_full_name).to eq 'Columbus Blue Jackets'
+        expect(penalty.team_name).to eq 'Boston'
+        expect(penalty.team_full_name).to eq 'Boston Bruins'
+        expect(penalty.city).to eq 'Boston'
+        expect(penalty.venue_name).to eq 'TD Garden'
+        expect(penalty.player_name).to eq 'David Pastrnak'
+        expect(penalty.label).to eq 'Hooking'
+        expect(penalty.name).to eq 'hooking'
+        expect(penalty.minutes).to eq 2
+        expect(penalty.period_number).to eq 2
+        expect(penalty.period_seconds).to eq 49
+        expect(penalty.seconds).to eq 120
+        expect(penalty.team_penalty).to eq false
+        expect(penalty.time_code).to eq 'PT0M49S'
+      end
+
+      it 'makes a sentence' do
+        penalty = nhl_penalties.first
+
+        expect(penalty.subject_name).to eq('David Pastrnak (Boston)')
+        expect(penalty.period_time).to eq('00:49')
+        expect(penalty.period_abbreviation).to eq('P')
+        expect(penalty.period).to eq('2P')
+        expect(penalty.at).to eq('00:49 of 2P')
+        expect(penalty.to_sentence).to eq('David Pastrnak (Boston) - Hooking - 2 minutes - 00:49 of 2P')
       end
     end
 
