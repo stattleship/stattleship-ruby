@@ -538,4 +538,34 @@ module Endpoints
     penalties.from_json(json)
     penalties.data
   end
+
+def nba_scoring_plays
+    scoring_plays = Stattleship::ScoringPlays.new
+    scoring_plays.extend(Stattleship::ScoringPlaysRepresenter)
+
+    json = File.read('spec/fixtures/nba/scoring_plays.json')
+
+    scoring_plays.from_json(json)
+    scoring_plays.data
+  end
+
+  def nfl_scoring_plays
+    scoring_plays = Stattleship::ScoringPlays.new
+    scoring_plays.extend(Stattleship::ScoringPlaysRepresenter)
+
+    json = File.read('spec/fixtures/nfl/scoring_plays.json')
+
+    scoring_plays.from_json(json)
+    scoring_plays.data
+  end
+
+  def nhl_scoring_plays
+    scoring_plays = Stattleship::ScoringPlays.new
+    scoring_plays.extend(Stattleship::ScoringPlaysRepresenter)
+
+    json = File.read('spec/fixtures/nhl/scoring_plays.json')
+
+    scoring_plays.from_json(json)
+    scoring_plays.data
+  end
 end

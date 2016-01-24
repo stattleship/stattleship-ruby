@@ -172,5 +172,23 @@ module Stattleship
         venue.id == model.venue_id
       end
     end
+
+    def populate_scoring_players(model)
+      model.scoring_players = []
+
+      return if scoring_players.nil?
+
+      model.scoring_player_ids.each do |scoring_player_id|
+        model.scoring_players << scoring_players.detect do |scoring_player|
+          scoring_player.id == scoring_player_id
+        end
+      end
+
+      model.scoring_players.each do |scoring_player|
+        scoring_player.player = players.detect do |player|
+          player.id == scoring_player.player_id
+        end
+      end
+    end
   end
 end

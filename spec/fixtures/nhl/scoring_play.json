@@ -1,0 +1,28 @@
+{
+  "id": "d3809aba-4da3-4d8d-81a0-e98c4ffc1d97",
+  "created_at": "2016-01-24T00:16:22-05:00",
+  "updated_at": "2016-01-24T00:16:22-05:00",
+  "conversion": null,
+  "conversion_points": 0,
+  "empty_net": false,
+  "name": "EV Goal",
+  "period_number": 2,
+  "period_seconds": 32,
+  "points": 1,
+  "scored_at": "2016-01-23T20:03:23-05:00",
+  "scoring_conversion": null,
+  "scoring_conversion_points": 0,
+  "scoring_how": null,
+  "scoring_method": "goal",
+  "scoring_type": "ev",
+  "time_code": "PT0M32S",
+  "yards": 0,
+  "game_id": "9f6108e5-41d1-4a37-a8a1-72e3c71b9387",
+  "opponent_id": "54410a6b-c9e0-443e-a4cf-b3e22f2cbb75",
+  "team_id": "e9d7bcb5-6723-4ca9-b1d9-1ccd026be1cb",
+  "scoring_player_ids": [
+    "f904196f-3973-4c77-a3e7-ce1450db6298",
+    "b112774c-4568-447f-9935-abcd56d1bbc7",
+    "648849ad-2d30-43c9-a769-c3a96e508009"
+  ]
+}

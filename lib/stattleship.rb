@@ -52,6 +52,11 @@ require 'stattleship/basketball_players'
 require 'stattleship/football_players'
 require 'stattleship/hockey_players'
 
+require 'stattleship/scoring_plays'
+require 'stattleship/basketball_scoring_plays'
+require 'stattleship/football_scoring_plays'
+require 'stattleship/hockey_scoring_plays'
+
 require 'stattleship/stat_leaders'
 require 'stattleship/basketball_stat_leaders'
 require 'stattleship/football_stat_leaders'
