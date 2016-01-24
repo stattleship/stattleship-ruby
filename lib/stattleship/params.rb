@@ -21,6 +21,11 @@ require 'stattleship/params/basketball_injuries_params'
 require 'stattleship/params/football_injuries_params'
 require 'stattleship/params/hockey_injuries_params'
 
+require 'stattleship/params/penalties_params'
+require 'stattleship/params/basketball_penalties_params'
+require 'stattleship/params/football_penalties_params'
+require 'stattleship/params/hockey_penalties_params'
+
 require 'stattleship/params/players_params'
 require 'stattleship/params/basketball_players_params'
 require 'stattleship/params/football_players_params'

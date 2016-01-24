@@ -1,0 +1,17 @@
+{
+  "id": "77e67d8e-3530-451d-8886-06996a75d5e8",
+  "created_at": "2016-01-24T03:55:35-05:00",
+  "updated_at": "2016-01-24T03:55:35-05:00",
+  "label": "Hooking",
+  "minutes": 2,
+  "name": "hooking",
+  "period_number": 2,
+  "period_seconds": 885,
+  "seconds": 120,
+  "team_penalty": false,
+  "time_code": "PT14M45S",
+  "game_id": "23593fd4-ad4e-4fb0-9e80-7881046da3ca",
+  "opponent_id": "54276c06-42a0-4649-838c-a462451d54c8",
+  "player_id": "009f0aa3-f769-4dd6-bea9-de56ba63b0b6",
+  "team_id": "d32b9696-2d78-40a0-bf6d-3cd16dc48c96"
+}

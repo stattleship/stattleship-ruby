@@ -42,6 +42,11 @@ require 'stattleship/basketball_injuries'
 require 'stattleship/football_injuries'
 require 'stattleship/hockey_injuries'
 
+require 'stattleship/penalties'
+require 'stattleship/basketball_penalties'
+require 'stattleship/football_penalties'
+require 'stattleship/hockey_penalties'
+
 require 'stattleship/players'
 require 'stattleship/basketball_players'
 require 'stattleship/football_players'
