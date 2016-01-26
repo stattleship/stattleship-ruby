@@ -48,7 +48,6 @@ module Stattleship
         expect(nhl_scoring_play.winning_team_name).to eq 'Boston'
         expect(nhl_scoring_play.opponent_name).to eq 'Columbus'
         expect(nhl_scoring_play.venue_name).to eq 'TD Garden'
-
       end
 
       it 'populates the scoring_play players' do
@@ -69,6 +68,37 @@ module Stattleship
         expect(nhl_scoring_player.role).to eq 'scorer'
         expect(nhl_scoring_player.name).to eq 'Scorer'
         expect(nhl_scoring_player.player_name).to eq 'Brad Marchand'
+      end
+
+      it 'gets scorers' do
+        nhl_scoring_play = nhl_scoring_plays.first
+        expect(nhl_scoring_play.scorers).not_to be_empty
+      end
+
+      it 'gets scorer' do
+        nhl_scoring_play = nhl_scoring_plays.first
+        expect(nhl_scoring_play.scorer).to be_a Stattleship::Models::ScoringPlayer
+      end
+
+      it 'gets scorer name' do
+        nhl_scoring_play = nhl_scoring_plays.first
+        expect(nhl_scoring_play.scorer_name).to eq 'Brad Marchand'
+      end
+
+      it 'gets assists' do
+        nhl_scoring_play = nhl_scoring_plays.first
+        expect(nhl_scoring_play.assists.map(&:role)).to eq ['assist', 'assist']
+      end
+
+      it 'gets assist_names' do
+        nhl_scoring_play = nhl_scoring_plays.first
+        expect(nhl_scoring_play.assist_names).to eq 'Ryan Spooner, Patrice Bergeron'
+      end
+
+      it 'makes a sentence' do
+        nhl_scoring_play = nhl_scoring_plays.first
+        sentence = 'Brad Marchand (Ryan Spooner, Patrice Bergeron) - 00:32 of 2P - vs Columbus 01/23/16'
+        expect(nhl_scoring_play.to_sentence).to eq sentence
       end
     end
 

@@ -8,7 +8,6 @@ module Stattleship
           populate_game(game)
         end
 
-        # populate_players(scoring_play)
         populate_teams(scoring_play)
         populate_opponents(scoring_play)
 

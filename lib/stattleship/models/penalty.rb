@@ -97,8 +97,14 @@ module Stattleship
         "#{period_time} of #{period}"
       end
 
+      def vs
+        if game
+          "vs #{opponent_name} #{game.short_date}"
+        end
+      end
+
       def to_sentence
-        "#{subject_name} - #{label} - #{minutes} minutes - #{at}"
+        "#{subject_name} - #{label} - #{minutes} minutes - #{at} - #{vs}"
       end
     end
 

@@ -53,7 +53,7 @@ module Stattleship
         expect(penalty.period_abbreviation).to eq('P')
         expect(penalty.period).to eq('2P')
         expect(penalty.at).to eq('00:49 of 2P')
-        expect(penalty.to_sentence).to eq('David Pastrnak (Boston) - Hooking - 2 minutes - 00:49 of 2P')
+        expect(penalty.to_sentence).to eq('David Pastrnak (Boston) - Hooking - 2 minutes - 00:49 of 2P - vs Columbus 01/23/16')
       end
     end
 

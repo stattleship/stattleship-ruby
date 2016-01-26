@@ -33,7 +33,7 @@ module Stattleship
     end
 
     def populate_player_teams(model)
-      return if teams.nil?
+      return if teams.nil? || model.player.nil?
 
       model.team = teams.detect do |team|
         team.id == model.player.team_id

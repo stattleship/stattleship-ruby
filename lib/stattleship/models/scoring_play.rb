@@ -68,6 +68,104 @@ module Stattleship
       def venue_name
         venue.name
       end
+
+      def scorers
+        return unless scoring_players
+
+        scoring_players.select do |scoring_player|
+          scoring_player.role == 'scorer'
+        end
+      end
+
+      def scorer
+        scorers.first if scorers
+      end
+
+      def scorer_name
+        if scorer
+          scorer.player_name
+        else
+          ''
+        end
+      end
+
+      def assists
+        return unless scoring_players
+
+        scoring_players.select do |scoring_player|
+          scoring_player.role == 'assist'
+        end
+      end
+
+      def assist_names
+        if assists
+          assists.map(&:player_name).join(', ')
+        else
+          'unassisted'
+        end
+      end
+
+      def period_time
+        Time.at(period_seconds).utc.strftime('%M:%S')
+      end
+
+      def period_abbreviation
+        if game.hockey?
+          "P"
+        else
+          "Q"
+        end
+      end
+
+      def period
+        "#{period_number}#{period_abbreviation}"
+      end
+
+      def at
+        "#{period_time} of #{period}"
+      end
+
+      def scoring_player_names
+        if scoring_players
+          scoring_players.map(&:player_name).join(', ')
+        else
+          ''
+        end
+      end
+
+      def scoring_player_role_names
+        if scoring_players
+          scoring_players.map(&:name).join(', ')
+        else
+          ''
+        end
+      end
+
+      def scoring_players_info
+        if scoring_players
+          player_names = scoring_players.map(&:player_name)
+          role_names = scoring_players.map(&:name)
+          player_names.zip(role_names).flatten.compact.join(', ')
+        else
+          ''
+        end
+      end
+
+      def vs
+        if game
+          "vs #{opponent_name} #{game.short_date}"
+        end
+      end
+
+      def to_sentence
+        if game.hockey?
+          "#{scorer_name} (#{assist_names}) - #{at} - #{vs}"
+        elsif game.football?
+          "#{period_number} QTR #{period_time} - #{points} points - #{yards} yards - #{scoring_players_info} - #{vs}"
+        else
+          ''
+        end
+      end
     end
 
     module ScoringPlayRepresenter

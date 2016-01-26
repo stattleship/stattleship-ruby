@@ -46,6 +46,10 @@ module Stattleship
       def football?
         league.football?
       end
+
+      def short_date
+        started_at.strftime('%m/%e/%y')
+      end
     end
 
     module GameRepresenter
