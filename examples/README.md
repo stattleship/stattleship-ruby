@@ -86,7 +86,7 @@ You'll need
   * Use the `player_id`, `type` and `stat` parameters to Adrian Peterson's total number of rushing attempts in the regular season
   * Demonstrates a fully populated player, so can access his `weight` etc
 
-* [Hockey Total Team Stats](football_total_team_stat.rb)
+* [Hockey Total Team Stats](hockey_total_team_stat.rb)
   * Uses `HockeyTotalTeamStatParams` and makes a `HockeyTotalTeamStat` request
   * Use the `team_id` and `stat` parameters to the total number of third period goals the Canadiens has scored
 
