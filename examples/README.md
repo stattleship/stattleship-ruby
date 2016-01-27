@@ -81,16 +81,16 @@ You'll need
   * Uses `BasketballTeamGameLogsParams` and makes a `BasketballTeamGameLogs` request
   * Use the `team_id` and `since` parameters to get Cavaliers team game logs for the past week
 
-* [Football Total Player Stats](football_player_total_stat.rb)
+* [Football Total Player Stats](football_total_player_stat.rb)
   * Uses `FootballTotalPlayerStatParams` and makes a `FootballTotalPlayerStat` request
   * Use the `player_id`, `type` and `stat` parameters to Adrian Peterson's total number of rushing attempts in the regular season
   * Demonstrates a fully populated player, so can access his `weight` etc
 
-* [Hockey Total Team Stats](football_player_total_stat.rb)
+* [Hockey Total Team Stats](football_total_team_stat.rb)
   * Uses `HockeyTotalTeamStatParams` and makes a `HockeyTotalTeamStat` request
   * Use the `team_id` and `stat` parameters to the total number of third period goals the Canadiens has scored
 
-* [Basketball Tops Stats](basketball_top_stats.rb)
+* [Basketball Top Stats](basketball_top_stats.rb)
   * Uses `BasketballTopStatsParams` and makes a `BasketballTopStats` request
   * Use the `type`, `stat`, and `place ` parameters to return the 3 best (highest) offensive rebounding performances in NBA
   * Demonstrates a fully populated game, so know when this was accomplished
