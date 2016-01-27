@@ -13,7 +13,7 @@ Affordable. Meaningful. Developer-Friendly.
 
 We're gonna need a bigger :boat:!
 
-# Examples
+## Examples
 
 Check out some [examples](examples/README.md) of how to make API calls.
 
@@ -35,8 +35,19 @@ pp game_logs.first
 
 **That's it.**
 
-# Apps Using the Stattleship API and this Gem
+## Apps
 
-* [Glickman: Your statmoji(tm) sports slackbot powered by Slack and the Stattleship API.](https://github.com/stattleship/glickman) - https://github.com/stattleship/glickman
+We're using the Stattleship API and this gem! You can, too.
 
-* [Oglethorpe: Stats + Scores + Photos! using the Stattleship API.](https://github.com/stattleship/oglethorpe) - https://github.com/stattleship/oglethorpe
+* [Glickman: Your statmoji(tm) sports slackbot powered by Slack and the Stattleship API.](https://github.com/stattleship/glickman)
+
+* [Oglethorpe: Stats + Scores + Photos! using the Stattleship API.](https://github.com/stattleship/oglethorpe)
+
+## Other Docs
+
+* [Our Playbook](http://playbook.stattleship.com/)
+* [Developer API Reference](http://developer.stattleship.com/)
+
+## Questions?
+
+Follow us on [@stattleship](https://twitter.com/stattleship) or join our free, public [Fanboat](http://fanboat.stattleship.com/) Slack group where you can try out "cosell" -- an instance of Glickman -- and get API updates.
