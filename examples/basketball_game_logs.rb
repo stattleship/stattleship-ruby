@@ -25,6 +25,8 @@ pp game_logs.first
 # can access friendly helpers
 pp game_logs.first.to_sentence
 
+# "Stephen Curry 8 FGM, 44.4 FG%, 25 PTS, 7 RBD, 11 A, 2 STL, 1 BLK (Warriors vs Bulls January 20, 2016 at  7:00pm)"
+
 # or, individual attributes
 game_logs.each do |game_log|
   pp game_log.three_pointers_made

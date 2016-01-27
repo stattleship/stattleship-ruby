@@ -31,9 +31,34 @@ You'll need
 * Stattleship API Access Token from https://www.stattleship.com
 * Set that in your `.env` file as `STATTLESHIP_ACCESS_TOKEN=your_token`
 * To run examples, that .env file should be the the `/examples` dir.
+* Copy the `sample.env` file, insert your token and save as `examples/.env`
+* The `cd` to the `/examples` directory and `ruby <example>.rb` such that the .env loads
 
 ## Code
 
 * [Basketball Game Logs](basketball_game_logs.rb)
-    * Uses `BasketballGameLogsParams` and makes a `BasketballGameLogs` request
-    * Use the `player_id` and `since` parameters to get Stephen Curry's game logs fro the past week
+  * Uses `BasketballGameLogsParams` and makes a `BasketballGameLogs` request
+  * Use the `player_id` and `since` parameters to get Stephen Curry's game logs for the past week
+
+* [Hockey Games](hockey_games.rb)
+  * Uses `HockeyGamesParams` and makes a `HockeyGames` request
+  * Uses the `status` and `since` parameters to return ended Chicago Blackhawk games
+  * Demonstrates `started_at` is a proper DateTime and renders `scoreline`s
+
+* [Football Feats](football_feats.rb)
+  * Uses `FootballFeatsParams` and makes a `FootballFeats` request
+  * Uses `player_id` and `level_up` parameters to return Cam Newton regular season accomplishments
+
+* [Basketball Injuries](basketball_injuries.rb)
+  * Uses `BasketballInjuriesParams` and makes a `BasketballInjuries` request
+  * Use the `team_id` and `since` to get Spurs injuries and show the injury note and its injury location (knee, back, etc)
+
+* [Hockey Penalties](hockey_penalties.rb)
+  * Uses `HockeyPenaltiesParams` and makes a `HockeyPenalties` request
+  * Uses the `status` and `since` parameters to return penalties for ended Buffalo Sabres games in last 2 weeks
+  * Demonstrates `minutes` is a proper Integer and renders a friendly-readable sentence describing the penalty
+
+* [Football Players](football_players.rb)
+  * Uses `FootballPlayersParams` and makes a `FootballPlayers` request
+  * Uses `team_id` and `level_up` parameters to return Denver Broncos players
+  * Demonstrates ability to filter and sort on a numeric `salary` to get list of players making more than $5M and where they went to `school`

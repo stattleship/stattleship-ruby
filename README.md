@@ -21,7 +21,7 @@ It's dead simple.
 
 * Build and set parameters
 * Use that to fetch data
-* Use fully populated PORO's
+* Use fully populated PORO's with real Ruby datatypes (DateTime, Integers, bool) not just JSON strings
 
 The pattern is pretty much as follows:
 
