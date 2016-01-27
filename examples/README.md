@@ -62,3 +62,35 @@ You'll need
   * Uses `FootballPlayersParams` and makes a `FootballPlayers` request
   * Uses `team_id` and `level_up` parameters to return Denver Broncos players
   * Demonstrates ability to filter and sort on a numeric `salary` to get list of players making more than $5M and where they went to `school`
+
+* [Hockey Scoring Plays](hockey_scoring_plays.rb)
+  * Uses `HockeyScoringPlaysParams` and makes a `HockeyScoringPlays` request
+  * Uses the `status` and `since` parameters to return scoring plays for ended Dallas Stars games in last month
+  * Demonstrates can access an array of players who assisted on each goal
+
+* [Basketball Injuries](basketball_injuries.rb)
+  * Uses `BasketballStatLeadersParams` and makes a `BasketballStatLeaders` request
+  * Use the `type`, `stat` and `place` parameters get the top 5 three point leaders (with ties)
+
+* [Football Stats](football_stats.rb)
+  * Uses `FootballStatsParams` and makes a `FootballStats` request
+  * Use the `type`, `stat` and `player_id` parameters get Aaron Rodgers TDs thrown in each game
+  * Demonstrates ability to get `game`-specific data per stat, such as `weather_conditions`
+
+* [Basketball Team Game Logs](basketball_team_game_logs.rb)
+  * Uses `BasketballTeamGameLogsParams` and makes a `BasketballTeamGameLogs` request
+  * Use the `team_id` and `since` parameters to get Cavaliers team game logs for the past week
+
+* [Football Total Player Stats](football_player_total_stat.rb)
+  * Uses `FootballTotalPlayerStatParams` and makes a `FootballTotalPlayerStat` request
+  * Use the `player_id`, `type` and `stat` parameters to Adrian Peterson's total number of rushing attempts in the regular season
+  * Demonstrates a fully populated player, so can access his `weight` etc
+
+* [Hockey Total Team Stats](football_player_total_stat.rb)
+  * Uses `HockeyTotalTeamStatParams` and makes a `HockeyTotalTeamStat` request
+  * Use the `team_id` and `stat` parameters to the total number of third period goals the Canadiens has scored
+
+* [Basketball Tops Stats](basketball_top_stats.rb)
+  * Uses `BasketballTopStatsParams` and makes a `BasketballTopStats` request
+  * Use the `type`, `stat`, and `place ` parameters to return the 3 best (highest) offensive rebounding performances in NBA
+  * Demonstrates a fully populated game, so know when this was accomplished

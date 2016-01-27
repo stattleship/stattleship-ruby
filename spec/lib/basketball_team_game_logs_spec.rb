@@ -162,7 +162,7 @@ module Stattleship
         it 'returns a sentence' do
           expect(
             nba_team_game_logs.first.to_sentence
-          ).to eq 'Chicago 42 FGM, 0.0 FG%, 0 PTS, 28 DRB, 13 ORB, 41 REB (Bulls vs Mavericks December 26, 2015 at  7:30pm)'
+          ).to eq 'Chicago 42 FGM, 53.9 FG%, 111 PTS, 28 DRB, 13 ORB, 41 REB (Bulls vs Mavericks December 26, 2015 at  7:30pm)'
         end
       end
     end

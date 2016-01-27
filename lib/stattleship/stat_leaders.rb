@@ -1,5 +1,11 @@
 module Stattleship
   class Leader < OpenStruct
+    def player_name
+      if player
+        player.name
+      end
+    end
+
     def to_sentence
       "#{player.name} is in #{place.ordinalize} place with #{format_stat(stat)} #{stat_name}"
     end
