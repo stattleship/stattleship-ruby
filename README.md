@@ -13,6 +13,16 @@ Affordable. Meaningful. Developer-Friendly.
 
 We're gonna need a bigger :boat:!
 
+## Usage
+
+Note: This gem is still in pre-release and is not yet in Rubygems.
+
+In your Gemfile:
+
+```
+gem 'stattleship-ruby', '0.1.3', git: 'https://github.com/stattleship/stattleship-ruby.git'
+```
+
 ## Examples
 
 Check out some [examples](examples/README.md) of how to make API calls.
@@ -34,6 +44,8 @@ pp game_logs.first
 ```
 
 **That's it.**
+
+If you want to see what the example JSON responses are, have a look in [fixtures](https://github.com/stattleship/stattleship-ruby/tree/master/spec/fixtures) as there are samples for each sport.
 
 ## Apps
 
