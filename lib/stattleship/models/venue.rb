@@ -5,8 +5,10 @@ module Stattleship
 
     module VenueRepresenter
       include Roar::JSON
+      include Roar::Coercion
 
       property :abbreviation
+      property :capacity, type: Integer
       property :city
       property :country
       property :field_type

@@ -18,6 +18,7 @@ module Stattleship
       end
 
       it 'sets the venue locations' do
+        expect(venue.capacity).to eq 19204
         expect(venue.city).to eq('Tampa')
         expect(venue.state).to eq('Florida')
         expect(venue.country).to eq('USA')
