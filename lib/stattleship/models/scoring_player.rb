@@ -13,6 +13,7 @@ module Stattleship
 
       property :id
       property :player_id
+      property :scoring_play_id
 
       property :name
       property :role
