@@ -18,6 +18,10 @@ module Stattleship
         expect(game.title).to eq('Clippers vs Kings')
       end
 
+      it 'sets the game status' do
+        expect(game.status).to eq('ended')
+      end
+
       it 'sets the game dates' do
         expect(game.ended_at).to eq(DateTime.parse('2015-10-28T21:36:47-07:00'))
         expect(game.started_at).to eq(DateTime.parse('2015-10-28T19:00:00-07:00'))

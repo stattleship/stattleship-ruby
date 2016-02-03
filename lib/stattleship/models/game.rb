@@ -176,6 +176,7 @@ module Stattleship
         :score,
         :scoreline,
         :slug,
+        :status,
         :temperature_unit,
         :title,
         :weather_conditions,
