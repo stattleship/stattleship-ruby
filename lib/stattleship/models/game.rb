@@ -132,7 +132,7 @@ module Stattleship
       end
 
       def dump
-        to_hash.
+        to_h.
           merge(
             away_team_colors: away_team_colors,
             away_team_name: away_team_name,

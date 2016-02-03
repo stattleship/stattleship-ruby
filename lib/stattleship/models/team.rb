@@ -26,7 +26,7 @@ module Stattleship
       end
 
       def dump
-        self.to_hash.
+        to_h.
           merge(
             full_name: full_name,
             title: title,

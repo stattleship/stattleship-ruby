@@ -2,7 +2,7 @@ module Stattleship
   module Models
     class Venue < OpenStruct
       def dump
-        self.to_hash
+        to_h
       end
     end
 
