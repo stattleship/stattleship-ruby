@@ -41,15 +41,25 @@ module Stattleship
       end
 
       it 'dumps all info to a hash' do
+        expect(dump).to have_key(:colors)
+        expect(dump).to have_key(:home_team_colors)
         expect(dump).to have_key(:away_team_name)
+        expect(dump).to have_key(:away_team_slug)
+        expect(dump).to have_key(:home_team_colors)
         expect(dump).to have_key(:home_team_name)
+        expect(dump).to have_key(:home_team_slug)
         expect(dump).to have_key(:league_abbreviation)
         expect(dump).to have_key(:league_name)
         expect(dump).to have_key(:city)
         expect(dump).to have_key(:short_date)
+        expect(dump).to have_key(:state)
+        expect(dump).to have_key(:team_slugs)
         expect(dump).to have_key(:venue_name)
         expect(dump).to have_key(:venue_capacity)
+        expect(dump).to have_key(:venue_slug)
+        expect(dump).to have_key(:winning_team_colors)
         expect(dump).to have_key(:winning_team_name)
+        expect(dump).to have_key(:winning_team_slug)
       end
 
       def game
