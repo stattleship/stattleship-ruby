@@ -24,16 +24,14 @@ module Stattleship
       end
 
       def dump
-        if self.to_hash
-          self.to_hash.
-            merge(
-              label: label,
-              team: team_hash,
-              team_name: team_name,
-              team_nickname: team_nickname,
-            )
-          end
-      end
+        self.to_hash.
+          merge(
+            label: label,
+            team: team_hash,
+            team_name: team_name,
+            team_nickname: team_nickname,
+          )
+        end
     end
 
     module PlayerRepresenter
