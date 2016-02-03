@@ -9,6 +9,7 @@ module Stattleship
 
       def colors
         [away_team_colors, home_team_colors].
+          flatten.
           compact.
           uniq
       end
