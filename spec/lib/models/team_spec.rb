@@ -32,11 +32,22 @@ module Stattleship
         expect(team.colors_css).to eq(['#ce1141', '#061922', '#a1a1a4', '#b4975a'])
       end
 
+      it 'dumps all info to a hash' do
+        expect(dump).to have_key(:full_name)
+        expect(dump).to have_key(:title)
+      end
+
       def team
-        json = File.read('spec/fixtures/nba/team.json')
-        team = Team.new
-        team.extend(TeamRepresenter)
-        team.from_json(json)
+        @team ||= begin
+          json = File.read('spec/fixtures/nba/team.json')
+          team = Team.new
+          team.extend(TeamRepresenter)
+          team.from_json(json)
+        end
+      end
+
+      def dump
+        @dump ||= team.dump
       end
     end
   end

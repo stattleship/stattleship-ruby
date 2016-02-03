@@ -6,11 +6,31 @@ module Stattleship
       end
 
       def team_name
-        team.name
+        if team
+          team.name
+        end
       end
 
       def team_nickname
-        team.nickname
+        if team
+          team.nickname
+        end
+      end
+
+      def team_hash
+        if team
+          team.dump
+        end
+      end
+
+      def dump
+        self.to_hash.
+          merge(
+            label: label,
+            team: team_hash,
+            team_name: team_name,
+            team_nickname: team_nickname,
+          )
       end
     end
 

@@ -10,7 +10,9 @@ module Stattleship
       end
 
       def league_abbreviation
-        league.abbreviation
+        if league
+          league.abbreviation
+        end
       end
 
       def color_css
@@ -21,6 +23,14 @@ module Stattleship
         if colors
           colors.map { |c| "##{c}"}
         end
+      end
+
+      def dump
+        self.to_hash.
+          merge(
+            full_name: full_name,
+            title: title,
+          )
       end
     end
 

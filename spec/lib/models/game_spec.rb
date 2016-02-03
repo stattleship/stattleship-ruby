@@ -40,11 +40,33 @@ module Stattleship
         expect(game.duration).to eq(8340)
       end
 
+      it 'dumps all info to a hash' do
+        expect(dump).to have_key(:away_team)
+        expect(dump).to have_key(:away_team_name)
+        expect(dump).to have_key(:home_team)
+        expect(dump).to have_key(:home_team_name)
+        expect(dump).to have_key(:league_abbreviation)
+        expect(dump).to have_key(:league_name)
+        expect(dump).to have_key(:city)
+        expect(dump).to have_key(:short_date)
+        expect(dump).to have_key(:venue_name)
+        expect(dump).to have_key(:venue_capacity)
+        expect(dump).to have_key(:winning_team)
+        expect(dump).to have_key(:winning_team_name)
+        expect(dump).to have_key(:venue)
+      end
+
       def game
-        json = File.read('spec/fixtures/nba/game.json')
-        game = Game.new
-        game.extend(GameRepresenter)
-        game.from_json(json)
+        @game ||= begin
+                    json = File.read('spec/fixtures/nba/game.json')
+                    game = Game.new
+                    game.extend(GameRepresenter)
+                    game.from_json(json)
+                  end
+      end
+
+      def dump
+        @dump ||= game.dump
       end
     end
   end

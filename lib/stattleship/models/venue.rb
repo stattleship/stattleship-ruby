@@ -1,6 +1,9 @@
 module Stattleship
   module Models
     class Venue < OpenStruct
+      def dump
+        self.to_hash
+      end
     end
 
     module VenueRepresenter

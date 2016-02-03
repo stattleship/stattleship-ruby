@@ -24,11 +24,24 @@ module Stattleship
         expect(player.position_name).to eq('Quarterback')
       end
 
+      it 'dumps all info to a hash' do
+        expect(dump).to have_key(:label)
+        expect(dump).to have_key(:team)
+        expect(dump).to have_key(:team_name)
+        expect(dump).to have_key(:team_nickname)
+      end
+
       def player
-        json = File.read('spec/fixtures/nfl/player.json')
-        player = Player.new
-        player.extend(PlayerRepresenter)
-        player.from_json(json)
+        @player ||= begin
+          json = File.read('spec/fixtures/nfl/player.json')
+          player = Player.new
+          player.extend(PlayerRepresenter)
+          player.from_json(json)
+        end
+      end
+
+      def dump
+        @dump ||= player.dump
       end
     end
   end

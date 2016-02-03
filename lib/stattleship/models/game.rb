@@ -2,19 +2,33 @@ module Stattleship
   module Models
     class Game < OpenStruct
       def city
-        venue.city
+        if venue
+          venue.city
+        end
       end
 
       def sport
-        league.sport
+        if league
+          league.sport
+        end
       end
 
       def league_name
-        league.name
+        if league
+          league.name
+        end
       end
 
       def league_abbreviation
-        league.abbreviation
+        if league
+          league.abbreviation
+        end
+      end
+
+      def away_team_hash
+        if away_team
+          away_team.dump
+        end
       end
 
       def away_team_name
@@ -23,9 +37,21 @@ module Stattleship
         end
       end
 
+      def home_team_hash
+        if home_team
+          home_team.dump
+        end
+      end
+
       def home_team_name
         if home_team
           home_team.name
+        end
+      end
+
+      def winning_team_hash
+        if winning_team
+          winning_team.dump
         end
       end
 
@@ -49,6 +75,44 @@ module Stattleship
 
       def short_date
         started_at.strftime('%m/%e/%y')
+      end
+
+      def venue_capacity
+        if venue
+          venue.capacity
+        end
+      end
+
+      def venue_hash
+        if venue
+          venue.dump
+        end
+      end
+
+      def venue_name
+        if venue
+          venue.name
+        end
+      end
+
+      def dump
+        self.to_hash.
+          merge(
+            away_team: away_team_hash,
+            away_team_name: away_team_name,
+            city: city,
+            home_team: home_team_hash,
+            home_team_name: home_team_name,
+            league_abbreviation: league_abbreviation,
+            league_name: league_name,
+            short_date: short_date,
+            sport: sport,
+            venue: venue_hash,
+            venue_name: venue_name,
+            venue_capacity: venue_capacity,
+            winning_team: winning_team_hash,
+            winning_team_name: winning_team_name,
+          )
       end
     end
 
