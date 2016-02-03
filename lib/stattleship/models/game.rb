@@ -96,23 +96,25 @@ module Stattleship
       end
 
       def dump
-        self.to_hash.
-          merge(
-            away_team: away_team_hash,
-            away_team_name: away_team_name,
-            city: city,
-            home_team: home_team_hash,
-            home_team_name: home_team_name,
-            league_abbreviation: league_abbreviation,
-            league_name: league_name,
-            short_date: short_date,
-            sport: sport,
-            venue: venue_hash,
-            venue_name: venue_name,
-            venue_capacity: venue_capacity,
-            winning_team: winning_team_hash,
-            winning_team_name: winning_team_name,
-          )
+        if self.to_hash
+          self.to_hash.
+            merge(
+              away_team: away_team_hash,
+              away_team_name: away_team_name,
+              city: city,
+              home_team: home_team_hash,
+              home_team_name: home_team_name,
+              league_abbreviation: league_abbreviation,
+              league_name: league_name,
+              short_date: short_date,
+              sport: sport,
+              venue: venue_hash,
+              venue_name: venue_name,
+              venue_capacity: venue_capacity,
+              winning_team: winning_team_hash,
+              winning_team_name: winning_team_name,
+            )
+        end
       end
     end
 
