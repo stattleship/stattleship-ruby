@@ -24,6 +24,8 @@ module Stattleship
           expect(player_feats.first.player.name).to eq 'Emmanuel Sanders'
           expect(player_feats.first.subject.name).to eq 'Emmanuel Sanders'
           expect(player_feats.first.subject_name).to eq 'Emmanuel Sanders'
+          expect(player_feats.first.title).to eq 'Emmanuel Sanders was thrown to 9 times'
+          expect(player_feats.first.description).to eq 'Emmanuel Sanders was thrown to 9 times vs. the Lions on Sunday September 27, 2015 at  8:30pm'
         end
       end
 
@@ -47,8 +49,6 @@ module Stattleship
 
           expect(team_feats.first.actual).to eq 3
           expect(team_feats.first.team.name).to eq 'Denver'
-          expect(team_feats.first.subject.name).to eq 'Denver'
-          expect(team_feats.first.subject_name).to eq 'Denver'
         end
       end
     end

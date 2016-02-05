@@ -40,6 +40,7 @@ module Stattleship
       property :accomplishment
       property :actual, type: BigDecimal
       property :category
+      property :description
       property :game_id
       property :game_slug
       property :humanized_stat_type
@@ -66,6 +67,7 @@ module Stattleship
       property :subject_team_slug
       property :subject_type
       property :subject_slug
+      property :title
       property :team_id
       property :team_slug
       property :verb
