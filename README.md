@@ -23,6 +23,18 @@ In your Gemfile:
 gem 'stattleship-ruby', '0.1.3', git: 'https://github.com/stattleship/stattleship-ruby.git'
 ```
 
+### Build
+
+```
+gem build stattleship-ruby.gemspec
+```
+
+### Install
+
+```
+gem install stattleship-ruby-0.1.3.gem
+```
+
 ## Examples
 
 Check out some [examples](examples/README.md) of how to make API calls.

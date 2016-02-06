@@ -33,7 +33,7 @@ module Stattleship
     end
 
     def http
-      @http ||= Net::HTTP.new(base_uri.host, base_uri.port).tap do |http|
+      Net::HTTP.new(base_uri.host, base_uri.port).tap do |http|
         http.use_ssl = true
         http.verify_mode = OpenSSL::SSL::VERIFY_PEER
       end
