@@ -1,6 +1,6 @@
 module Stattleship
   class Feat < OpenStruct
-    def name
+    def subject_name
       subject.name
     end
 

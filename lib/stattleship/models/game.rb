@@ -131,6 +131,25 @@ module Stattleship
         end
       end
 
+      def losing_score
+        if score
+          score.split('-').
+            map(&:to_i).
+            sort.
+            join('-')
+        end
+      end
+
+      def winning_score
+        if score
+          score.split('-').
+            map(&:to_i).
+            sort.
+            reverse.
+            join('-')
+        end
+      end
+
       def dump
         to_h.
           merge(

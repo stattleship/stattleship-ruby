@@ -37,6 +37,8 @@ module Stattleship
         expect(game.score).to eq('111-104')
         expect(game.score_differential).to eq(7)
         expect(game.scoreline).to eq('Clippers 111 - Kings 104')
+        expect(game.winning_score).to eq('111-104')
+        expect(game.losing_score).to eq('104-111')
       end
 
       it 'sets the game metrics' do
