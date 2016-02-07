@@ -32,6 +32,16 @@ module Stattleship
         expect(team.colors_css).to eq(['#ce1141', '#061922', '#a1a1a4', '#b4975a'])
       end
 
+      it 'sets the primary hashtag' do
+        expect(team.hashtag).to eq('Raptors')
+        expect(team.hashtag_with_hash).to eq('#Raptors')
+      end
+
+      it 'sets the list of hashtags' do
+        expect(team.hashtags).to eq(['Raptors', 'NBARaptors'])
+        expect(team.hashtags_with_hash).to eq(['#Raptors', '#NBARaptors'])
+      end
+
       it 'dumps all info to a hash' do
         expect(dump).to have_key(:full_name)
         expect(dump).to have_key(:title)

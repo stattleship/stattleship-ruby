@@ -25,6 +25,16 @@ module Stattleship
         end
       end
 
+      def hashtag_with_hash
+        "##{hashtag}"
+      end
+
+      def hashtags_with_hash
+        if hashtags
+          hashtags.map { |c| "##{c}"}
+        end
+      end
+
       def dump
         to_h.
           merge(
@@ -40,6 +50,8 @@ module Stattleship
       property :id
       property :color
       collection :colors
+      property :hashtag
+      collection :hashtags
       property :league_id
       property :location
       property :name
