@@ -1,10 +1,11 @@
 module Stattleship
   module Params
     class PlayersParams < Stattleship::Params::QueryParams
-      attr_accessor :team_id
+      attr_accessor :birth_date, :team_id
 
       def params
-        super.merge('team_id' => team_id)
+        super.merge('birth_date' => birth_date,
+                    'team_id' => team_id)
       end
     end
   end

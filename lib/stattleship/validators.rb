@@ -1,4 +1,5 @@
 require 'stattleship/validators/base_validator'
+require 'stattleship/validators/birth_date_validator'
 require 'stattleship/validators/game_id_validator'
 require 'stattleship/validators/interval_type_validator'
 require 'stattleship/validators/feat_validator'

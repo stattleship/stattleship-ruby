@@ -24,6 +24,10 @@ module Stattleship
         expect(player.position_name).to eq('Quarterback')
       end
 
+      it 'sets the player dob' do
+        expect(player.birth_date).to eq(Date.parse('1995-02-09'))
+      end
+
       it 'dumps all info to a hash' do
         expect(dump).to have_key(:label)
         expect(dump).to have_key(:team)

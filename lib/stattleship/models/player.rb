@@ -38,6 +38,7 @@ module Stattleship
       include Roar::JSON
       include Roar::Coercion
 
+      property :birth_date, type: Date
       property :first_name
       property :handedness
       property :height, type: Integer
