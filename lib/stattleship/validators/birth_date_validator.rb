@@ -2,7 +2,7 @@ module Stattleship
   module Validators
     class BirthDateValidator < Stattleship::Validators::BaseValidator
       def validate
-        Date.parse(value)
+        validates_date
       end
     end
   end

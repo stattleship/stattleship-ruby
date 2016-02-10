@@ -11,6 +11,14 @@ module Stattleship
         raise 'Validator subclass must implement validate method'
       end
 
+      def validates_date
+        if value.is_a?(Date)
+          return
+        else
+          fail ArgumentError.new("expected #{key} to be a Date")
+        end
+      end
+
       def validates_positive_or_zero_integer
         if value.is_a?(Integer) && value >= 0
           return

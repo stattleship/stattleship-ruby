@@ -6,7 +6,7 @@ module Stattleship
       describe 'validates' do
         it 'is a valid date' do
           key = 'birth_date'
-          params = { 'birth_date' => '2016-01-14' }
+          params = { 'birth_date' => Time.now.to_date }
           class_name = 'Stattleship::Params::PlayersParams'
 
           validator = BirthDateValidator.new(key: key,
