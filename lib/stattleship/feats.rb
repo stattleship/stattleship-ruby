@@ -44,7 +44,8 @@ module Stattleship
       property :game_id
       property :game_slug
       property :humanized_stat_type
-      property :level, type: Integer
+      property :level
+      property :level_numeric, type: Integer
       property :name
       property :on
       property :opponent_abbrev
