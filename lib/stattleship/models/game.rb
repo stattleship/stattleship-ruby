@@ -131,6 +131,23 @@ module Stattleship
         end
       end
 
+      def latitude
+        if venue
+          venue.latitude
+        end
+      end
+
+      def longitude
+        if venue
+          venue.longitude
+        end
+      end
+
+      def coordinates
+        [latitude, longitude]
+      end
+
+
       def losing_score
         if score
           score.split('-').

@@ -20,6 +20,10 @@ module Stattleship
         expect(nba_games.first.away_team_name).to eq 'Denver'
         expect(nba_games.first.home_team_name).to eq 'Golden State'
         expect(nba_games.first.winning_team_name).to eq 'Golden State'
+
+        expect(nba_games.first.latitude).to eq(38.8980412)
+        expect(nba_games.first.longitude).to eq(-77.0209114)
+        expect(nba_games.first.coordinates).to eq([38.8980412, -77.0209114])
       end
     end
 
