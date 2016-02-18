@@ -1,6 +1,10 @@
 module Stattleship
   module Models
     class Venue < OpenStruct
+      def coordinates
+        [latitude, longitude]
+      end
+
       def dump
         to_h
       end
@@ -15,6 +19,9 @@ module Stattleship
       property :city
       property :country
       property :field_type
+      property :id
+      property :latitude, type: Float
+      property :longitude, type: Float
       property :id
       property :name
       property :slug

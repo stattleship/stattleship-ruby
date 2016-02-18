@@ -26,6 +26,12 @@ module Stattleship
         expect(venue.field_type).to be_nil
       end
 
+      it 'sets the venue geocodes' do
+        expect(venue.latitude).to eq(38.8980412)
+        expect(venue.longitude).to eq(-77.0209114)
+        expect(venue.coordinates).to eq([38.8980412, -77.0209114])
+      end
+
       def venue
         json = File.read('spec/fixtures/nhl/venue.json')
         venue = Venue.new

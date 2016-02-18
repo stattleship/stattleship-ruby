@@ -15,6 +15,8 @@
     "NBARaptors"
   ],
   "location": "Toronto",
+  "latitude": 38.8980412,
+  "longitude": -77.0209114,
   "name": "Toronto",
   "nickname": "Raptors",
   "slug": "nba-tor",

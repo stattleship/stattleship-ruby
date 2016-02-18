@@ -47,6 +47,12 @@ module Stattleship
         expect(dump).to have_key(:title)
       end
 
+      it 'sets the team geocodes' do
+        expect(team.latitude).to eq(38.8980412)
+        expect(team.longitude).to eq(-77.0209114)
+        expect(team.coordinates).to eq([38.8980412, -77.0209114])
+      end
+
       def team
         @team ||= begin
           json = File.read('spec/fixtures/nba/team.json')

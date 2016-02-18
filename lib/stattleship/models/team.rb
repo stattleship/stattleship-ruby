@@ -42,6 +42,10 @@ module Stattleship
             title: title,
           )
       end
+
+      def coordinates
+        [latitude, longitude]
+      end
     end
 
     module TeamRepresenter
@@ -54,6 +58,8 @@ module Stattleship
       collection :hashtags
       property :league_id
       property :location
+      property :latitude, type: Float
+      property :longitude, type: Float
       property :name
       property :nickname
       property :slug
