@@ -1,0 +1,17 @@
+{
+  "id": null,
+  "created_at": "2016-01-16",
+  "updated_at": "2016-01-16",
+  "outcome": "loss",
+  "started_on": "2016-01-16",
+  "ended_on": "2016-01-18",
+  "game_number": 41,
+  "streak": 8,
+  "streak_length": 1,
+  "streak_length_in_days": 2,
+  "current": false,
+  "rank": 7,
+  "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e",
+  "season_id": "e56321f3-1c81-4f91-9bdf-8dac07129648",
+  "team_id": "2a173568-fca6-4891-8c3b-3573547b0b6b"
+}

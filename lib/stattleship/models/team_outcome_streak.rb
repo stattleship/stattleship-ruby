@@ -1,6 +1,10 @@
 module Stattleship
   module Models
     class TeamOutcomeStreak < OpenStruct
+      def current?
+        current
+      end
+
       def league_name
         league.name
       end
@@ -9,8 +13,16 @@ module Stattleship
         league.abbreviation
       end
 
+      def team_location
+        team.location
+      end
+
       def team_name
         team.name
+      end
+
+      def team_nickname
+        team.nickname
       end
 
       def team_full_name
@@ -19,9 +31,9 @@ module Stattleship
 
       def to_sentence
         if current
-          "#{team_full_name} is currently on a #{streak_length} game #{outcome} streak starting on #{started_on}."
+          "#{team_full_name} is currently on a #{streak_length} game #{outcome} streak starting on #{started_on}"
         else
-          "#{team_full_name} had a #{streak_length} game #{outcome} streak between #{started_on} and #{ended_on}."
+          "#{team_full_name} had a #{streak_length} game #{outcome} streak between #{started_on} and #{ended_on}"
         end
       end
 

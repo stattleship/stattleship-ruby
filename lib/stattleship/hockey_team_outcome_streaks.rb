@@ -8,7 +8,7 @@ module Stattleship
     end
   end
 
-  module HockeyTeamOutcomeStreakRepresenter
+  module HockeyTeamOutcomeStreaksRepresenter
     include Roar::JSON
     include TeamOutcomeStreaksRepresenter
   end

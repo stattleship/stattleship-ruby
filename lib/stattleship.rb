@@ -77,6 +77,11 @@ require 'stattleship/basketball_team_game_logs'
 require 'stattleship/football_team_game_logs'
 require 'stattleship/hockey_team_game_logs'
 
+require 'stattleship/team_outcome_streaks'
+require 'stattleship/basketball_team_outcome_streaks'
+require 'stattleship/football_team_outcome_streaks'
+require 'stattleship/hockey_team_outcome_streaks'
+
 require 'stattleship/total_player_stat'
 require 'stattleship/basketball_total_player_stat'
 require 'stattleship/football_total_player_stat'

@@ -13,6 +13,9 @@ module Stattleship
     include Roar::JSON
     include Stattleship::Models
 
+    collection :team_outcome_streaks, extend: TeamOutcomeStreakRepresenter,
+                                      class: TeamOutcomeStreak
+
     collection :leagues, extend: LeagueRepresenter,
                          class: League
 
@@ -21,9 +24,5 @@ module Stattleship
 
     collection :teams, extend: TeamRepresenter,
                        class: Team
-
-    collection :team_outcome_streaks, extend: TeamOutcomeStreakRepresenter,
-                                      class: Stattleship::Models::TeamOutcomeStreak
-
   end
 end
