@@ -59,6 +59,11 @@ require 'stattleship/params/basketball_team_game_logs_params'
 require 'stattleship/params/football_team_game_logs_params'
 require 'stattleship/params/hockey_team_game_logs_params'
 
+require 'stattleship/params/team_outcome_streaks_params'
+require 'stattleship/params/basketball_team_outcome_streaks_params'
+require 'stattleship/params/football_team_outcome_streaks_params'
+require 'stattleship/params/hockey_team_outcome_streaks_params'
+
 require 'stattleship/params/top_stats_params'
 require 'stattleship/params/basketball_top_stats_params'
 require 'stattleship/params/football_top_stats_params'

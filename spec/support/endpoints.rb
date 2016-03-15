@@ -568,4 +568,34 @@ def nba_scoring_plays
     scoring_plays.from_json(json)
     scoring_plays.data
   end
+
+def nba_team_streak_outcomes
+    team_streak_outcomes = Stattleship::TeamStreakOutcomes.new
+    team_streak_outcomes.extend(Stattleship::TeamStreakOutcomesRepresenter)
+
+    json = File.read('spec/fixtures/nba/team_streak_outcomes.json')
+
+    team_streak_outcomes.from_json(json)
+    team_streak_outcomes.data
+  end
+
+  def nfl_team_streak_outcomes
+    team_streak_outcomes = Stattleship::TeamStreakOutcomes.new
+    team_streak_outcomes.extend(Stattleship::TeamStreakOutcomesRepresenter)
+
+    json = File.read('spec/fixtures/nfl/team_streak_outcomes.json')
+
+    team_streak_outcomes.from_json(json)
+    team_streak_outcomes.data
+  end
+
+  def nhl_team_streak_outcomes
+    team_streak_outcomes = Stattleship::TeamStreakOutcomes.new
+    team_streak_outcomes.extend(Stattleship::TeamStreakOutcomesRepresenter)
+
+    json = File.read('spec/fixtures/nhl/team_streak_outcomes.json')
+
+    team_streak_outcomes.from_json(json)
+    team_streak_outcomes.data
+  end
 end

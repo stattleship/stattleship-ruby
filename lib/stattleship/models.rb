@@ -8,6 +8,7 @@ require 'stattleship/models/scoring_player'
 require 'stattleship/models/scoring_play'
 require 'stattleship/models/season'
 require 'stattleship/models/team'
+require 'stattleship/models/team_outcome_streak'
 require 'stattleship/models/venue'
 
 module Stattleship
