@@ -31,14 +31,38 @@ module Stattleship
 
       def to_sentence
         if current
-          "#{team_full_name} is currently on a #{streak_length} game #{outcome} streak starting on #{started_on}"
+          "#{team_full_name} are currently on a #{streak_length} game #{outcome_participle} streak starting #{started_on_short_date}"
         else
-          "#{team_full_name} had a #{streak_length} game #{outcome} streak between #{started_on} and #{ended_on}"
+          "#{team_full_name} had a #{streak_length} game #{outcome_participle} streak between #{started_on_short_date} and #{ended_on_short_date}"
         end
       end
 
       def to_rank
-        "#{team_full_name} #{rank.ordinalize} streak of the season is a #{streak_length} game #{outcome} streak between #{started_on} and #{ended_on}."
+        "#{team_full_name} #{rank.ordinalize} streak of the season is a #{streak_length} game #{outcome} streak between #{started_on_short_date} and #{ended_on_short_date}."
+      end
+
+      def outcome_participle
+        if win?
+          'winning'
+        else
+          'losing'
+        end
+      end
+
+      def loss?
+        outcome == 'loss'
+      end
+
+      def win?
+        outcome == 'win'
+      end
+
+      def started_on_short_date
+         started_on.to_datetime.strftime('%b %d')
+      end
+
+      def ended_on_short_date
+        ended_on.to_datetime.strftime('%b %d')
       end
     end
 

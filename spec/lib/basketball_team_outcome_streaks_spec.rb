@@ -39,7 +39,7 @@ module Stattleship
       it 'makes a sentence' do
         nba_team_outcome_streak = nba_team_outcome_streaks.first
 
-        expect(nba_team_outcome_streak.to_sentence).to eq('Golden State Warriors had a 24 game win streak between 2015-10-27 and 2015-12-12')
+        expect(nba_team_outcome_streak.to_sentence).to eq('Golden State Warriors had a 24 game winning streak between Oct 27 and Dec 12')
       end
     end
 

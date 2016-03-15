@@ -20,6 +20,11 @@ module Stattleship
         expect(team_outcome_streak.ended_on).to eq(Date.parse('2016-01-18'))
       end
 
+      it 'sets the team_outcome_streak short dates' do
+        expect(team_outcome_streak.started_on_short_date).to eq('Jan 16')
+        expect(team_outcome_streak.ended_on_short_date).to eq('Jan 18')
+      end
+
       it 'sets the team_outcome_streak info' do
         expect(team_outcome_streak.outcome).to eq('loss')
         expect(team_outcome_streak.game_number).to eq(41)
