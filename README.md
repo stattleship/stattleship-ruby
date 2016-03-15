@@ -20,7 +20,7 @@ Note: This gem is still in pre-release and is not yet in Rubygems.
 In your Gemfile:
 
 ```
-gem 'stattleship-ruby', '0.1.4', git: 'https://github.com/stattleship/stattleship-ruby.git'
+gem 'stattleship-ruby', '0.1.5', git: 'https://github.com/stattleship/stattleship-ruby.git'
 ```
 
 ### Build
@@ -32,7 +32,7 @@ gem build stattleship-ruby.gemspec
 ### Install
 
 ```
-gem install stattleship-ruby-0.1.4.gem
+gem install stattleship-ruby-0.1.5.gem
 ```
 
 ## Examples

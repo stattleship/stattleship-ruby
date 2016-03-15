@@ -96,5 +96,15 @@ You'll need
 
 * [Basketball Top Stats](basketball_top_stats.rb)
   * Uses `BasketballTopStatsParams` and makes a `BasketballTopStats` request
-  * Use the `type`, `stat`, and `place ` parameters to return the 3 best (highest) offensive rebounding performances in NBA
+  * Use the `type`, `stat`, and `place` parameters to return the 3 best (highest) offensive rebounding performances in NBA
   * Demonstrates a fully populated game, so know when this was accomplished
+
+* [Basketball Winning Streaks](basketball_winning_streaks.rb)
+  * Uses `BasketballTeamOutcomeStreaksParams` and makes a `BasketballTeamOutcomeStreaks` request
+  * Use the `outcome` and `current` parameters to return winning streaks that filters to those more than 2 games in length
+  * Demonstrates a fully populated streak
+
+* [Hockey Ranked Streaks](hockey_team_ranked_streaks.rb)
+  * Uses `HockeyTeamOutcomeStreaksParams` and makes a `HockeyTeamOutcomeStreaks` request
+  * Use the `team_id` and `ranked` parameters to the top 3 ranked streaks in length
+  * Demonstrates a fully populated streak with season and league
