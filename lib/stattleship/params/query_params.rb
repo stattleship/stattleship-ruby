@@ -1,8 +1,12 @@
 module Stattleship
   module Params
     class QueryParams
+      attr_accessor :season_id
+
       def params
-        {}
+        {
+          'season_id' => season_id,
+        }
       end
 
       def query
