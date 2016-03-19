@@ -86,7 +86,9 @@ module Stattleship
       end
 
       def league_prefix
-        if query_parameter_class.start_with?('Basketball')
+        if query_parameter_class.start_with?('Baseball')
+          'mlb'
+        elsif query_parameter_class.start_with?('Basketball')
           'nba'
         elsif query_parameter_class.start_with?('Football')
           'nfl'
@@ -98,7 +100,9 @@ module Stattleship
       end
 
       def sport_prefix
-        if query_parameter_class.start_with?('Basketball')
+        if query_parameter_class.start_with?('Baseball')
+          'baseball'
+        elsif query_parameter_class.start_with?('Basketball')
           'basketball'
         elsif query_parameter_class.start_with?('Football')
           'football'

@@ -1,0 +1,58 @@
+{
+  "teams": [
+    {
+      "id": "8a72ea07-afce-4907-9e6a-13b3f4e9d378",
+      "created_at": "2016-03-18T20:56:44-04:00",
+      "updated_at": "2016-03-18T20:56:45-04:00",
+      "color": null,
+      "colors": [],
+      "hashtag": null,
+      "hashtags": [],
+      "location": "Kansas City",
+      "name": "Kansas City",
+      "nickname": "Royals",
+      "latitude": null,
+      "longitude": null,
+      "slug": "mlb-kc",
+      "division_id": "ca580e37-ee8b-44d3-94ac-6eb2bf35d094",
+      "league_id": "cb399a17-e581-4f1a-9535-ea3bcb09fa1f"
+    }
+  ],
+  "divisions": [
+    {
+      "id": "ca580e37-ee8b-44d3-94ac-6eb2bf35d094",
+      "created_at": "2016-03-18T20:56:44-04:00",
+      "updated_at": "2016-03-18T20:56:44-04:00",
+      "name": "American League Central",
+      "conference_id": "d118b71f-2b2a-4a86-86a0-782af18e0053"
+    }
+  ],
+  "conferences": [
+    {
+      "id": "d118b71f-2b2a-4a86-86a0-782af18e0053",
+      "created_at": "2016-03-18T20:56:43-04:00",
+      "updated_at": "2016-03-18T20:56:43-04:00",
+      "name": "American League",
+      "league_id": "cb399a17-e581-4f1a-9535-ea3bcb09fa1f"
+    }
+  ],
+  "leagues": [
+    {
+      "id": "cb399a17-e581-4f1a-9535-ea3bcb09fa1f",
+      "created_at": "2016-03-18T20:56:43-04:00",
+      "updated_at": "2016-03-18T20:56:43-04:00",
+      "abbreviation": "MLB",
+      "color": null,
+      "minutes_per_period": null,
+      "name": "Major League Baseball",
+      "periods": null,
+      "slug": "mlb",
+      "sport": "baseball"
+    }
+  ],
+  "total_team_stat": {
+    "stat": "hits",
+    "total": 52,
+    "team_id": "8a72ea07-afce-4907-9e6a-13b3f4e9d378"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "players": [
+    {
+      "id": "0fb0179b-cbec-41a6-8919-3bd9bce74c03",
+      "created_at": "2016-03-18T21:09:46-04:00",
+      "updated_at": "2016-03-19T03:18:17-04:00",
+      "active": true,
+      "birth_date": "1985-08-26",
+      "defensive": false,
+      "first_name": "David",
+      "handedness": "left",
+      "bats": "bats_left",
+      "height": 77,
+      "unit_of_height": "inches",
+      "last_name": "Price",
+      "name": "David Price",
+      "offensive": true,
+      "position_abbreviation": "SP",
+      "position_name": "Starter",
+      "salary": 30000000,
+      "humanized_salary": "30,000,000",
+      "salary_currency": "USD",
+      "school": "Vanderbilt",
+      "slug": "mlb-david-price",
+      "sport": "baseball",
+      "weight": 215,
+      "unit_of_weight": "pounds",
+      "years_of_experience": 7,
+      "league_id": "cb399a17-e581-4f1a-9535-ea3bcb09fa1f",
+      "playing_position_id": "738ffd4a-154d-4ccf-9f9a-5ee32466c4d6",
+      "team_id": "9ab4bef1-ea26-456b-a018-bf2bde1f6599"
+    }
+  ],
+  "leagues": [
+    {
+      "id": "cb399a17-e581-4f1a-9535-ea3bcb09fa1f",
+      "created_at": "2016-03-18T20:56:43-04:00",
+      "updated_at": "2016-03-18T20:56:43-04:00",
+      "abbreviation": "MLB",
+      "color": null,
+      "minutes_per_period": null,
+      "name": "Major League Baseball",
+      "periods": null,
+      "slug": "mlb",
+      "sport": "baseball"
+    }
+  ],
+  "playing_positions": [
+    {
+      "id": "738ffd4a-154d-4ccf-9f9a-5ee32466c4d6",
+      "created_at": "2016-03-18T21:09:27-04:00",
+      "updated_at": "2016-03-18T21:09:27-04:00",
+      "abbreviation": "SP",
+      "description": null,
+      "formation": "offensive",
+      "name": "Starter",
+      "league_id": "cb399a17-e581-4f1a-9535-ea3bcb09fa1f"
+    }
+  ],
+  "teams": [
+    {
+      "id": "9ab4bef1-ea26-456b-a018-bf2bde1f6599",
+      "created_at": "2016-03-18T20:56:44-04:00",
+      "updated_at": "2016-03-18T20:56:45-04:00",
+      "color": null,
+      "colors": [],
+      "hashtag": null,
+      "hashtags": [],
+      "location": "Detroit",
+      "name": "Detroit",
+      "nickname": "Tigers",
+      "latitude": null,
+      "longitude": null,
+      "slug": "mlb-det",
+      "division_id": "ca580e37-ee8b-44d3-94ac-6eb2bf35d094",
+      "league_id": "cb399a17-e581-4f1a-9535-ea3bcb09fa1f"
+    }
+  ],
+  "divisions": [
+    {
+      "id": "ca580e37-ee8b-44d3-94ac-6eb2bf35d094",
+      "created_at": "2016-03-18T20:56:44-04:00",
+      "updated_at": "2016-03-18T20:56:44-04:00",
+      "name": "American League Central",
+      "conference_id": "d118b71f-2b2a-4a86-86a0-782af18e0053"
+    }
+  ],
+  "conferences": [
+    {
+      "id": "d118b71f-2b2a-4a86-86a0-782af18e0053",
+      "created_at": "2016-03-18T20:56:43-04:00",
+      "updated_at": "2016-03-18T20:56:43-04:00",
+      "name": "American League",
+      "league_id": "cb399a17-e581-4f1a-9535-ea3bcb09fa1f"
+    }
+  ],
+  "total_player_stat": {
+    "stat": "pitches_thrown",
+    "total": 1154,
+    "player_id": "0fb0179b-cbec-41a6-8919-3bd9bce74c03"
+  }
+}

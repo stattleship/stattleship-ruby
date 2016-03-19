@@ -1,4 +1,14 @@
 module Endpoints
+  def mlb_game_logs
+    mlb_game_logs = Stattleship::BaseballGameLogs.new
+    mlb_game_logs.extend(Stattleship::BaseballGameLogsRepresenter)
+
+    json = File.read('spec/fixtures/mlb/game_log.json')
+
+    mlb_game_logs.from_json(json)
+    mlb_game_logs.data
+  end
+
   def nba_game_logs
     nba_game_logs = Stattleship::BasketballGameLogs.new
     nba_game_logs.extend(Stattleship::BasketballGameLogsRepresenter)
@@ -34,6 +44,16 @@ module Endpoints
     stat_leaders.extend(Stattleship::StatLeadersRepresenter)
 
     json = File.read('spec/fixtures/nhl/stat_leaders.json')
+
+    stat_leaders.from_json(json)
+    stat_leaders.data
+  end
+
+  def mlb_leaders
+    stat_leaders = Stattleship::BaseballStatLeaders.new
+    stat_leaders.extend(Stattleship::StatLeadersRepresenter)
+
+    json = File.read('spec/fixtures/mlb/stat_leaders.json')
 
     stat_leaders.from_json(json)
     stat_leaders.data
@@ -79,6 +99,16 @@ module Endpoints
     tps.data
   end
 
+  def mlb_total_player_stat
+    tps = Stattleship::BaseballTotalPlayerStat.new
+    tps.extend(Stattleship::BaseballTotalPlayerStatRepresenter)
+
+    json = File.read('spec/fixtures/mlb/total_player_stat.json')
+
+    tps.from_json(json)
+    tps.data
+  end
+
   def nba_total_player_stat
     tps = Stattleship::BasketballTotalPlayerStat.new
     tps.extend(Stattleship::BasketballTotalPlayerStatRepresenter)
@@ -114,6 +144,16 @@ module Endpoints
     tps.extend(Stattleship::TotalTeamStatRepresenter)
 
     json = File.read('spec/fixtures/nfl/total_team_stat.json')
+
+    tps.from_json(json)
+    tps.data
+  end
+
+  def mlb_total_team_stat
+    tps = Stattleship::BaseballTotalTeamStat.new
+    tps.extend(Stattleship::BaseballTotalTeamStatRepresenter)
+
+    json = File.read('spec/fixtures/mlb/total_team_stat.json')
 
     tps.from_json(json)
     tps.data
@@ -159,6 +199,16 @@ module Endpoints
     top_stats.data
   end
 
+  def mlb_top_stats
+    top_stats = Stattleship::BaseballTopStats.new
+    top_stats.extend(Stattleship::BaseballTopStatsRepresenter)
+
+    json = File.read('spec/fixtures/mlb/top_stats.json')
+
+    top_stats.from_json(json)
+    top_stats.data
+  end
+
   def nba_top_stats
     top_stats = Stattleship::BasketballTopStats.new
     top_stats.extend(Stattleship::BasketballTopStatsRepresenter)
@@ -187,6 +237,16 @@ module Endpoints
 
     top_stats.from_json(json)
     top_stats.data
+  end
+
+  def mlb_team_game_logs
+    mlb_team_game_logs = Stattleship::BaseballTeamGameLogs.new
+    mlb_team_game_logs.extend(Stattleship::BaseballTeamGameLogsRepresenter)
+
+    json = File.read('spec/fixtures/mlb/team_game_logs.json')
+
+    mlb_team_game_logs.from_json(json)
+    mlb_team_game_logs.data
   end
 
   def nba_team_game_logs
@@ -219,6 +279,16 @@ module Endpoints
     nhl_team_game_logs.data
   end
 
+  def mlb_games
+    mlb_games = Stattleship::BaseballGames.new
+    mlb_games.extend(Stattleship::BaseballGamesRepresenter)
+
+    json = File.read('spec/fixtures/mlb/games.json')
+
+    mlb_games.from_json(json)
+    mlb_games.data
+  end
+
   def nba_games
     nba_games = Stattleship::BasketballGames.new
     nba_games.extend(Stattleship::BasketballGamesRepresenter)
@@ -247,6 +317,16 @@ module Endpoints
 
     nhl_games.from_json(json)
     nhl_games.data
+  end
+
+  def mlb_players
+    mlb_players = Stattleship::BaseballPlayers.new
+    mlb_players.extend(Stattleship::BaseballPlayersRepresenter)
+
+    json = File.read('spec/fixtures/mlb/players.json')
+
+    mlb_players.from_json(json)
+    mlb_players.data
   end
 
   def nba_players
@@ -278,6 +358,17 @@ module Endpoints
     nhl_players.from_json(json)
     nhl_players.data
   end
+
+  def mlb_teams
+    mlb_teams = Stattleship::BaseballTeams.new
+    mlb_teams.extend(Stattleship::BaseballTeamsRepresenter)
+
+    json = File.read('spec/fixtures/mlb/teams.json')
+
+    mlb_teams.from_json(json)
+    mlb_teams.data
+  end
+
 
   def nba_teams
     nba_teams = Stattleship::BasketballTeams.new
@@ -314,6 +405,16 @@ module Endpoints
     stats.extend(Stattleship::StatsRepresenter)
 
     json = File.read('spec/fixtures/nba/player_stats.json')
+
+    stats.from_json(json)
+    stats.data
+  end
+
+  def mlb_player_stats
+    stats = Stattleship::Stats.new
+    stats.extend(Stattleship::StatsRepresenter)
+
+    json = File.read('spec/fixtures/mlb/player_stats.json')
 
     stats.from_json(json)
     stats.data
@@ -359,6 +460,16 @@ module Endpoints
     stats.data
   end
 
+  def mlb_team_stats
+    stats = Stattleship::Stats.new
+    stats.extend(Stattleship::StatsRepresenter)
+
+    json = File.read('spec/fixtures/mlb/team_stats.json')
+
+    stats.from_json(json)
+    stats.data
+  end
+
   def nba_team_stats
     stats = Stattleship::Stats.new
     stats.extend(Stattleship::StatsRepresenter)
@@ -394,6 +505,16 @@ module Endpoints
     feats.extend(Stattleship::FeatsRepresenter)
 
     json = File.read('spec/fixtures/nfl/player_feats.json')
+
+    feats.from_json(json)
+    feats.data
+  end
+
+  def mlb_player_feats
+    feats = Stattleship::Feats.new
+    feats.extend(Stattleship::FeatsRepresenter)
+
+    json = File.read('spec/fixtures/mlb/player_feats.json')
 
     feats.from_json(json)
     feats.data
@@ -439,6 +560,16 @@ module Endpoints
     feats.data
   end
 
+  def mlb_team_feats
+    feats = Stattleship::Feats.new
+    feats.extend(Stattleship::FeatsRepresenter)
+
+    json = File.read('spec/fixtures/mlb/team_feats.json')
+
+    feats.from_json(json)
+    feats.data
+  end
+
   def nba_team_feats
     feats = Stattleship::Feats.new
     feats.extend(Stattleship::FeatsRepresenter)
@@ -479,6 +610,16 @@ module Endpoints
     injuries.data
   end
 
+  def mlb_injuries
+    injuries = Stattleship::Injuries.new
+    injuries.extend(Stattleship::InjuriesRepresenter)
+
+    json = File.read('spec/fixtures/mlb/injuries.json')
+
+    injuries.from_json(json)
+    injuries.data
+  end
+
   def nba_injuries
     injuries = Stattleship::Injuries.new
     injuries.extend(Stattleship::InjuriesRepresenter)
@@ -507,6 +648,16 @@ module Endpoints
 
     injuries.from_json(json)
     injuries.data
+  end
+
+  def mlb_penalties
+    penalties = Stattleship::Penalties.new
+    penalties.extend(Stattleship::PenaltiesRepresenter)
+
+    json = File.read('spec/fixtures/mlb/penalties.json')
+
+    penalties.from_json(json)
+    penalties.data
   end
 
   def nba_penalties
@@ -539,7 +690,17 @@ module Endpoints
     penalties.data
   end
 
-def nba_scoring_plays
+  def mlb_scoring_plays
+    scoring_plays = Stattleship::ScoringPlays.new
+    scoring_plays.extend(Stattleship::ScoringPlaysRepresenter)
+
+    json = File.read('spec/fixtures/mlb/scoring_plays.json')
+
+    scoring_plays.from_json(json)
+    scoring_plays.data
+  end
+
+  def nba_scoring_plays
     scoring_plays = Stattleship::ScoringPlays.new
     scoring_plays.extend(Stattleship::ScoringPlaysRepresenter)
 
@@ -567,6 +728,16 @@ def nba_scoring_plays
 
     scoring_plays.from_json(json)
     scoring_plays.data
+  end
+
+  def mlb_team_outcome_streaks
+    team_outcome_streaks = Stattleship::TeamOutcomeStreaks.new
+    team_outcome_streaks.extend(Stattleship::TeamOutcomeStreaksRepresenter)
+
+    json = File.read('spec/fixtures/mlb/team_outcome_streaks.json')
+
+    team_outcome_streaks.from_json(json)
+    team_outcome_streaks.data
   end
 
   def nba_team_outcome_streaks
