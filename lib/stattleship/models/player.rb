@@ -23,6 +23,26 @@ module Stattleship
         end
       end
 
+      def pitcher?
+        position_abbreviation == 'SP' ||
+        position_abbreviation == 'SP'
+      end
+
+      def inflielder?
+        position_abbreviation == '1B' ||
+        position_abbreviation == '2B' ||
+        position_abbreviation == '3B' ||
+        position_abbreviation == 'SS' ||
+        position_abbreviation == 'C'
+      end
+
+      def outflielder?
+        position_abbreviation == 'LF' ||
+        position_abbreviation == 'CF' ||
+        position_abbreviation == 'RF' ||
+        position_abbreviation == 'OF'
+      end
+
       def dump
         to_h.
           merge(

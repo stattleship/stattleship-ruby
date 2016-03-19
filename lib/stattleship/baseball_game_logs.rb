@@ -1,12 +1,21 @@
 module Stattleship
   class BaseballGameLog < Stattleship::GameLog
     def stats
-      [
-        "#{hits.to_i} H",
-        "#{runs.to_i} R",
-        "#{runs_batted_in.to_i} RBI",
-        "#{fielding_errors.to_i} E"
-      ]
+      if player.pitcher?
+        [
+          "#{pitcher_strikeouts.to_i} K",
+          "#{pitches_thrown.to_i} thrown",
+          "#{strikes_thrown.to_i} K thrown",
+          "#{pitcher_runs.to_i} R"
+        ]
+      else
+        [
+          "#{hits.to_i} H",
+          "#{runs.to_i} R",
+          "#{runs_batted_in.to_i} RBI",
+          "#{fielding_errors.to_i} E"
+        ]
+      end
     end
 
     def to_sentence
