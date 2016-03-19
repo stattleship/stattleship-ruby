@@ -8,25 +8,26 @@ require File.join(dir, 'stattleship')
 require 'pp'
 
 # Construct params for the fetch
-query_params = Stattleship::Params::BaseballGamesParams.new
+query_params = Stattleship::Params::BaseballGameLogsParams.new
 
-# use a slug, typically 'league-team_abbreviation'
-query_params.team_id = 'mlb-bos'
+# use a slug
 
-# may need to adjust this depending on time of year
-query_params.season_id = 'mlb-2016'
-query_params.status = 'upcoming'
+query_params.player_id = 'mlb-pablo-sandoval'
+query_params.season_id = 'mlb-2015'
+query_params.interval_type = 'regularseason'
+query_params.since = '1 year ago'
 
 # fetch will automatically traverse the paginated response links
-games = Stattleship::BaseballGames.fetch(params: query_params)
+game_logs = Stattleship::BaseballGameLogs.fetch(params: query_params)
 
 # the populated object
-pp games.first
+pp game_logs.first
 
 # can access friendly helpers
-pp games.first.started_at.strftime('%b %e, %l:%M %p')
+pp game_logs.first.to_sentence
 
 # or, individual attributes
-games.each do |game|
-  pp game.scoreline
+game_logs.each do |game_log|
+  pp game_log.to_sentence
 end
+

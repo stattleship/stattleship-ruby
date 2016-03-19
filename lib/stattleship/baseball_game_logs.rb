@@ -2,7 +2,7 @@ module Stattleship
   class BaseballGameLog < Stattleship::GameLog
     def stats
       [
-        "#{hits.to_i} RBD",
+        "#{hits.to_i} H",
         "#{runs.to_i} R",
         "#{runs_batted_in.to_i} RBI",
         "#{fielding_errors.to_i} E"
