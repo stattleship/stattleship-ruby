@@ -58,6 +58,8 @@ require 'stattleship/football_players'
 require 'stattleship/hockey_players'
 require 'stattleship/baseball_players'
 
+require 'stattleship/rankings'
+
 require 'stattleship/scoring_plays'
 require 'stattleship/basketball_scoring_plays'
 require 'stattleship/football_scoring_plays'

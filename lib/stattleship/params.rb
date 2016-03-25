@@ -1,5 +1,6 @@
 require 'stattleship/params/query_params'
 require 'stattleship/params/game_time_params'
+require 'stattleship/params/rankings_params'
 
 require 'stattleship/params/feats_params'
 require 'stattleship/params/basketball_feats_params'

@@ -10,6 +10,7 @@ require 'stattleship/models/season'
 require 'stattleship/models/team'
 require 'stattleship/models/team_outcome_streak'
 require 'stattleship/models/venue'
+require 'stattleship/models/ranking'
 
 module Stattleship
   module Models

@@ -1,0 +1,29 @@
+{
+  "id": "7b3b841e-2046-4679-b4c6-a1eb0747f9e9",
+  "created_at": null,
+  "updated_at": null,
+  "stat": "mothership",
+  "stat_value": 79.65,
+  "data": {
+    "blocks": "2",
+    "points": "56",
+    "steals": "1",
+    "assists": "4",
+    "turnovers": "7",
+    "personal_fouls": "6",
+    "rebounds_total": "12",
+    "field_goals_made": "21",
+    "free_throws_made": "13",
+    "time_played_total": "2740",
+    "three_pointers_made": "1",
+    "field_goals_attempted": "30",
+    "free_throws_attempted": "16",
+    "three_pointers_attempted": "3"
+  },
+  "interval_type": "season",
+  "interval_value": "2015-2016",
+  "place": 5,
+  "game_id": "7b3b841e-2046-4679-b4c6-a1eb0747f9e9",
+  "player_id": "fc9c0eb1-5f15-45e1-af02-52bcc936545f",
+  "team_id": "1572a867-7efd-4338-9f64-b7b961676f37"
+}

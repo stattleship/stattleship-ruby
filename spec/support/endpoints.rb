@@ -769,4 +769,14 @@ module Endpoints
     team_outcome_streaks.from_json(json)
     team_outcome_streaks.data
   end
+
+  def rankings
+    rankings = Stattleship::Rankings.new
+    rankings.extend(Stattleship::RankingsRepresenter)
+
+    json = File.read('spec/fixtures/rankings/basketball_season_player_performance_ranking.json')
+
+    rankings.from_json(json)
+    rankings.data
+  end
 end
