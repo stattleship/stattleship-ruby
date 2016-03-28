@@ -7,6 +7,14 @@ module Stattleship
         expect(ranking).to be_a Ranking
       end
 
+      it 'constructs a sentence' do
+        expect(ranking.to_sentence).to eq ' has the fifth best game in the  season on  with 56 P, 21 FG, 13 FT, 1 3PT, 12 RBD, 2 B, 1 S'
+      end
+
+      it 'constructs a statline' do
+        expect(ranking.statline).to eq '56 P, 21 FG, 13 FT, 1 3PT, 12 RBD, 2 B, 1 S'
+      end
+
       def ranking
         @ranking ||= begin
                     json = File.read('spec/fixtures/rankings/ranking.json')

@@ -23,16 +23,34 @@ module Stattleship
 
       def whence
         if interval_type == 'season'
-          "in the #{season_name} season on #{game.short_date}"
+          "in the #{season_name} season on #{short_date}"
         elsif interval_type == 'day'
-          "for #{game.short_date}"
+          "for #{short_date}"
         else
           ''
         end
       end
 
+      def short_date
+        game.short_date if game
+      end
+
       def to_sentence
-        "#{player_name} has the #{ordinal_place} best game #{whence}"
+        "#{player_name} has the #{ordinal_place} best game #{whence} with #{statline}"
+      end
+
+      def statline
+        if data
+          [
+            "#{data['points']} P",
+            "#{data['field_goals_made']} FG",
+            "#{data['free_throws_made']} FT",
+            "#{data['three_pointers_made']} 3PT",
+            "#{data['rebounds_total']} RBD",
+            "#{data['blocks']} B",
+            "#{data['steals']} S",
+            ].join(', ')
+        end
       end
     end
 
