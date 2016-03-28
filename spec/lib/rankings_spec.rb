@@ -9,11 +9,7 @@ module Stattleship
 
       it 'populates rankings' do
         rankings.each do |ranking|
-          pp ranking.player_name
-          pp ranking.season_name
-          pp ranking.team_name
-          pp ranking.place
-          pp ranking.ordinal_place
+          expect(ranking).to be_a Stattleship::Models::Ranking
         end
       end
     end
