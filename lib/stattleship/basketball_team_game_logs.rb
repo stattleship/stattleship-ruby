@@ -29,6 +29,7 @@ module Stattleship
     include Roar::JSON
     include Roar::Coercion
     include Stattleship::TeamGameLogsRepresenter
+    include Virtus.model
 
     collection :team_game_logs, class: Stattleship::BasketballTeamGameLog do
 
@@ -36,6 +37,7 @@ module Stattleship
         :away_team_outcome,
         :home_team_outcome,
         :team_outcome,
+        :opponent_outcome,
       ].each do |attribute|
         property attribute
       end
@@ -52,6 +54,7 @@ module Stattleship
         :away_team_score,
         :home_team_score,
         :team_score,
+        :opponent_score,
         :assists_total,
         :blocks_total,
         :coach_technical_fouls,
@@ -89,6 +92,13 @@ module Stattleship
         :turnovers_total,
       ].each do |attribute|
         property attribute, type: Integer
+      end
+
+      [
+        :is_home_team,
+        :is_away_team,
+      ].each do |attribute|
+        property attribute, type: Boolean, default: false
       end
 
       [
