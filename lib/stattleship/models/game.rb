@@ -147,7 +147,6 @@ module Stattleship
         [latitude, longitude]
       end
 
-
       def losing_score
         if score
           score.split('-').
@@ -165,6 +164,14 @@ module Stattleship
             reverse.
             join('-')
         end
+      end
+
+      def winning_team_score
+        [away_team_score, home_team_score].max
+      end
+
+      def losing_team_score
+        [away_team_score, home_team_score].min
       end
 
       def dump
