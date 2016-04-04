@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'stattleship'
+
+params = Stattleship::Params::HockeyGameLogsParams.new
+params.player_id = 'nhl-patrick-kane'
+params.since = '1 month ago'
+
+game_logs = Stattleship::HockeyGameLogs.fetch(params: params)
+
+game_logs.each do |game_log|
+  puts game_log.to_sentence
+  game_log.game.officials.each do |official|
+    puts "#{official.name} was a #{official.role} when #{game_log.game.to_sentence}"
+  end
+end
+
+
+params = Stattleship::Params::HockeyTeamGameLogsParams.new
+params.team_id = 'nhl-bos'
+params.since = '1 month ago'
+
+game_logs = Stattleship::HockeyTeamGameLogs.fetch(params: params)
+
+game_logs.each do |game_log|
+  puts game_log.to_sentence
+  game_log.game.officials.each do |official|
+    puts "#{official.name} was a #{official.role} when #{game_log.game.to_sentence}"
+  end
+end
+

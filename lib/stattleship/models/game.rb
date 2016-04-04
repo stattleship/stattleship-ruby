@@ -110,7 +110,7 @@ module Stattleship
       end
 
       def short_date
-        started_at.strftime('%m/%e/%y')
+        started_at.strftime('%m/%d/%y')
       end
 
       def venue_capacity
@@ -172,6 +172,10 @@ module Stattleship
 
       def losing_team_score
         [away_team_score, home_team_score].min
+      end
+
+      def to_sentence
+        "#{winning_team_name} won #{winning_score} on #{short_date}"
       end
 
       def dump
@@ -259,6 +263,8 @@ module Stattleship
       ].each do |relationship|
         property relationship
       end
+
+      collection :official_ids
     end
   end
 end

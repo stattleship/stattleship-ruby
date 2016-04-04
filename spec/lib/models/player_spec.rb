@@ -28,13 +28,6 @@ module Stattleship
         expect(player.birth_date).to eq(Date.parse('1995-02-09'))
       end
 
-      it 'dumps all info to a hash' do
-        expect(dump).to have_key(:label)
-        expect(dump).to have_key(:team)
-        expect(dump).to have_key(:team_name)
-        expect(dump).to have_key(:team_nickname)
-      end
-
       def player
         @player ||= begin
           json = File.read('spec/fixtures/nfl/player.json')
@@ -42,10 +35,6 @@ module Stattleship
           player.extend(PlayerRepresenter)
           player.from_json(json)
         end
-      end
-
-      def dump
-        @dump ||= player.dump
       end
     end
   end

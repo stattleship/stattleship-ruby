@@ -26,6 +26,9 @@ module Stattleship
     collection :leagues, extend: LeagueRepresenter,
                          class: League
 
+    collection :officials, extend: OfficialRepresenter,
+                           class: Official
+
     collection :seasons, extend: SeasonRepresenter,
                          class: Season
 

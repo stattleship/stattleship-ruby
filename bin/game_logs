@@ -58,3 +58,12 @@ game_logs = Stattleship::HockeyGameLogs.fetch(params: params).
               map(&:to_sentence)
 
 puts game_logs
+
+game_logs = Stattleship::HockeyGameLogs.fetch(params: params)
+
+game_logs.each do |game|
+  game.officials.each do |official|
+    puts "#{official.name} was a #{official.role} when #{game.to_sentence}"
+  end
+end
+

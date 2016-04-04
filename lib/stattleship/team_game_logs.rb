@@ -47,6 +47,7 @@ module Stattleship
         end
 
         populate_opponents(team_game_log)
+        populate_officials(team_game_log)
         populate_teams(team_game_log)
       end
     end
@@ -73,6 +74,9 @@ module Stattleship
 
     collection :seasons, extend: SeasonRepresenter,
                          class: Season
+
+    collection :officials, extend: OfficialRepresenter,
+                           class: Official
 
     collection :opponents, extend: TeamRepresenter,
                            class: Team

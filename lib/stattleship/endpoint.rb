@@ -16,6 +16,19 @@ module Stattleship
 
     private
 
+    def populate_officials(model)
+      model.officials = []
+
+      return if model.official_ids.nil?
+      return if model.officials.nil?
+
+      model.official_ids.each do |official_id|
+        model.officials << officials.detect do |official|
+          official.id == official_id
+        end
+      end
+    end
+
     def populate_opponents(model)
       return if opponents.nil?
 
@@ -79,6 +92,7 @@ module Stattleship
     def populate_game(game)
       populate_away_team(game)
       populate_home_team(game)
+      populate_officials(game)
       populate_winning_team(game)
       populate_season(game)
       populate_venue(game)

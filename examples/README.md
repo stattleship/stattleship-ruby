@@ -108,3 +108,11 @@ You'll need
   * Uses `HockeyTeamOutcomeStreaksParams` and makes a `HockeyTeamOutcomeStreaks` request
   * Use the `team_id` and `ranked` parameters to the top 3 ranked streaks in length
   * Demonstrates a fully populated streak with season and league
+
+* [Game Officials](officials.rb)
+  * Uses games params and request for each sport
+  * Demonstrates a fully populated list of officials for each game
+
+* [Game Log Officials](officials.rb)
+  * Uses game_log and team_game_log params and request for Hockey
+  * Demonstrates a fully populated list of officials for each game on the game_log

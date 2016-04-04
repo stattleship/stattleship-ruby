@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'stattleship'
+
+params = Stattleship::Params::BasketballGamesParams.new
+params.team_id = 'nba-gs'
+params.since = '2 weeks ago'
+
+games = Stattleship::BasketballGames.fetch(params: params)
+
+games.each do |game|
+  game.officials.each do |official|
+    puts "#{official.name} was a #{official.role} when #{game.to_sentence}"
+  end
+end
+
+
+params = Stattleship::Params::FootballGamesParams.new
+params.status = 'in_progress'
+
+games = Stattleship::FootballGames.fetch(params: params)
+
+games.each do |game|
+  game.officials.each do |official|
+    puts "#{official.name} was a #{official.role} when #{game.to_sentence}"
+  end
+end
+
+#
+
+params = Stattleship::Params::HockeyGamesParams.new
+params.team_id = 'nhl-chi'
+params.since = '1 month ago'
+
+games = Stattleship::HockeyGames.fetch(params: params)
+
+games.each do |game|
+  game.officials.each do |official|
+    puts "#{official.name} was a #{official.role} when #{game.to_sentence}"
+  end
+end

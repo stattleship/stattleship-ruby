@@ -1,6 +1,10 @@
 module Stattleship
   module Models
     class Player < OpenStruct
+      def active?
+        active
+      end
+
       def label
         "#{name} (#{position_abbreviation}) - #{team_nickname}"
       end
@@ -42,22 +46,14 @@ module Stattleship
         position_abbreviation == 'RF' ||
         position_abbreviation == 'OF'
       end
-
-      def dump
-        to_h.
-          merge(
-            label: label,
-            team: team_hash,
-            team_name: team_name,
-            team_nickname: team_nickname,
-          )
-        end
     end
 
     module PlayerRepresenter
       include Roar::JSON
       include Roar::Coercion
+      include Virtus.model
 
+      property :active, type: Boolean
       property :birth_date, type: Date
       property :first_name
       property :handedness
