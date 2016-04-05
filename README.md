@@ -65,8 +65,6 @@ We're using the Stattleship API and this gem! You can, too.
 
 * [Glickman: Your statmoji(tm) sports slackbot powered by Slack and the Stattleship API.](https://github.com/stattleship/glickman)
 
-* [Oglethorpe: Stats + Scores + Photos! using the Stattleship API.](https://github.com/stattleship/oglethorpe)
-
 ## Other Docs
 
 * [Our Playbook](http://playbook.stattleship.com/)
