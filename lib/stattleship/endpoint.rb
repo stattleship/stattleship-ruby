@@ -20,7 +20,7 @@ module Stattleship
       model.officials = []
 
       return if model.official_ids.nil?
-      return if model.officials.nil?
+      return if officials.nil?
 
       model.official_ids.each do |official_id|
         model.officials << officials.detect do |official|
