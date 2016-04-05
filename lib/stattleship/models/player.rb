@@ -74,6 +74,14 @@ module Stattleship
       property :unit_of_weight
       property :weight, type: Integer
       property :years_of_experience, type: Integer
+      property :city
+      property :state
+      property :country
+      property :draft_season
+      property :draft_round, type: Integer
+      property :draft_overall_pick, type: Integer
+      property :draft_team_name
+
     end
   end
 end

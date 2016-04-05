@@ -34,7 +34,12 @@ puts player_names
 params = Stattleship::Params::HockeyPlayersParams.new
 params.team_id = 'nhl-chi'
 
-player_names = Stattleship::HockeyPlayers.fetch(params: params).
+active_statuses = Stattleship::HockeyPlayers.fetch(params: params).
                  map(&:active?)
 
-puts player_names
+puts active_statuses
+
+draft_team = Stattleship::HockeyPlayers.fetch(params: params).
+                 map(&:draft_team_name)
+
+puts draft_team
