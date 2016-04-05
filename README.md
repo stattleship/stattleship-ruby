@@ -7,7 +7,7 @@ Stattleship API Ruby client
 
 Check out the [Stattleship API](https://www.stattleship.com) - The Sports Data API you've always wanted
 
-Affordable. Meaningful. Developer-Friendly.
+Meaningful. Developer-Friendly.
 
 :football: :basketball: and :black_circle: :ice_hockey_stick_and_puck: :snowflake: and :baseball: !
 
@@ -68,7 +68,7 @@ We're using the Stattleship API and this gem! You can, too.
 ## Other Docs
 
 * [Our Playbook](http://playbook.stattleship.com/)
-* [Developer API Reference](http://developer.stattleship.com/)
+* [Developer API Reference](http://developers.stattleship.com/)
 
 ## Questions?
 
