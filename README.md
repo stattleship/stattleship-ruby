@@ -9,7 +9,7 @@ Check out the [Stattleship API](https://www.stattleship.com) - The Sports Data A
 
 Affordable. Meaningful. Developer-Friendly.
 
-:football: :basketball: and :black_circle: :ice_hockey_stick_and_puck: :snowflake: with :baseball: coming soon.
+:football: :basketball: and :black_circle: :ice_hockey_stick_and_puck: :snowflake: and :baseball: !
 
 We're gonna need a bigger :boat:!
 
