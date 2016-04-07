@@ -31,15 +31,26 @@ pp games.first.started_at.strftime('%b %e, %l:%M %p')
 # or, individual attributes
 games.each do |game|
   pp game.scoreline
+  pp game.winning_scoreline
+  pp game.losing_scoreline
 end
 
-# "Blackhawks 0 - Hurricanes 5"
-# "Blues 0 - Blackhawks 2"
-# "Blackhawks 0 - Panthers 4"
-# "Blackhawks 1 - Lightning 2"
-# "Blackhawks 4 - Predators 1"
-# "Canadiens 2 - Blackhawks 5"
-# "Blackhawks 4 - Maple Leafs 1"
-# "Blackhawks 2 - Canadiens 1"
-# "Predators 2 - Blackhawks 3"
+# "Coyotes 2 - Blackhawks 6"
+# "Blackhawks 6 - Coyotes 2"
+# "Coyotes 2 - Blackhawks 6"
+# "Bruins 4 - Blackhawks 6"
+# "Blackhawks 6 - Bruins 4"
+# "Bruins 4 - Blackhawks 6"
+# "Blackhawks 5 - Jets 4"
+# "Blackhawks 5 - Jets 4"
+# "Jets 4 - Blackhawks 5"
+# "Blackhawks 1 - Wild 4"
+# "Wild 4 - Blackhawks 1"
+# "Blackhawks 1 - Wild 4"
+# "Blackhawks 3 - Canucks 2"
+# "Blackhawks 3 - Canucks 2"
+# "Canucks 2 - Blackhawks 3"
+# "Blackhawks 4 - Flames 1"
+# "Blackhawks 4 - Flames 1"
+# "Flames 1 - Blackhawks 4"
 # ...

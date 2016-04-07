@@ -41,6 +41,20 @@ module Stattleship
         expect(game.losing_score).to eq('104-111')
       end
 
+      xit 'sets the game winner' do
+        expect(game.winning_team).to eq(game.away_team)
+        expect(game.winning_scoreline).to eq('Clippers 111 - Kings 104')
+        expect(game.winning_team_name).to eq('Los Angeles Clippers')
+        expect(game.winning_team_slug).to eq('nba-lac')
+      end
+
+      xit 'sets the game loser' do
+        expect(game.losing_team).to eq(game.away_team)
+        expect(game.losing_scoreline).to eq('Kings 104 - Clippers 111')
+        expect(game.losing_team_name).to eq(game.away_team.name)
+        expect(game.losing_team_slug).to eq(game.away_team.slug)
+      end
+
       it 'sets the game metrics' do
         expect(game.attendance).to eq(17458)
         expect(game.duration).to eq(8340)

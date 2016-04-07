@@ -97,6 +97,32 @@ module Stattleship
         end
       end
 
+      def losing_team_colors
+        if losing_team
+          losing_team.colors
+        end
+      end
+
+      def losing_team
+        if home_team_slug == winning_team_slug
+          away_team
+        else
+          home_team
+        end
+      end
+
+      def losing_team_name
+        if losing_team
+          losing_team.name
+        end
+      end
+
+      def losing_team_slug
+        if losing_team
+          losing_team.slug
+        end
+      end
+
       def hockey?
         league.hockey?
       end
@@ -172,6 +198,22 @@ module Stattleship
 
       def losing_team_score
         [away_team_score, home_team_score].min
+      end
+
+      def winning_scoreline
+        if winning_team && losing_team
+          "#{winning_team.nickname} #{winning_team_score} - #{losing_team.nickname} #{losing_team_score}"
+        else
+          ''
+        end
+      end
+
+      def losing_scoreline
+        if winning_team && losing_team
+          "#{losing_team.nickname} #{losing_team_score} - #{winning_team.nickname} #{winning_team_score}"
+        else
+          ''
+        end
       end
 
       def to_sentence
