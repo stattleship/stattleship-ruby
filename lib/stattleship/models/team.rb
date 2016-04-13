@@ -36,11 +36,10 @@ module Stattleship
       end
 
       def dump
-        to_h.
-          merge(
-            full_name: full_name,
-            title: title,
-          )
+        {
+          full_name: full_name,
+          title: title,
+        }
       end
 
       def coordinates

@@ -46,6 +46,38 @@ module Stattleship
         position_abbreviation == 'RF' ||
         position_abbreviation == 'OF'
       end
+
+      def dump
+        {
+          birth_date: birth_date,
+          first_name: first_name,
+          handedness: handedness,
+          height: height,
+          humanized_salary: humanized_salary,
+          id: id,
+          last_name: last_name,
+          name: name,
+          position_abbreviation: position_abbreviation,
+          position_name: position_name,
+          salary: salary,
+          salary_currency: salary_currency,
+          school: school,
+          slug: slug,
+          sport: sport,
+          team_id: team_id,
+          unit_of_height: unit_of_height,
+          unit_of_weight: unit_of_weight,
+          weight: weight,
+          years_of_experience: years_of_experience,
+          city: city,
+          state: state,
+          country: country,
+          draft_season: draft_season,
+          draft_round: draft_round,
+          draft_overall_pick: draft_overall_pick,
+          draft_team_name: draft_team_name,
+        }
+      end
     end
 
     module PlayerRepresenter
@@ -81,7 +113,6 @@ module Stattleship
       property :draft_round, type: Integer
       property :draft_overall_pick, type: Integer
       property :draft_team_name
-
     end
   end
 end
