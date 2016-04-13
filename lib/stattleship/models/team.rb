@@ -43,7 +43,7 @@ module Stattleship
           colors: colors,
           hashtag: hashtag,
           hashtags: hashtags,
-          league_id: league_id,
+          league_abbreviation: league_abbreviation,
           location: location,
           latitude: latitude,
           longitude: longitude,

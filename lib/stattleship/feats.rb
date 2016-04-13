@@ -11,6 +11,49 @@ module Stattleship
     def to_sentence
       sentence_vs_on
     end
+
+    def dump
+      {
+        accomplished_vs: accomplished_vs,
+        accomplishment: accomplishment,
+        actual: actual,
+        category: category,
+        description: description,
+        game_id: game_id,
+        game_slug: game_slug,
+        humanized_stat_type: humanized_stat_type,
+        level: level,
+        level_numeric: level_numeric,
+        name: name,
+        on: on,
+        opponent_abbrev: opponent_abbrev,
+        opponent_location: opponent_location,
+        opponent_name: opponent_name,
+        opponent_nickname: opponent_nickname,
+        opponent_slug: opponent_slug,
+        player_id: player_id,
+        player_slug: player_slug,
+        sentence: sentence,
+        sentence_on: sentence_on,
+        sentence_vs: sentence_vs,
+        sentence_vs_on: sentence_vs_on,
+        subject: subject.dump,
+        subject_id: subject_id,
+        subject_name: subject_name,
+        subject_slug: subject_slug,
+        subject_team_abbrev: subject_team_abbrev,
+        subject_team_location: subject_team_location,
+        subject_team_name: subject_team_name,
+        subject_team_nickname: subject_team_nickname,
+        subject_team_slug: subject_team_slug,
+        subject_type: subject_type,
+        team_id: team_id,
+        team_slug: team_slug,
+        title: title,
+        verb: verb,
+        vs: vs,
+      }
+    end
   end
 
   class Feats < Stattleship::Endpoint

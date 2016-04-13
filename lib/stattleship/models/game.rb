@@ -97,6 +97,18 @@ module Stattleship
         end
       end
 
+      def winning_team_hash
+        if winning_team
+          winning_team.dump
+        end
+      end
+
+      def losing_team_hash
+        if losing_team
+          losing_team.dump
+        end
+      end
+
       def losing_team_colors
         if losing_team
           losing_team.colors
@@ -229,6 +241,7 @@ module Stattleship
           away_team_slug: away_team_slug,
           city: city,
           colors: colors,
+          coordinates: coordinates,
           daytime: daytime,
           home_team_colors: home_team_colors,
           home_team_name: home_team_name,
@@ -237,12 +250,21 @@ module Stattleship
           interval: interval,
           interval_type: interval_type,
           label: label,
+          latitude: latitude,
+          longitude: longitude,
           league_abbreviation: league_abbreviation,
           league_name: league_name,
+          losing_score: losing_score,
+          losing_scoreline: losing_scoreline,
+          losing_team_colors: losing_team_colors,
+          losing_team_score: losing_team_score,
+          losing_team_slug: losing_team_slug,
+          losing_team: losing_team.hash,
           name: name,
           on: on,
           score: score,
           scoreline: scoreline,
+          sentence: to_sentence,
           short_date: short_date,
           slug: slug,
           sport: sport,
@@ -258,9 +280,13 @@ module Stattleship
           wind_direction: wind_direction,
           wind_speed: wind_speed,
           wind_speed_unit: wind_speed_unit,
+          winning_score: winning_score,
+          winning_scoreline: winning_scoreline,
           winning_team_colors: winning_team_colors,
           winning_team_name: winning_team_name,
+          winning_team_score: winning_team_score,
           winning_team_slug: winning_team_slug,
+          winning_team: winning_team_hash,
         }
       end
     end

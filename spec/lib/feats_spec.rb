@@ -57,6 +57,13 @@ module Stattleship
   end
 
   describe '#to_sentence' do
+    it 'dumps all info to a hash' do
+      expect(player_feats.first.dump).to have_key(:subject_name)
+      expect(player_feats.first.dump).to have_key(:sentence)
+    end
+  end
+
+  describe '#to_sentence' do
     context 'with player feats' do
       it 'can make a sentence' do
         expect(
