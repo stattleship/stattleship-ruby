@@ -39,6 +39,17 @@ module Stattleship
         {
           full_name: full_name,
           title: title,
+          color: color,
+          colors: colors,
+          hashtag: hashtag,
+          hashtags: hashtags,
+          league_id: league_id,
+          location: location,
+          latitude: latitude,
+          longitude: longitude,
+          name: name,
+          nickname: nickname,
+          slug: slug,
         }
       end
 
