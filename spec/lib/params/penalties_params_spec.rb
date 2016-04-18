@@ -17,6 +17,17 @@ module Stattleship
           expect(query_parameters['team_id']).to eq 'nhl-bos'
         end
 
+        it 'constructs only the given penalty parameter' do
+          params = PenaltiesParams.new
+
+          params.penalty = 'fighting'
+
+          query_parameters = params.query['query']
+
+          expect(query_parameters.size).to eq 1
+          expect(query_parameters['penalty']).to eq 'fighting'
+        end
+
         it 'constructs only the given player parameter' do
           params = PenaltiesParams.new
 

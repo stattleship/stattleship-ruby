@@ -77,18 +77,6 @@ module Stattleship
         end
       end
 
-      def period_time
-        Time.at(period_seconds).utc.strftime('%M:%S')
-      end
-
-      def period_abbreviation
-        if game.hockey?
-          "P"
-        else
-          "Q"
-        end
-      end
-
       def period
         "#{period_number}#{period_abbreviation}"
       end
@@ -121,6 +109,8 @@ module Stattleship
       property :name
       property :period_number, type: Integer
       property :period_seconds, type: Integer
+      property :period_abbreviation
+      property :period_time
       property :player_id
       property :seconds, type: Integer
       property :team_penalty, type: Boolean, default: false

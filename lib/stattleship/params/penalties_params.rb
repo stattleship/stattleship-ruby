@@ -1,8 +1,10 @@
 module Stattleship
   module Params
     class PenaltiesParams < Stattleship::Params::GameLogsParams
+      attr_accessor :penalty
+
       def params
-        super
+        super.merge('penalty' => penalty)
       end
     end
   end
