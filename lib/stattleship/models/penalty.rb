@@ -77,6 +77,18 @@ module Stattleship
         end
       end
 
+      def period_time
+        Time.at(period_seconds).utc.strftime('%M:%S')
+      end
+
+      def period_abbreviation
+        if game.hockey?
+          "P"
+        else
+          "Q"
+        end
+      end
+
       def period
         "#{period_number}#{period_abbreviation}"
       end
