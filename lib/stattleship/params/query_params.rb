@@ -1,10 +1,12 @@
 module Stattleship
   module Params
     class QueryParams
-      attr_accessor :season_id
+      attr_accessor :page, :per_page, :season_id
 
       def params
         {
+          'page' => page,
+          'per_page' => per_page,
           'season_id' => season_id,
         }
       end
