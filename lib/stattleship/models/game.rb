@@ -139,6 +139,10 @@ module Stattleship
         league.hockey?
       end
 
+      def baseball?
+        league.baseball?
+      end
+
       def basketball?
         league.basketball?
       end

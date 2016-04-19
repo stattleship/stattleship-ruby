@@ -5,6 +5,10 @@ module Stattleship
         sport == 'hockey'
       end
 
+      def basetball?
+        sport == 'baseball'
+      end
+
       def basketball?
         sport == 'basketball'
       end
