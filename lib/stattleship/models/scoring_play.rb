@@ -98,10 +98,10 @@ module Stattleship
       end
 
       def assist_names
-        if assists
+        if assists && assists.count > 0
           assists.map(&:player_name).join(', ')
         else
-          'unassisted'
+          'Unassisted'
         end
       end
 
