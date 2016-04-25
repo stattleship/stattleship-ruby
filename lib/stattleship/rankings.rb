@@ -18,6 +18,7 @@ module Stattleship
 
         populate_players(ranking)
         populate_player_teams(ranking)
+        populate_teams(ranking)
       end
     end
   end
