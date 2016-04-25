@@ -17,40 +17,12 @@ module Stattleship
         team.name if team
       end
 
-      def ordinal_place
-        place.ordinalize if place
-      end
-
-      def whence
-        if interval_type == 'season'
-          "in the #{season_name} season on #{short_date}"
-        elsif interval_type == 'day'
-          "for #{short_date}"
-        else
-          ''
-        end
-      end
-
       def short_date
         game.short_date if game
       end
 
       def to_sentence
-        "#{player_name} has the #{ordinal_place} best game #{whence} with #{statline}"
-      end
-
-      def statline
-        if data
-          [
-            "#{data['points']} P",
-            "#{data['field_goals_made']} FG",
-            "#{data['free_throws_made']} FT",
-            "#{data['three_pointers_made']} 3PT",
-            "#{data['rebounds_total']} RBD",
-            "#{data['blocks']} B",
-            "#{data['steals']} S",
-            ].join(', ')
-        end
+        description
       end
     end
 
@@ -60,9 +32,14 @@ module Stattleship
 
       [
         :id,
+        :description,
+        :ordinal_place,
         :stat,
         :interval_type,
         :interval_value,
+        :statline,
+        :superlative,
+        :title
       ].each do |attribute|
         property attribute
       end

@@ -8,11 +8,11 @@ module Stattleship
       end
 
       it 'constructs a sentence' do
-        expect(ranking.to_sentence).to eq ' has the fifth best game in the  season on  with 56 P, 21 FG, 13 FT, 1 3PT, 12 RBD, 2 B, 1 S'
+        expect(ranking.to_sentence).to eq 'Kevin Durant had the 3rd best single game performance of 03/24/2016 (20p 8r 9a 2s 1b)'
       end
 
       it 'constructs a statline' do
-        expect(ranking.statline).to eq '56 P, 21 FG, 13 FT, 1 3PT, 12 RBD, 2 B, 1 S'
+        expect(ranking.statline).to eq '20p 8r 9a 2s 1b'
       end
 
       def ranking
