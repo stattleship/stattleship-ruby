@@ -24,6 +24,36 @@ module Stattleship
       def to_sentence
         description
       end
+
+      def game_hash
+        if game
+          game.dump
+        end
+      end
+
+      def team_hash
+        if team
+          team.dump
+        end
+      end
+
+      def dump
+        {
+          description: description,
+          ordinal_place: ordinal_place,
+          stat: stat,
+          interval_type: interval_type,
+          interval_value: interval_value,
+          statline: statline,
+          superlative: superlative,
+          title: title,
+          place: place,
+          stat_value: stat_value,
+          data: data,
+          game: game_hash,
+          team: team_hash,
+        }
+      end
     end
 
     module RankingRepresenter
