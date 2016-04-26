@@ -25,33 +25,24 @@ module Stattleship
         description
       end
 
-      def game_hash
-        if game
-          game.dump
-        end
-      end
-
-      def team_hash
-        if team
-          team.dump
-        end
-      end
-
       def dump
         {
+          data: data,
           description: description,
-          ordinal_place: ordinal_place,
-          stat: stat,
           interval_type: interval_type,
           interval_value: interval_value,
+          name: name,
+          ordinal_place: ordinal_place,
+          place: place,
+          player_name: player_name,
+          season_name: season_name,
+          short_date: short_date,
+          stat: stat,
+          stat_value: stat_value,
           statline: statline,
           superlative: superlative,
-          title: title,
-          place: place,
-          stat_value: stat_value,
-          data: data,
-          game: game_hash,
-          team: team_hash,
+          team_name: team_name,
+          title: title
         }
       end
     end
@@ -63,6 +54,7 @@ module Stattleship
       [
         :id,
         :description,
+        :name,
         :ordinal_place,
         :stat,
         :interval_type,

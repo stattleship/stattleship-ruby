@@ -2,6 +2,7 @@
   "id": "7b3b841e-2046-4679-b4c6-a1eb0747f9e9",
   "created_at": null,
   "updated_at": null,
+  "name": "basketball_daily_player_performance_rankings",
   "stat": "mothership",
   "stat_value": 45.5,
   "data": {

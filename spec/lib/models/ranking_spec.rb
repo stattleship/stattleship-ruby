@@ -15,6 +15,10 @@ module Stattleship
         expect(ranking.statline).to eq '20p 8r 9a 2s 1b'
       end
 
+      it 'constructs a name' do
+        expect(ranking.name).to eq 'basketball_daily_player_performance_rankings'
+      end
+
       it 'dumps the object to a hash' do
         expect(ranking.dump).to be_a Hash
         expect(ranking.dump[:statline]).to eq '20p 8r 9a 2s 1b'
