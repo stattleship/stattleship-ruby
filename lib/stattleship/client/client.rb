@@ -15,7 +15,7 @@ module Stattleship
         'Authorization' => "Token token=#{token}",
         'Content-Type' => 'application/json',
         'User-Agent' =>
-          "Stattleship Ruby/#{Stattleship::Ruby::VERSION} (#{RUBY_PLATFORM})"
+          "StattleshipRuby/#{Stattleship::Ruby::VERSION} (#{RUBY_PLATFORM})"
       }
     end
 

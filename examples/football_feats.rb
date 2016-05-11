@@ -10,6 +10,8 @@ require 'pp'
 # Construct params for the fetch
 query_params = Stattleship::Params::FootballFeatsParams.new
 
+query_params.season_id = 'nfl-2015-2016'
+
 # use a slug, typically 'league-firstname-lastname'
 query_params.player_id = 'nfl-cam-newton'
 query_params.level_up = 2
