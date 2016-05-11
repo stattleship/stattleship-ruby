@@ -81,7 +81,7 @@ module Stattleship
         'Accept' => 'application/vnd.stattleship.com; version=1',
         'Content-Type' => 'application/json',
         'Authorization' => 'Token token=abc123',
-        'User-Agent' => "Stattleship Ruby/#{version} (#{RUBY_PLATFORM})"
+        'User-Agent' => "StattleshipRuby/#{version} (#{RUBY_PLATFORM})"
       }
     end
   end
