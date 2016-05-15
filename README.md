@@ -36,6 +36,11 @@ gem build stattleship-ruby.gemspec
 ```
 gem install stattleship-ruby-0.1.20.gem
 ```
+## Prerequisites
+
+You'll need
+
+* Stattleship [API Access Token from https://www.stattleship.com](https://www.stattleship.com)
 
 ## API Documentation
 

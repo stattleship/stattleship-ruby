@@ -30,7 +30,7 @@ You'll need
 
 * Stattleship API Access Token from https://www.stattleship.com
 * Set that in your `.env` file as `STATTLESHIP_ACCESS_TOKEN=your_token`
-* To run examples, that .env file should be the the `/examples` dir.
+* To run examples, that .env file should be in the `/examples` dir.
 * Copy the `sample.env` file, insert your token and save as `examples/.env`
 * The `cd` to the `/examples` directory and `ruby <example>.rb` such that the .env loads
 
@@ -42,7 +42,7 @@ You'll need
 
 * [Football Game Logs](basketball_game_logs.rb)
   * Uses `FootballGameLogsParams` and makes a `FootballGameLogs` request
-  * Use the `player_id`, `inteval_type` and `since` parameters to get Cam Newton's game logs for the past weeks by specifying the interval type (divisionplayoffs, conferencechampionships, etc)
+  * Use the `player_id`, `interval_type` and `since` parameters to get Cam Newton's game logs for the past weeks by specifying the interval type (divisionplayoffs, conferencechampionships, etc)
 
 * [Hockey Games](hockey_games.rb)
   * Uses `HockeyGamesParams` and makes a `HockeyGames` request
