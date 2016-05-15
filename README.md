@@ -13,14 +13,16 @@ Meaningful. Developer-Friendly.
 
 We're gonna need a bigger :boat:!
 
-## Usage
-
-Note: This gem is still in pre-release and is not yet in Rubygems.
-
-In your Gemfile:
+## Installation
 
 ```
-gem 'stattleship-ruby', '0.1.19', git: 'https://github.com/stattleship/stattleship-ruby.git'
+gem install stattleship-ruby
+```
+
+## Usage
+
+```
+gem 'stattleship-ruby', '~> 0.1.19'
 ```
 
 ### Build
@@ -34,6 +36,10 @@ gem build stattleship-ruby.gemspec
 ```
 gem install stattleship-ruby-0.1.19.gem
 ```
+
+## API Documentation
+
+* [Developer API Reference](http://developers.stattleship.com/)
 
 ## Examples
 
@@ -65,11 +71,6 @@ We're using the Stattleship API and this gem! You can, too.
 
 * [Glickman: Your statmoji(tm) sports slackbot powered by Slack and the Stattleship API.](https://github.com/stattleship/glickman)
 
-## Other Docs
-
-* [Our Playbook](http://playbook.stattleship.com/)
-* [Developer API Reference](http://developers.stattleship.com/)
-
 ## Questions?
 
-Follow us on [@stattleship](https://twitter.com/stattleship) or join our free, public [Fanboat](http://fanboat.stattleship.com/) Slack group where you can try out "cosell" -- an instance of Glickman -- and get API updates.
+Follow us on [@stattleship](https://twitter.com/stattleship) or join our free, public [Fanboat](https://fanboat.stattleship.com/) Slack group where you can try out "cosell" -- an instance of Glickman -- and get API updates.
