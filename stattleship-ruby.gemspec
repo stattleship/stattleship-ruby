@@ -8,10 +8,11 @@ Gem::Specification.new do |spec|
   spec.version = Stattleship::Ruby::VERSION
   spec.authors = ['Stattleship', 'David Thyresson']
   spec.email = ['support@stattleship.com']
+  spec.required_ruby_version = '>= 2.2.0'
 
   spec.summary = 'Stattleship API Ruby client'
   spec.description = 'Connect to and retrieve sports data from the Stattleship API'
-  spec.homepage  = 'http://developers.stattleship.com'
+  spec.homepage  = 'https://github.com/stattleship/stattleship-ruby'
   spec.license = 'MIT'
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
