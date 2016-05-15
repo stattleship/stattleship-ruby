@@ -6,12 +6,12 @@ require 'stattleship/version'
 Gem::Specification.new do |spec|
   spec.name = 'stattleship-ruby'
   spec.version = Stattleship::Ruby::VERSION
-  spec.authors = ['Stattleship', 'David Thyresson', 'Edward Loveall']
+  spec.authors = ['Stattleship', 'David Thyresson']
   spec.email = ['support@stattleship.com']
 
   spec.summary = 'Stattleship API Ruby client'
   spec.description = 'Connect to and retrieve sports data from the Stattleship API'
-  spec.homepage  = 'http://playbook.stattleship.com'
+  spec.homepage  = 'http://developers.stattleship.com'
   spec.license = 'MIT'
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
