@@ -42,6 +42,22 @@ You'll need
 
 * Stattleship [API Access Token from https://www.stattleship.com](https://www.stattleship.com)
 
+# Configuration
+
+There are two ways to configure the gem.
+
+```
+Stattleship.configure do |config|
+  config.api_token = YOUR_TOKEN
+end
+```
+
+or via a `.env`
+
+```
+STATTLESHIP_ACCESS_TOKEN=YOUR_TOKEN
+```
+
 ## API Documentation
 
 * [Developer API Reference](http://developers.stattleship.com/)
