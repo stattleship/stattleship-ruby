@@ -1,16 +1,17 @@
 module Stattleship
   module Params
     class TopStatsParams < Stattleship::Params::QueryParams
-      attr_accessor :place, :stat, :type
+      attr_accessor :interval_type, :place, :stat, :type
 
       private
 
       def params
-        {
-          'stat' => stat,
-          'type' => type,
-          'place' => place
-        }
+        super.merge({
+                      'interval_type' => interval_type,
+                      'place' => place,
+                      'stat' => stat,
+                      'type' => type,
+                    })
       end
     end
   end
