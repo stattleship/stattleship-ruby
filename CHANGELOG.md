@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.22
+
+Populate season information on
+
+* `StatLeadersParams`
+* `TotalPlayerStatParams`
+* `TotalTeamStatParams`
+
 ## 0.1.21
 
 ### Added

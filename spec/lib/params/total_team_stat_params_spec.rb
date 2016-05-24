@@ -9,6 +9,8 @@ module Stattleship
 
           params.team_id = 'nhl-bos'
           params.stat = 'shots'
+          params.season_id = 'nhl-2015-2016'
+          params.interval_type = 'regularseason'
         end
       end
     end
