@@ -46,26 +46,26 @@ module Stattleship
 
   RSpec.describe Leader do
     it 'knows its place' do
-      expect(nfl_leaders.first.place).to eq 1
-      expect(nfl_leaders.last.place).to eq 4
+      expect(nfl_leaders.first.place).to eq 4
+      expect(nfl_leaders.last.place).to eq 1
     end
 
     it 'knows about a player in first place' do
       leader = nfl_leaders.first
 
       expect(leader.player).to be_a Stattleship::Models::Player
-      expect(leader.player.name).to eq('Adrian Peterson')
-      expect(leader.player.first_name).to eq('Adrian')
-      expect(leader.player.last_name).to eq('Peterson')
+      expect(leader.player.name).to eq('Darren McFadden')
+      expect(leader.player.first_name).to eq('Darren')
+      expect(leader.player.last_name).to eq('McFadden')
     end
 
     it 'knows about a player in second player in list' do
       leader = nfl_leaders[1]
 
       expect(leader.player).to be_a Stattleship::Models::Player
-      expect(leader.player.name).to eq('Doug Martin')
-      expect(leader.player.first_name).to eq('Doug')
-      expect(leader.player.last_name).to eq('Martin')
+      expect(leader.player.name).to eq('Todd Gurley')
+      expect(leader.player.first_name).to eq('Todd')
+      expect(leader.player.last_name).to eq('Gurley')
     end
 
     it 'knows about a player position' do
@@ -73,7 +73,7 @@ module Stattleship
       player = leader.player
 
       expect(player.position_abbreviation).to eq('RB')
-      expect(player.position_name).to eq('Runningback')
+      expect(player.position_name).to eq('Running Back')
     end
 
     it 'knows about the player team' do
@@ -81,10 +81,27 @@ module Stattleship
       team = leader.team
 
       expect(team).to be_a Stattleship::Models::Team
-      expect(team.full_name).to eq('Tampa Bay Buccaneers')
-      expect(team.name).to eq('Tampa Bay')
-      expect(team.nickname).to eq('Buccaneers')
-      expect(team.location).to eq('Tampa Bay')
+      expect(team.full_name).to eq('St. Louis Rams')
+      expect(team.name).to eq('St. Louis')
+      expect(team.nickname).to eq('Rams')
+      expect(team.location).to eq('St. Louis')
+    end
+
+    it 'knows about a stat' do
+      leader = nfl_leaders[0]
+
+      expect(leader.stat).to eq(1089)
+      expect(leader.stat_name).to eq('rushes_yards')
+      expect(leader.humanized_stat).to eq('Rushes Yards')
+    end
+
+    it 'knows about a seasonality' do
+      leader = nfl_leaders[1]
+
+      expect(leader.season_slug).to eq('nfl-2015-2016')
+      expect(leader.season_name).to eq('2015-2016')
+      expect(leader.since).to be_nil
+      expect(leader.week).to be_nil
     end
 
     it 'can format a readable sentence' do
@@ -92,7 +109,7 @@ module Stattleship
 
       expect(
         leader.to_sentence
-      ).to eq 'Adrian Peterson is in first place with 1418 rushes_yards'
+      ).to eq 'Darren McFadden is in fourth place with 1089 rushes yards'
     end
   end
 end

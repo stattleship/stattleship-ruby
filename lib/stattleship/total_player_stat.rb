@@ -2,9 +2,15 @@ module Stattleship
   class TotalPlayerStat < Stattleship::Endpoint
     def to_sentence
       if season_name.nil?
-        "#{player.name} has #{format_stat(total)} #{humanized_stat.downcase}"
+        "#{player.name} has #{format_stat(total)} #{lowercase_stat}"
       else
-        "#{player.name} had #{format_stat(total)} #{humanized_stat.downcase} in the #{season_name} season"
+        "#{player.name} had #{format_stat(total)} #{lowercase_stat} in the #{season_name} season"
+      end
+    end
+
+    def lowercase_stat
+      if humanized_stat
+        humanized_stat.downcase
       end
     end
 

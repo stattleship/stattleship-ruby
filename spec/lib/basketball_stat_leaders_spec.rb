@@ -60,16 +60,16 @@ module Stattleship
     end
 
     it 'knows about a player in second player in list' do
-      leader = nba_leaders[1]
+      leader = nba_leaders.last
 
       expect(leader.player).to be_a Stattleship::Models::Player
-      expect(leader.player.name).to eq('Paul George')
-      expect(leader.player.first_name).to eq('Paul')
-      expect(leader.player.last_name).to eq('George')
+      expect(leader.player.name).to eq('Kyle Lowry')
+      expect(leader.player.first_name).to eq('Kyle')
+      expect(leader.player.last_name).to eq('Lowry')
     end
 
     it 'knows about a player position' do
-      leader = nba_leaders.first
+      leader = nba_leaders.last
       player = leader.player
 
       expect(player.position_abbreviation).to eq('PG')
@@ -77,14 +77,31 @@ module Stattleship
     end
 
     it 'knows about the player team' do
-      leader = nba_leaders[1]
+      leader = nba_leaders.last
       team = leader.team
 
       expect(team).to be_a Stattleship::Models::Team
-      expect(team.full_name).to eq('Indiana Pacers')
-      expect(team.name).to eq('Indiana')
-      expect(team.nickname).to eq('Pacers')
-      expect(team.location).to eq('Indiana')
+      expect(team.full_name).to eq('Toronto Raptors')
+      expect(team.name).to eq('Toronto')
+      expect(team.nickname).to eq('Raptors')
+      expect(team.location).to eq('Toronto')
+    end
+
+    it 'knows about a stat' do
+      leader = nba_leaders.first
+
+      expect(leader.stat).to eq(402)
+      expect(leader.stat_name).to eq('three_pointers_made')
+      expect(leader.humanized_stat).to eq('Three Pointers Made')
+    end
+
+    it 'knows about a seasonality' do
+      leader = nba_leaders.first
+
+      expect(leader.season_slug).to eq('nba-2015-2016')
+      expect(leader.season_name).to eq('2015-2016')
+      expect(leader.since).to be_nil
+      expect(leader.week).to be_nil
     end
 
     it 'can format a readable sentence' do
@@ -92,7 +109,7 @@ module Stattleship
 
       expect(
         leader.to_sentence
-      ).to eq 'Stephen Curry is in first place with 160 three_pointers_made'
+      ).to eq 'Stephen Curry is in first place with 402 three pointers made'
     end
   end
 end

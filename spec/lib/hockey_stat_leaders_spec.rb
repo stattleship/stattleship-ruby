@@ -4,7 +4,7 @@ module Stattleship
   RSpec.describe HockeyStatLeaders do
     describe '#leaders' do
       it 'returns all the nhl_leaders' do
-        expect(nhl_leaders.count).to eq 6
+        expect(nhl_leaders.count).to eq 4
       end
     end
 
@@ -27,7 +27,7 @@ module Stattleship
 
         stat_leaders = HockeyStatLeaders.fetch(params: params)
 
-        expect(stat_leaders.count).to eq 6
+        expect(stat_leaders.count).to eq 4
 
         stat_leaders.each do |stat_leader|
           expect(stat_leader).to be_a Leader
@@ -54,9 +54,9 @@ module Stattleship
       leader = nhl_leaders.first
 
       expect(leader.player).to be_a Stattleship::Models::Player
-      expect(leader.player.name).to eq('Vladimir Tarasenko')
-      expect(leader.player.first_name).to eq('Vladimir')
-      expect(leader.player.last_name).to eq('Tarasenko')
+      expect(leader.player.name).to eq('Alex Ovechkin')
+      expect(leader.player.first_name).to eq('Alex')
+      expect(leader.player.last_name).to eq('Ovechkin')
     end
 
     it 'knows about a player in second player in list' do
@@ -72,8 +72,8 @@ module Stattleship
       leader = nhl_leaders.first
       player = leader.player
 
-      expect(player.position_abbreviation).to eq('RW')
-      expect(player.position_name).to eq('Right Wing')
+      expect(player.position_abbreviation).to eq('LW')
+      expect(player.position_name).to eq('Left Wing')
     end
 
     it 'knows about the player team' do
@@ -87,12 +87,29 @@ module Stattleship
       expect(team.location).to eq('Chicago')
     end
 
+    it 'knows about a stat' do
+      leader = nhl_leaders[0]
+
+      expect(leader.stat).to eq(50)
+      expect(leader.stat_name).to eq('goals')
+      expect(leader.humanized_stat).to eq('Goals')
+    end
+
+    it 'knows about a seasonality' do
+      leader = nhl_leaders[1]
+
+      expect(leader.season_slug).to eq('nhl-2015-2016')
+      expect(leader.season_name).to eq('2015-2016')
+      expect(leader.since).to be_nil
+      expect(leader.week).to be_nil
+    end
+
     it 'can format a readable sentence' do
       leader = nhl_leaders.first
 
       expect(
         leader.to_sentence
-      ).to eq 'Vladimir Tarasenko is in first place with 26 goals'
+      ).to eq 'Alex Ovechkin is in first place with 50 goals'
     end
   end
 end
