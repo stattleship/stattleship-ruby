@@ -94,9 +94,28 @@
       "league_id": "cb399a17-e581-4f1a-9535-ea3bcb09fa1f"
     }
   ],
+  "seasons": [
+    {
+      "id": "e46014e6-f9e9-41c3-9deb-cd11ee879d75",
+      "created_at": "2016-03-18T21:03:28-04:00",
+      "updated_at": "2016-03-18T21:03:28-04:00",
+      "name": "2015",
+      "current_interval_type": "regularseason",
+      "starts_on": "2015-02-01",
+      "ends_on": "2015-11-30",
+      "slug": "mlb-2015",
+      "league_id": "cb399a17-e581-4f1a-9535-ea3bcb09fa1f"
+    }
+  ],
   "total_player_stat": {
+    "interval_type": "regularseason",
+    "season_name": "2015",
+    "since": null,
     "stat": "pitches_thrown",
-    "total": 1154,
-    "player_id": "0fb0179b-cbec-41a6-8919-3bd9bce74c03"
+    "humanized_stat": "Pitches Thrown",
+    "total": 3388,
+    "week": null,
+    "player_id": "0fb0179b-cbec-41a6-8919-3bd9bce74c03",
+    "season_id": "e46014e6-f9e9-41c3-9deb-cd11ee879d75"
   }
 }

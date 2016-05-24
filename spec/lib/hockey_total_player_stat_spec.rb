@@ -12,7 +12,7 @@ module Stattleship
 
       it 'knows about the stat and total' do
         expect(nhl_total_player_stat.stat).to eq('points')
-        expect(nhl_total_player_stat.total).to eq(50)
+        expect(nhl_total_player_stat.total).to eq(106)
       end
 
       it 'knows about a player position' do
@@ -32,10 +32,22 @@ module Stattleship
         expect(team.location).to eq('Chicago')
       end
 
+      it 'knows about a seasonality' do
+        expect(nhl_total_player_stat.season_name).to eq('2015-2016')
+        expect(nhl_total_player_stat.interval_type).to eq('regularseason')
+        expect(nhl_total_player_stat.since).to be_nil
+        expect(nhl_total_player_stat.week).to be_nil
+      end
+
+      it 'knows about a season' do
+        expect(nhl_total_player_stat.season).to be_a Stattleship::Models::Season
+        expect(nhl_total_player_stat.season.name).to eq('2015-2016')
+      end
+
       it 'can format a readable sentence' do
         expect(
           nhl_total_player_stat.to_sentence
-        ).to eq 'Patrick Kane has 50 points'
+        ).to eq 'Patrick Kane had 106 points in the 2015-2016 season'
       end
     end
 
@@ -64,7 +76,7 @@ module Stattleship
         expect(total_stat.player.first_name).to eq('Patrick')
         expect(total_stat.player.last_name).to eq('Kane')
         expect(total_stat.stat).to eq('points')
-        expect(total_stat.total).to eq(50)
+        expect(total_stat.total).to eq(106)
       end
 
       def params

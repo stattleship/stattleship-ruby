@@ -1,7 +1,7 @@
 {
   "players": [
     {
-      "id": "49c461c7-0cbb-47fc-8cf2-281741b02059",
+      "id": "b0cf0678-15bc-48fb-8b84-ac8eff47fbbc",
       "created_at": "2015-12-18T01:12:08-05:00",
       "updated_at": "2015-12-21T11:18:16-05:00",
       "active": true,
@@ -86,9 +86,28 @@
       "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
     }
   ],
+  "seasons": [
+    {
+      "id": "301759de-976d-4daa-a194-cacea1dc02ca",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "2015-2016",
+      "current_interval_type": "conferencefinals",
+      "starts_on": "2015-09-01",
+      "ends_on": "2016-06-30",
+      "slug": "nhl-2015-2016",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    }
+  ],
   "total_player_stat": {
+    "interval_type": "regularseason",
+    "season_name": "2015-2016",
+    "since": null,
     "stat": "points",
-    "total": 50,
-    "player_id": "49c461c7-0cbb-47fc-8cf2-281741b02059"
+    "humanized_stat": "Points",
+    "total": 106,
+    "week": null,
+    "player_id": "b0cf0678-15bc-48fb-8b84-ac8eff47fbbc",
+    "season_id": "301759de-976d-4daa-a194-cacea1dc02ca"
   }
 }

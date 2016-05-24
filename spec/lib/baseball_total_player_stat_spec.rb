@@ -12,7 +12,7 @@ module Stattleship
 
       it 'knows about the stat and total' do
         expect(mlb_total_player_stat.stat).to eq('pitches_thrown')
-        expect(mlb_total_player_stat.total).to eq(1154)
+        expect(mlb_total_player_stat.total).to eq(3388)
       end
 
       it 'knows about a player position' do
@@ -32,10 +32,22 @@ module Stattleship
         expect(team.location).to eq('Detroit')
       end
 
+      it 'knows about a seasonality' do
+        expect(mlb_total_player_stat.season_name).to eq('2015')
+        expect(mlb_total_player_stat.interval_type).to eq('regularseason')
+        expect(mlb_total_player_stat.since).to be_nil
+        expect(mlb_total_player_stat.week).to be_nil
+      end
+
+      it 'knows about a season' do
+        expect(mlb_total_player_stat.season).to be_a Stattleship::Models::Season
+        expect(mlb_total_player_stat.season.name).to eq('2015')
+      end
+
       it 'can format a readable sentence' do
         expect(
           mlb_total_player_stat.to_sentence
-        ).to eq 'David Price has 1154 pitches_thrown'
+        ).to eq 'David Price had 3388 pitches thrown in the 2015 season'
       end
     end
 
@@ -64,7 +76,7 @@ module Stattleship
         expect(total_stat.player.first_name).to eq('David')
         expect(total_stat.player.last_name).to eq('Price')
         expect(total_stat.stat).to eq('pitches_thrown')
-        expect(total_stat.total).to eq(1154)
+        expect(total_stat.total).to eq(3388)
       end
 
       def params

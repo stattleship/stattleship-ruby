@@ -1,18 +1,24 @@
 {
   "players": [
     {
-      "id": "b6ea1a38-b9d1-47e0-84f7-d77b4c4555b9",
-      "created_at": "2015-12-26T02:21:01-05:00",
-      "updated_at": "2016-01-02T13:40:11-05:00",
-      "active": false,
-      "defensive": false,
+      "id": "2fe53803-7533-462e-8205-ebf6d72306d6",
+      "created_at": "2016-01-06T00:47:55-05:00",
+      "updated_at": "2016-05-24T04:48:52-04:00",
+      "active": true,
+      "birth_date": "1988-03-14",
+      "city": "Akron",
+      "country": "USA",
+      "draft_season": "2009",
+      "draft_round": 1,
+      "draft_overall_pick": 7,
+      "draft_team_name": "Golden State",
       "first_name": "Stephen",
       "handedness": "unknown",
+      "bats": "bats_unknown",
       "height": 75,
       "unit_of_height": "inches",
       "last_name": "Curry",
       "name": "Stephen Curry",
-      "offensive": true,
       "position_abbreviation": "PG",
       "position_name": "Point Guard",
       "salary": 11370786,
@@ -21,11 +27,12 @@
       "school": null,
       "slug": "nba-stephen-curry",
       "sport": "basketball",
+      "state": "Ohio",
       "weight": 190,
       "unit_of_weight": "pounds",
       "years_of_experience": 6,
       "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e",
-      "playing_position_id": "fff1b6b8-9e02-4071-8dc6-9356ddd1b292",
+      "playing_position_id": "950b3ddd-28b6-4af1-a5a3-0d64b5fa9c85",
       "team_id": "2a173568-fca6-4891-8c3b-3573547b0b6b"
     }
   ],
@@ -45,9 +52,9 @@
   ],
   "playing_positions": [
     {
-      "id": "fff1b6b8-9e02-4071-8dc6-9356ddd1b292",
-      "created_at": "2015-12-09T05:30:50-05:00",
-      "updated_at": "2015-12-09T05:30:50-05:00",
+      "id": "950b3ddd-28b6-4af1-a5a3-0d64b5fa9c85",
+      "created_at": "2016-01-06T03:16:47-05:00",
+      "updated_at": "2016-01-06T03:16:47-05:00",
       "abbreviation": "PG",
       "description": null,
       "formation": "offensive",
@@ -59,10 +66,23 @@
     {
       "id": "2a173568-fca6-4891-8c3b-3573547b0b6b",
       "created_at": "2015-11-28T22:33:56-05:00",
-      "updated_at": "2015-12-09T09:15:47-05:00",
+      "updated_at": "2016-02-19T05:17:34-05:00",
+      "color": "fdb927",
+      "colors": [
+        "fdb927",
+        "006bb6",
+        "26282a"
+      ],
+      "hashtag": "DubNation",
+      "hashtags": [
+        "DubNation",
+        "WarriorsGround"
+      ],
       "location": "Golden State",
       "name": "Golden State",
       "nickname": "Warriors",
+      "latitude": 37.6830258,
+      "longitude": -122.1553887,
       "slug": "nba-gs",
       "division_id": "0df84c15-1dbc-471e-b9d9-d277eeba9eba",
       "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
@@ -86,9 +106,28 @@
       "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
     }
   ],
+  "seasons": [
+    {
+      "id": "e56321f3-1c81-4f91-9bdf-8dac07129648",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "2015-2016",
+      "current_interval_type": "conferencefinals",
+      "starts_on": "2015-10-01",
+      "ends_on": "2016-06-30",
+      "slug": "nba-2015-2016",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    }
+  ],
   "total_player_stat": {
+    "interval_type": "regularseason",
+    "season_name": "2015-2016",
+    "since": null,
     "stat": "three_pointers_made",
-    "total": 140,
-    "player_id": "b6ea1a38-b9d1-47e0-84f7-d77b4c4555b9"
+    "humanized_stat": "Three Pointers Made",
+    "total": 402,
+    "week": null,
+    "player_id": "2fe53803-7533-462e-8205-ebf6d72306d6",
+    "season_id": "e56321f3-1c81-4f91-9bdf-8dac07129648"
   }
 }

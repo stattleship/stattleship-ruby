@@ -1,32 +1,39 @@
 {
   "players": [
     {
-      "id": "cb44b3a3-0c44-41ab-bc8a-b819ce0fbf3b",
-      "created_at": "2015-12-26T01:38:29-05:00",
-      "updated_at": "2015-12-28T10:38:59-05:00",
+      "id": "add09d84-9f6a-421f-af12-8374b8a32202",
+      "created_at": "2016-01-06T01:09:00-05:00",
+      "updated_at": "2016-05-23T05:09:35-04:00",
       "active": true,
-      "defensive": false,
-      "first_name": "Tom",
+      "birth_date": "1984-03-23",
+      "city": "Pittsburgh",
+      "country": "USA",
+      "draft_season": "2006",
+      "draft_round": 4,
+      "draft_overall_pick": 119,
+      "draft_team_name": "Denver",
+      "first_name": "Brandon",
       "handedness": "unknown",
-      "height": null,
+      "bats": "bats_unknown",
+      "height": 76,
       "unit_of_height": "inches",
-      "last_name": "Brady",
-      "name": "Tom Brady",
-      "offensive": true,
-      "position_abbreviation": "QB",
-      "position_name": "Quarterback",
-      "salary": null,
-      "humanized_salary": "",
+      "last_name": "Marshall",
+      "name": "Brandon Marshall",
+      "position_abbreviation": "WR",
+      "position_name": "Wide Receiver",
+      "salary": 9000000,
+      "humanized_salary": "9,000,000",
       "salary_currency": "USD",
-      "school": null,
-      "slug": "nfl-tom-brady",
+      "school": "Central Florida",
+      "slug": "nfl-brandon-marshall",
       "sport": "football",
-      "weight": null,
+      "state": "Pennsylvania",
+      "weight": 230,
       "unit_of_weight": "pounds",
-      "years_of_experience": null,
+      "years_of_experience": 10,
       "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c",
-      "playing_position_id": "ab89a348-3e52-4bb1-b055-4b4e639903c6",
-      "team_id": "5546974d-27c2-4d93-a63e-d8320952e871"
+      "playing_position_id": "4934c69f-7843-4bab-97e8-8dc941a2a226",
+      "team_id": "8112be50-1ec2-47c0-ab27-b4fc4654aa5b"
     }
   ],
   "leagues": [
@@ -45,25 +52,36 @@
   ],
   "playing_positions": [
     {
-      "id": "ab89a348-3e52-4bb1-b055-4b4e639903c6",
-      "created_at": "2015-11-29T22:31:29-05:00",
-      "updated_at": "2015-11-29T22:31:29-05:00",
-      "abbreviation": "QB",
+      "id": "4934c69f-7843-4bab-97e8-8dc941a2a226",
+      "created_at": "2016-01-06T01:06:09-05:00",
+      "updated_at": "2016-01-06T03:16:31-05:00",
+      "abbreviation": "WR",
       "description": null,
       "formation": "offensive",
-      "name": "Quarterback",
+      "name": "Wide Receiver",
       "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
     }
   ],
   "teams": [
     {
-      "id": "5546974d-27c2-4d93-a63e-d8320952e871",
+      "id": "8112be50-1ec2-47c0-ab27-b4fc4654aa5b",
       "created_at": "2015-11-28T22:33:56-05:00",
-      "updated_at": "2015-12-27T16:56:07-05:00",
-      "location": "New England",
-      "name": "New England",
-      "nickname": "Patriots",
-      "slug": "nfl-ne",
+      "updated_at": "2016-04-23T05:37:38-04:00",
+      "color": "203731",
+      "colors": [
+        "203731"
+      ],
+      "hashtag": "Jets",
+      "hashtags": [
+        "Jets",
+        "JetsNation"
+      ],
+      "location": "New York",
+      "name": "N.Y. Jets",
+      "nickname": "Jets",
+      "latitude": 40.8144295,
+      "longitude": -74.0726778,
+      "slug": "nfl-nyj",
       "division_id": "7eb2130f-0d1d-4396-9595-649708fe5a6a",
       "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
     }
@@ -86,9 +104,28 @@
       "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
     }
   ],
+  "seasons": [
+    {
+      "id": "07f6794a-5312-4ce9-b5b0-2010c5975ff2",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2016-03-21T14:58:18-04:00",
+      "name": "2015-2016",
+      "current_interval_type": "week",
+      "starts_on": "2015-08-01",
+      "ends_on": "2016-02-14",
+      "slug": "nfl-2015-2016",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    }
+  ],
   "total_player_stat": {
-    "stat": "passes_touchdowns",
-    "total": 36,
-    "player_id": "cb44b3a3-0c44-41ab-bc8a-b819ce0fbf3b"
+    "interval_type": "week",
+    "season_name": "2015-2016",
+    "since": null,
+    "stat": "receptions_total",
+    "humanized_stat": "Receptions Total",
+    "total": 109,
+    "week": null,
+    "player_id": "add09d84-9f6a-421f-af12-8374b8a32202",
+    "season_id": "07f6794a-5312-4ce9-b5b0-2010c5975ff2"
   }
 }
