@@ -22,7 +22,7 @@ gem install stattleship-ruby
 ## Usage
 
 ```
-gem 'stattleship-ruby', '~> 0.1.22'
+gem 'stattleship-ruby', '~> 0.1.23'
 ```
 
 ### Build
@@ -34,7 +34,7 @@ gem build stattleship-ruby.gemspec
 ### Install
 
 ```
-gem install stattleship-ruby-0.1.22.gem
+gem install stattleship-ruby-0.1.23.gem
 ```
 ## Prerequisites
 
