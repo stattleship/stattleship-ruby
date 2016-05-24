@@ -1,12 +1,51 @@
 {
+  "seasons": [
+    {
+      "id": "301759de-976d-4daa-a194-cacea1dc02ca",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "2015-2016",
+      "current_interval_type": "conferencefinals",
+      "starts_on": "2015-09-01",
+      "ends_on": "2016-06-30",
+      "slug": "nhl-2015-2016",
+      "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
+    }
+  ],
+  "leagues": [
+    {
+      "id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "abbreviation": "NHL",
+      "color": null,
+      "minutes_per_period": null,
+      "name": "National Hockey League",
+      "periods": null,
+      "slug": "nhl",
+      "sport": "hockey"
+    }
+  ],
   "teams": [
     {
       "id": "80d99c5a-882e-4296-ae9d-048d2830b154",
       "created_at": "2015-11-28T22:33:56-05:00",
-      "updated_at": "2015-12-09T09:15:48-05:00",
+      "updated_at": "2016-02-19T05:17:34-05:00",
+      "color": "BF2F38",
+      "colors": [
+        "BF2F38",
+        "213770"
+      ],
+      "hashtag": "Habs",
+      "hashtags": [
+        "Habs",
+        "Canadiens"
+      ],
       "location": "Montreal",
       "name": "Montreal",
       "nickname": "Canadiens",
+      "latitude": 45.4960039,
+      "longitude": -73.5692379,
       "slug": "nhl-mon",
       "division_id": "15ca4e46-2b49-4f37-84ea-befb62de28c5",
       "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
@@ -30,23 +69,15 @@
       "league_id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9"
     }
   ],
-  "leagues": [
-    {
-      "id": "48803e9e-c4ec-414a-a85d-9abfa6e9cfd9",
-      "created_at": "2015-11-28T22:33:56-05:00",
-      "updated_at": "2015-11-28T22:33:56-05:00",
-      "abbreviation": "NHL",
-      "color": null,
-      "minutes_per_period": null,
-      "name": "National Hockey League",
-      "periods": null,
-      "slug": "nhl",
-      "sport": "hockey"
-    }
-  ],
   "total_team_stat": {
+    "interval_type": "regularseason",
+    "season_name": "2015-2016",
+    "since": null,
     "stat": "goals_period_3",
-    "total": 42,
+    "humanized_stat": "Goals Period 3",
+    "total": 65,
+    "week": null,
+    "season_id": "301759de-976d-4daa-a194-cacea1dc02ca",
     "team_id": "80d99c5a-882e-4296-ae9d-048d2830b154"
   }
 }

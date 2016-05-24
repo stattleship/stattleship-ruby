@@ -1,12 +1,52 @@
 {
+  "seasons": [
+    {
+      "id": "07f6794a-5312-4ce9-b5b0-2010c5975ff2",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2016-03-21T14:58:18-04:00",
+      "name": "2015-2016",
+      "current_interval_type": "week",
+      "starts_on": "2015-08-01",
+      "ends_on": "2016-02-14",
+      "slug": "nfl-2015-2016",
+      "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
+    }
+  ],
+  "leagues": [
+    {
+      "id": "ebb52980-4b25-4384-bb32-26d354568f0c",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "abbreviation": "NFL",
+      "color": null,
+      "minutes_per_period": null,
+      "name": "National Football League",
+      "periods": null,
+      "slug": "nfl",
+      "sport": "football"
+    }
+  ],
   "teams": [
     {
       "id": "47b8904b-4d56-481a-ab06-6e56dfe59f78",
       "created_at": "2015-11-28T22:33:56-05:00",
-      "updated_at": "2015-12-31T18:29:53-05:00",
+      "updated_at": "2016-04-21T09:01:11-04:00",
+      "color": "0B2265",
+      "colors": [
+        "0B2265",
+        "A71930",
+        "A5ACAF"
+      ],
+      "hashtag": "Giants",
+      "hashtags": [
+        "Giants",
+        "GiantsPride"
+      ],
       "location": "New York",
       "name": "N.Y. Giants",
       "nickname": "Giants",
+      "latitude": null,
+      "longitude": null,
       "slug": "nfl-nyg",
       "division_id": "804da3bf-894a-4066-8f43-61617e7bfcb5",
       "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
@@ -30,23 +70,15 @@
       "league_id": "ebb52980-4b25-4384-bb32-26d354568f0c"
     }
   ],
-  "leagues": [
-    {
-      "id": "ebb52980-4b25-4384-bb32-26d354568f0c",
-      "created_at": "2015-11-28T22:33:56-05:00",
-      "updated_at": "2015-11-28T22:33:56-05:00",
-      "abbreviation": "NFL",
-      "color": null,
-      "minutes_per_period": null,
-      "name": "National Football League",
-      "periods": null,
-      "slug": "nfl",
-      "sport": "football"
-    }
-  ],
   "total_team_stat": {
+    "interval_type": "week",
+    "season_name": "2015-2016",
+    "since": null,
     "stat": "passing_gross_yards",
-    "total": 4202,
+    "humanized_stat": "Passing Gross Yards",
+    "total": 4503,
+    "week": null,
+    "season_id": "07f6794a-5312-4ce9-b5b0-2010c5975ff2",
     "team_id": "47b8904b-4d56-481a-ab06-6e56dfe59f78"
   }
 }

@@ -1,12 +1,53 @@
 {
+  "seasons": [
+    {
+      "id": "e56321f3-1c81-4f91-9bdf-8dac07129648",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "name": "2015-2016",
+      "current_interval_type": "conferencefinals",
+      "starts_on": "2015-10-01",
+      "ends_on": "2016-06-30",
+      "slug": "nba-2015-2016",
+      "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
+    }
+  ],
+  "leagues": [
+    {
+      "id": "3c805f57-ef31-407d-b633-54bac8745b9e",
+      "created_at": "2015-11-28T22:33:56-05:00",
+      "updated_at": "2015-11-28T22:33:56-05:00",
+      "abbreviation": "NBA",
+      "color": null,
+      "minutes_per_period": null,
+      "name": "National Basketball Association",
+      "periods": null,
+      "slug": "nba",
+      "sport": "basketball"
+    }
+  ],
   "teams": [
     {
       "id": "1c65bbb6-bd10-4ef6-831a-89050d57fe16",
       "created_at": "2015-11-28T22:33:56-05:00",
-      "updated_at": "2015-12-09T09:15:47-05:00",
+      "updated_at": "2016-02-19T05:09:31-05:00",
+      "color": "008348",
+      "colors": [
+        "008348",
+        "bb9753",
+        "a73832",
+        "fab383",
+        "061922"
+      ],
+      "hashtag": "Celtics",
+      "hashtags": [
+        "Celtics"
+      ],
       "location": "Boston",
       "name": "Boston",
       "nickname": "Celtics",
+      "latitude": 42.3663,
+      "longitude": -71.0622,
       "slug": "nba-bos",
       "division_id": "8256a4da-413c-4f03-8438-56963be591c4",
       "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
@@ -30,23 +71,15 @@
       "league_id": "3c805f57-ef31-407d-b633-54bac8745b9e"
     }
   ],
-  "leagues": [
-    {
-      "id": "3c805f57-ef31-407d-b633-54bac8745b9e",
-      "created_at": "2015-11-28T22:33:56-05:00",
-      "updated_at": "2015-11-28T22:33:56-05:00",
-      "abbreviation": "NBA",
-      "color": null,
-      "minutes_per_period": null,
-      "name": "National Basketball Association",
-      "periods": null,
-      "slug": "nba",
-      "sport": "basketball"
-    }
-  ],
   "total_team_stat": {
+    "interval_type": "regularseason",
+    "season_name": "2015-2016",
+    "since": null,
     "stat": "three_pointers_made",
-    "total": 291,
+    "humanized_stat": "Three Pointers Made",
+    "total": 717,
+    "week": null,
+    "season_id": "e56321f3-1c81-4f91-9bdf-8dac07129648",
     "team_id": "1c65bbb6-bd10-4ef6-831a-89050d57fe16"
   }
 }

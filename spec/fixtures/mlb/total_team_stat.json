@@ -1,18 +1,50 @@
 {
+  "seasons": [
+    {
+      "id": "e46014e6-f9e9-41c3-9deb-cd11ee879d75",
+      "created_at": "2016-03-18T21:03:28-04:00",
+      "updated_at": "2016-03-18T21:03:28-04:00",
+      "name": "2015",
+      "current_interval_type": "regularseason",
+      "starts_on": "2015-02-01",
+      "ends_on": "2015-11-30",
+      "slug": "mlb-2015",
+      "league_id": "cb399a17-e581-4f1a-9535-ea3bcb09fa1f"
+    }
+  ],
+  "leagues": [
+    {
+      "id": "cb399a17-e581-4f1a-9535-ea3bcb09fa1f",
+      "created_at": "2016-03-18T20:56:43-04:00",
+      "updated_at": "2016-03-18T20:56:43-04:00",
+      "abbreviation": "MLB",
+      "color": null,
+      "minutes_per_period": null,
+      "name": "Major League Baseball",
+      "periods": null,
+      "slug": "mlb",
+      "sport": "baseball"
+    }
+  ],
   "teams": [
     {
       "id": "8a72ea07-afce-4907-9e6a-13b3f4e9d378",
       "created_at": "2016-03-18T20:56:44-04:00",
-      "updated_at": "2016-03-18T20:56:45-04:00",
-      "color": null,
-      "colors": [],
-      "hashtag": null,
-      "hashtags": [],
+      "updated_at": "2016-03-21T17:54:26-04:00",
+      "color": "004687",
+      "colors": [
+        "004687",
+        "C09A5B"
+      ],
+      "hashtag": "Royals",
+      "hashtags": [
+        "Royals"
+      ],
       "location": "Kansas City",
       "name": "Kansas City",
       "nickname": "Royals",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 39.0997265,
+      "longitude": -94.5785667,
       "slug": "mlb-kc",
       "division_id": "ca580e37-ee8b-44d3-94ac-6eb2bf35d094",
       "league_id": "cb399a17-e581-4f1a-9535-ea3bcb09fa1f"
@@ -36,23 +68,15 @@
       "league_id": "cb399a17-e581-4f1a-9535-ea3bcb09fa1f"
     }
   ],
-  "leagues": [
-    {
-      "id": "cb399a17-e581-4f1a-9535-ea3bcb09fa1f",
-      "created_at": "2016-03-18T20:56:43-04:00",
-      "updated_at": "2016-03-18T20:56:43-04:00",
-      "abbreviation": "MLB",
-      "color": null,
-      "minutes_per_period": null,
-      "name": "Major League Baseball",
-      "periods": null,
-      "slug": "mlb",
-      "sport": "baseball"
-    }
-  ],
   "total_team_stat": {
+    "interval_type": "regularseason",
+    "season_name": "2015",
+    "since": null,
     "stat": "hits",
-    "total": 52,
+    "humanized_stat": "Hits",
+    "total": 1484,
+    "week": null,
+    "season_id": "e46014e6-f9e9-41c3-9deb-cd11ee879d75",
     "team_id": "8a72ea07-afce-4907-9e6a-13b3f4e9d378"
   }
 }
