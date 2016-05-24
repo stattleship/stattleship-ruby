@@ -11,6 +11,9 @@ module Stattleship
           params.stat = 'shots'
           params.season_id = 'nhl-2015-2016'
           params.interval_type = 'regularseason'
+          params.week = nil
+          params.status = 'ended'
+          params.since = '1 week ago'
         end
       end
     end

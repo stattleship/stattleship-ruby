@@ -1,7 +1,7 @@
 module Stattleship
   module Params
     class GameTimeParams < Stattleship::Params::QueryParams
-      attr_accessor :season_id, :interval_type, :status, :on, :since
+      attr_accessor :season_id, :interval_type, :status, :on, :since, :week
 
       def params
         {
@@ -10,6 +10,7 @@ module Stattleship
           'status' => status,
           'on' => on,
           'since' => since,
+          'week' => week,
         }
       end
     end

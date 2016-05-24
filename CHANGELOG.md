@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.23
+
+TotalPlayerStatParams and TotalTeamStatParams extends GameTimeParams to support
+
+* since
+* on
+* at
+* status
+
+parameter options.
+
 ## 0.1.22
 
 Populate season information on

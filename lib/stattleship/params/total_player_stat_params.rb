@@ -1,13 +1,13 @@
 module Stattleship
   module Params
-    class TotalPlayerStatParams < Stattleship::Params::QueryParams
-      attr_accessor :interval_type, :player_id, :stat, :type
+    class TotalPlayerStatParams < Stattleship::Params::GameTimeParams
+      attr_accessor :interval_type, :player_id, :stat, :type, :week, :game_id
 
       private
 
       def params
         super.merge({
-                      'interval_type' => interval_type,
+                      'game_id' => game_id,
                       'player_id' => player_id,
                       'stat' => stat,
                       'type' => type,
