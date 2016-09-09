@@ -14,7 +14,9 @@ query_params = Stattleship::Params::BasketballGameLogsParams.new
 query_params.player_id = 'nba-stephen-curry'
 
 # may need to adjust this depending on time of year/NBA season
-query_params.since = '1 week ago'
+query_params.season_id = 'nba-2015-2016'
+query_params.interval_type = 'nbachampionship'
+query_params.since = 'june 2016'
 
 # fetch will automatically traverse the paginated response links
 game_logs = Stattleship::BasketballGameLogs.fetch(params: query_params)

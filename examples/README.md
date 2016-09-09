@@ -40,7 +40,7 @@ You'll need
   * Uses `BasketballGameLogsParams` and makes a `BasketballGameLogs` request
   * Use the `player_id` and `since` parameters to get Stephen Curry's game logs for the past week
 
-* [Football Game Logs](basketball_game_logs.rb)
+* [Football Game Logs](football_game_logs.rb)
   * Uses `FootballGameLogsParams` and makes a `FootballGameLogs` request
   * Use the `player_id`, `interval_type` and `since` parameters to get Cam Newton's game logs for the past weeks by specifying the interval type (divisionplayoffs, conferencechampionships, etc)
 

@@ -29,7 +29,7 @@ module Stattleship
     end
 
     def base_uri
-      @base_uri ||= URI('https://www.stattleship.com')
+      @base_uri ||= URI('https://api.stattleship.com')
     end
 
     def http

@@ -5,7 +5,7 @@ Stattleship API Ruby client
 
 [![Build Status](https://travis-ci.org/stattleship/stattleship-ruby.svg?branch=master)](https://travis-ci.org/stattleship/stattleship-ruby)
 
-Check out the [Stattleship API](https://www.stattleship.com) - The Sports Data API you've always wanted
+Check out the [Stattleship API](https://api.stattleship.com) - The Sports Data API you've always wanted
 
 Meaningful. Developer-Friendly.
 
@@ -22,7 +22,7 @@ gem install stattleship-ruby
 ## Usage
 
 ```
-gem 'stattleship-ruby', '~> 0.1.23'
+gem 'stattleship-ruby', '~> 0.1.25'
 ```
 
 ### Build
@@ -34,13 +34,13 @@ gem build stattleship-ruby.gemspec
 ### Install
 
 ```
-gem install stattleship-ruby-0.1.23.gem
+gem install stattleship-ruby-0.1.25.gem
 ```
 ## Prerequisites
 
 You'll need
 
-* Stattleship [API Access Token from https://www.stattleship.com](https://www.stattleship.com)
+* Stattleship [API Access Token from https://api.stattleship.com](https://api.stattleship.com)
 
 # Configuration
 

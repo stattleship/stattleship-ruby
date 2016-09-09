@@ -29,7 +29,7 @@ module Stattleship
 
       def pitcher?
         position_abbreviation == 'SP' ||
-        position_abbreviation == 'SP'
+        position_abbreviation == 'RP'
       end
 
       def inflielder?

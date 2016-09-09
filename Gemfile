@@ -8,7 +8,7 @@ end
 
 group :test do
   gem 'rspec'
-  gem  'webmock', '~> 1.22', '<= 1.22.3'
+  gem 'webmock', '~> 2.1'
 end
 
 # Specify your gem's dependencies in stattleship-ruby.gemspec
