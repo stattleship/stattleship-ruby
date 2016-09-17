@@ -16,6 +16,7 @@ query_params.team_id = 'mlb-bos'
 # may need to adjust this depending on time of year
 query_params.season_id = 'mlb-2016'
 query_params.status = 'upcoming'
+query_params.on = 'today'
 
 # fetch will automatically traverse the paginated response links
 games = Stattleship::BaseballGames.fetch(params: query_params)
@@ -28,5 +29,5 @@ pp games.first.started_at.strftime('%b %e, %l:%M %p')
 
 # or, individual attributes
 games.each do |game|
-  pp game.scoreline
+  pp game.label
 end
