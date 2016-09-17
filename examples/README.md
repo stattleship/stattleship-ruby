@@ -30,6 +30,8 @@ You'll need
 
 * Stattleship API Access Token from https://www.stattleship.com
 * Set that in your `.env` file as `STATTLESHIP_ACCESS_TOKEN=your_token`
+* To build the gem: `gem build stattleship-ruby.gemspec`
+* To install the gem (with the current version of the gem file): `gem install stattleship-ruby-0.1.xx.gem`
 * To run examples, that .env file should be in the `/examples` dir.
 * Copy the `sample.env` file, insert your token and save as `examples/.env`
 * The `cd` to the `/examples` directory and `ruby <example>.rb` such that the .env loads
@@ -64,7 +66,7 @@ You'll need
 
 * [Football Players](football_players.rb)
   * Uses `FootballPlayersParams` and makes a `FootballPlayers` request
-  * Uses `team_id` and `level_up` parameters to return Denver Broncos players
+  * Uses `team_id` parameters to return Denver Broncos players
   * Demonstrates ability to filter and sort on a numeric `salary` to get list of players making more than $5M and where they went to `school`
 
 * [Hockey Scoring Plays](hockey_scoring_plays.rb)
