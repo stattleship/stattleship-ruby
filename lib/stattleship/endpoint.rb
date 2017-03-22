@@ -37,6 +37,22 @@ module Stattleship
       end
     end
 
+    def populate_pitchers(model)
+      return if pitchers.nil?
+
+      model.pitcher = pitchers.detect do |pitcher|
+        pitcher.id == model.pitcher_id
+      end
+    end
+
+    def populate_hitters(model)
+      return if hitters.nil?
+
+      model.hitter = hitters.detect do |hitter|
+        hitter.id == model.hitter_id
+      end
+    end
+
     def populate_players(model)
       return if players.nil?
 
@@ -176,6 +192,14 @@ module Stattleship
 
       model.team = teams.detect do |team|
         team.id == model.team_id
+      end
+    end
+
+    def populate_hitter_teams(model)
+      return if hitter_teams.nil?
+
+      model.hitter_team = hitter_teams.detect do |hitter_team|
+        hitter_team.id == model.hitter_team_id
       end
     end
 

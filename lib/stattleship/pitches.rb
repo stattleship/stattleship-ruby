@@ -8,13 +8,18 @@ module Stattleship
     end
 
     def populate
-      pitches.each do |p|
-        populate_game(model)
-      end
+      pitches.each do |model|
+        populate_games(model)
 
-      # games.each do |game|
-      #   populate_game(game)
-      # end
+        games.each do |game|
+          populate_game(game)
+        end
+
+        populate_pitchers(model)
+        populate_hitters(model)
+        populate_teams(model)
+        populate_hitter_teams(model)
+      end
     end
   end
 
@@ -25,8 +30,17 @@ module Stattleship
     collection :away_teams, extend: TeamRepresenter,
                             class: Team
 
+    collection :hitters, extend: PlayerRepresenter,
+                         class: Player
+
+    collection :hitter_teams, extend: TeamRepresenter,
+                              class: Team
+
     collection :home_teams, extend: TeamRepresenter,
                             class: Team
+
+    collection :pitchers, extend: PlayerRepresenter,
+                          class: Player
 
     collection :winning_teams, extend: TeamRepresenter,
                                class: Team
@@ -45,6 +59,10 @@ module Stattleship
 
     collection :venues, extend: VenueRepresenter,
                         class: Venue
+
+
+    collection :teams, extend: TeamRepresenter,
+                       class: Team
 
     collection :pitches, extend: PitchRepresenter,
                          class: Pitch

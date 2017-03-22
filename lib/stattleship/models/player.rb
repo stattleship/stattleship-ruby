@@ -5,8 +5,16 @@ module Stattleship
         active
       end
 
+      def full_name
+        if name == ''
+          "#{first_name} #{last_name}"
+        else
+          name
+        end
+      end
+
       def label
-        "#{name} (#{position_abbreviation}) - #{team_nickname}"
+        "#{full_name} (#{position_abbreviation}) - #{team_nickname}"
       end
 
       def team_name
