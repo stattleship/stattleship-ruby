@@ -12,6 +12,7 @@ require 'stattleship/models/team'
 require 'stattleship/models/team_outcome_streak'
 require 'stattleship/models/venue'
 require 'stattleship/models/ranking'
+require 'stattleship/models/pitch'
 
 module Stattleship
   module Models

@@ -96,6 +96,8 @@ require 'stattleship/params/football_total_team_stat_params'
 require 'stattleship/params/hockey_total_team_stat_params'
 require 'stattleship/params/baseball_total_team_stat_params'
 
+require 'stattleship/params/pitches_params'
+
 module Stattleship
   module Params
   end
