@@ -12,7 +12,7 @@ query_params = Stattleship::Params::AtBatsParams.new
 
 query_params.season_id = 'mlb-2016'
 query_params.interval_type = 'regularseason'
-query_params.hitter_id = 'mlb-bryce-harper'
+query_params.hitter_id = 'mlb-mike-trout'
 query_params.hit_type = 'GB'
 
 # fetch will automatically traverse the paginated response links

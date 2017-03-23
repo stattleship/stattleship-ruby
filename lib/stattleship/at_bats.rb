@@ -15,10 +15,8 @@ module Stattleship
           populate_game(game)
         end
 
-        populate_pitchers(model)
         populate_hitters(model)
         populate_hitter_teams(model)
-
 
         (baseball_pitches || []).each do |pitch|
           populate_pitchers(pitch)
@@ -45,6 +43,9 @@ module Stattleship
 
     collection :hitter_teams, extend: TeamRepresenter,
                               class: Team
+
+    collection :pitchers, extend: PlayerRepresenter,
+                          class: Player
 
     collection :home_teams, extend: TeamRepresenter,
                             class: Team
