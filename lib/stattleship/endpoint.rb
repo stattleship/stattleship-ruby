@@ -16,6 +16,19 @@ module Stattleship
 
     private
 
+    def populate_baseball_pitches(model)
+      model.pitches = []
+
+      return if model.baseball_pitch_ids.nil?
+      return if baseball_pitches.nil?
+
+      model.baseball_pitch_ids.each do |baseball_pitch_id|
+        model.pitches << baseball_pitches.detect do |baseball_pitch|
+          baseball_pitch.id == baseball_pitch_id
+        end
+      end
+    end
+
     def populate_officials(model)
       model.officials = []
 

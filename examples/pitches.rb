@@ -7,6 +7,8 @@ dir = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
 require File.join(dir, 'stattleship')
 require 'pp'
 
+pp File.join(dir, 'stattleship')
+
 # Construct params for the fetch
 query_params = Stattleship::Params::PitchesParams.new
 
@@ -23,4 +25,4 @@ query_params.game_id = 'mlb-2017-cin-kc-2017-03-20-1605'
 # fetch will automatically traverse the paginated response links
 pitches = Stattleship::Pitches.fetch(params: query_params)
 
-pp pitches
+pp pitches.map(&:to_sentence)
