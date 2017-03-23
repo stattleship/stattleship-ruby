@@ -97,6 +97,7 @@ require 'stattleship/params/hockey_total_team_stat_params'
 require 'stattleship/params/baseball_total_team_stat_params'
 
 require 'stattleship/params/at_bats_params'
+require 'stattleship/params/line_ups_params'
 require 'stattleship/params/pitches_params'
 
 module Stattleship

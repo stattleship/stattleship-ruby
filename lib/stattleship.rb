@@ -115,6 +115,7 @@ require 'stattleship/hockey_top_stats'
 require 'stattleship/baseball_top_stats'
 
 require 'stattleship/at_bats'
+require 'stattleship/line_ups'
 require 'stattleship/pitches'
 
 Dotenv.load

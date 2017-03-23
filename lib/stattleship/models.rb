@@ -14,6 +14,7 @@ require 'stattleship/models/venue'
 require 'stattleship/models/ranking'
 
 require 'stattleship/models/at_bat'
+require 'stattleship/models/line_up'
 require 'stattleship/models/pitch'
 
 module Stattleship

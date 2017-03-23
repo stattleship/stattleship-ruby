@@ -1,50 +1,32 @@
 module Stattleship
-  class AtBats < Stattleship::Endpoint
-    AT_BATS = 'baseball/mlb/at_bats'.freeze
+  class LineUps < Stattleship::Endpoint
+    LINE_UPS = 'baseball/mlb/lineups'.freeze
 
     def self.fetch(params:)
-      super(path: AT_BATS,
+      super(path: LINE_UPS,
             params: params)
     end
 
     def populate
-      at_bats.each do |model|
+      lineups.each do |model|
         populate_games(model)
 
         games.each do |game|
           populate_game(game)
         end
 
-        populate_pitchers(model)
-        populate_hitters(model)
-        populate_hitter_teams(model)
-
-
-        (baseball_pitches || []).each do |pitch|
-          populate_pitchers(pitch)
-          populate_hitters(pitch)
-          populate_teams(pitch)
-          populate_hitter_teams(pitch)
-        end
-
-        populate_baseball_pitches(model)
-
+        populate_players(model)
+        populate_teams(model)
       end
     end
   end
 
-  module AtBatsRepresenter
+  module LineUpsRepresenter
     include Roar::JSON
     include Stattleship::Models
 
     collection :away_teams, extend: TeamRepresenter,
                             class: Team
-
-    collection :hitters, extend: PlayerRepresenter,
-                         class: Player
-
-    collection :hitter_teams, extend: TeamRepresenter,
-                              class: Team
 
     collection :home_teams, extend: TeamRepresenter,
                             class: Team
@@ -67,14 +49,13 @@ module Stattleship
     collection :venues, extend: VenueRepresenter,
                         class: Venue
 
-
     collection :teams, extend: TeamRepresenter,
                        class: Team
 
-    collection :baseball_pitches, extend: PitchRepresenter,
-                                  class: Pitch
+    collection :players, extend: PlayerRepresenter,
+                         class: Player
 
-    collection :at_bats, extend: AtBatRepresenter,
-                         class: AtBat
+    collection :lineups, extend: LineUpRepresenter,
+                          class: LineUp
   end
 end

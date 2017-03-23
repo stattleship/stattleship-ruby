@@ -25,11 +25,16 @@ module Stattleship
       [
         :id,
         :description,
-        :inning,
         :inning_label,
         :half,
       ].each do |attribute|
         property attribute
+      end
+
+      [
+        :inning,
+      ].each do |attribute|
+        property attribute, type: Integer
       end
 
       [
