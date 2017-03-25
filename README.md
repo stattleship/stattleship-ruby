@@ -9,7 +9,7 @@ Check out the [Stattleship API](https://api.stattleship.com) - The Sports Data A
 
 Meaningful. Developer-Friendly.
 
-:football: :basketball: and :black_circle: :ice_hockey_stick_and_puck: :snowflake: and :baseball: !
+:football: :basketball: and :black_circle: :black_circle: :snowflake: and :baseball: !
 
 We're gonna need a bigger :boat:!
 
@@ -33,7 +33,7 @@ gem build stattleship-ruby.gemspec
 
 ### Install
 
-```
+```rb
 gem install stattleship-ruby-0.1.25.gem
 ```
 ## Prerequisites
@@ -46,7 +46,7 @@ You'll need
 
 There are two ways to configure the gem.
 
-```
+```rb
 Stattleship.configure do |config|
   config.api_token = YOUR_TOKEN
 end
@@ -74,7 +74,7 @@ It's dead simple.
 
 The pattern is pretty much as follows:
 
-```
+```rb
 query_params = Stattleship::Params::BasketballGameLogsParams.new
 query_params.player_id = 'nba-stephen-curry'
 query_params.since = '1 week ago'
