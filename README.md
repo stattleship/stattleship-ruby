@@ -9,7 +9,7 @@ Check out the [Stattleship API](https://api.stattleship.com) - The Sports Data A
 
 Meaningful. Developer-Friendly.
 
-:football: :basketball: and :black_circle: :black_circle: :snowflake: and :baseball: !
+:football: :basketball: and :black_circle: :snowflake: and :baseball: !
 
 We're gonna need a bigger :boat:!
 
@@ -22,7 +22,7 @@ gem install stattleship-ruby
 ## Usage
 
 ```
-gem 'stattleship-ruby', '~> 0.1.25'
+gem 'stattleship-ruby', '~> 0.1.26'
 ```
 
 ### Build
@@ -34,7 +34,7 @@ gem build stattleship-ruby.gemspec
 ### Install
 
 ```rb
-gem install stattleship-ruby-0.1.25.gem
+gem install stattleship-ruby-0.1.26.gem
 ```
 ## Prerequisites
 
