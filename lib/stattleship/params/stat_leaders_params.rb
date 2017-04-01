@@ -1,7 +1,7 @@
 module Stattleship
   module Params
     class StatLeadersParams < Stattleship::Params::QueryParams
-      attr_accessor :interval_type, :place, :stat, :type
+      attr_accessor :interval_type, :place, :stat
 
       private
 
@@ -9,7 +9,6 @@ module Stattleship
         super.merge({
                       'interval_type' => interval_type,
                       'stat' => stat,
-                      'type' => type,
                       'place' => place,
                     })
       end
