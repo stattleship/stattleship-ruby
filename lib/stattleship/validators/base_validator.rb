@@ -56,7 +56,7 @@ module Stattleship
         elsif blank?(sport_prefix)
           return
         else
-          if value.start_with?("#{sport_prefix}_")
+          if value.start_with?("#{sport_prefix}") || value.start_with?("#{sport_prefix}_")
             return
           end
         end

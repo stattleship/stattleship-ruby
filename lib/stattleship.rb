@@ -60,6 +60,12 @@ require 'stattleship/baseball_players'
 
 require 'stattleship/rankings'
 
+require 'stattleship/scoreboards'
+require 'stattleship/basketball_scoreboards'
+require 'stattleship/football_scoreboards'
+require 'stattleship/hockey_scoreboards'
+require 'stattleship/baseball_scoreboards'
+
 require 'stattleship/scoring_plays'
 require 'stattleship/basketball_scoring_plays'
 require 'stattleship/football_scoring_plays'

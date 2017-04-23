@@ -232,6 +232,22 @@ module Stattleship
         end
       end
 
+      def top_or_bottom
+        if clock == ':30'
+          'Bottom'
+        else
+          'Top'
+        end
+      end
+
+      def game_clock
+        if sport == 'baseball'
+          "#{top_or_bottom} #{period.ordinalize} #{period_label}"
+        else
+          "#{clock} #{period.ordinalize} #{period_label}"
+        end
+      end
+
       def to_sentence
         "#{winning_team_name} won #{winning_score} on #{short_date}"
       end
@@ -303,6 +319,7 @@ module Stattleship
         :id,
         :at_neutral_site,
         :away_team_outcome,
+        :clock,
         :daytime,
         :home_team_outcome,
         :interval,
@@ -310,6 +327,7 @@ module Stattleship
         :label,
         :name,
         :on,
+        :period_label,
         :score,
         :scoreline,
         :slug,
@@ -328,8 +346,10 @@ module Stattleship
         :attendance,
         :away_team_score,
         :home_team_score,
+        :clock_secs,
         :duration,
         :interval_number,
+        :period,
         :score_differential,
         :temperature,
         :timestamp,

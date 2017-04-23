@@ -38,6 +38,12 @@ require 'stattleship/params/football_players_params'
 require 'stattleship/params/hockey_players_params'
 require 'stattleship/params/baseball_players_params'
 
+require 'stattleship/params/scoreboards_params'
+require 'stattleship/params/basketball_scoreboards_params'
+require 'stattleship/params/football_scoreboards_params'
+require 'stattleship/params/hockey_scoreboards_params'
+require 'stattleship/params/baseball_scoreboards_params'
+
 require 'stattleship/params/scoring_plays_params'
 require 'stattleship/params/basketball_scoring_plays_params'
 require 'stattleship/params/football_scoring_plays_params'

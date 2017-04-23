@@ -779,4 +779,14 @@ module Endpoints
     rankings.from_json(json)
     rankings.data
   end
+
+  def nhl_scoreboards
+    scoreboards = Stattleship::HockeyScoreboards.new
+    scoreboards.extend(Stattleship::ScoreboardsRepresenter)
+
+    json = File.read('spec/fixtures/nhl/scoreboards.json')
+
+    scoreboards.from_json(json)
+    scoreboards.data
+  end
 end

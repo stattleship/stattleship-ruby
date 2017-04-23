@@ -1,5 +1,5 @@
 module Constants
   def base_api_url
-    'https://www.stattleship.com'
+    'https://api.stattleship.com'
   end
 end

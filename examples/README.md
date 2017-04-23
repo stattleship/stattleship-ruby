@@ -115,6 +115,6 @@ You'll need
   * Uses games params and request for each sport
   * Demonstrates a fully populated list of officials for each game
 
-* [Game Log Officials](officials.rb)
-  * Uses game_log and team_game_log params and request for Hockey
-  * Demonstrates a fully populated list of officials for each game on the game_log
+* [Basketbal Scoreboards](scoreboards.rb)
+  * Uses basketball_scoreboards params
+  * Demonstrates a fully populated list of scoreboards to fetch a list of scoreboards (points, time per game) for a basketball game

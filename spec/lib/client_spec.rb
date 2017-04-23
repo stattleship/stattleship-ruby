@@ -47,15 +47,15 @@ module Stattleship
         path = 'basketball/nba/game_logs?team_id=nba-cle'
         client = Stattleship::Client.new(path: path)
         url = "#{base_api_url}/#{path}"
-        next_url = 'https://www.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=2&per_page=40'
+        next_url = "#{base_api_url}/basketball/nba/game_logs?team_id=nba-cle&page=2&per_page=40"
 
-        response_headers = { 'Link' => '<https://www.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=1&per_page=40>; rel="first", <https://www.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=2&per_page=40>; rel="prev", <https://www.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=2&per_page=40>; rel="last", <https://www.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=2&per_page=40>; rel="next"' }
+        response_headers = { 'Link' => '<https://api.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=1&per_page=40>; rel="first", <https://api.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=2&per_page=40>; rel="prev", <https://api.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=2&per_page=40>; rel="last", <https://api.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=2&per_page=40>; rel="next"' }
 
         stub_request(:get, url).
           to_return(body: File.read('spec/fixtures/nba/game_log.json'),
                     headers: response_headers)
 
-        response_headers = { 'Link' => '<https://www.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=1&per_page=40>; rel="first", <https://www.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=1&per_page=40>; rel="prev", <https://www.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=2&per_page=40>; rel="last"' }
+        response_headers = { 'Link' => '<https://api.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=1&per_page=40>; rel="first", <https://api.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=1&per_page=40>; rel="prev", <https://www.stattleship.com/basketball/nba/game_logs?team_id=nba-cle&page=2&per_page=40>; rel="last"' }
 
         stub_request(:get, next_url).
           to_return(body: File.read('spec/fixtures/nba/game_log_page_2.json'),
